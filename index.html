@@ -154,6 +154,28 @@
     .shadow-soft { box-shadow: 0 12px 30px rgba(13, 60, 96, 0.12) !important; }
     .shadow-soft2 { box-shadow: 0 18px 50px rgba(13, 60, 96, 0.18) !important; }
 
+    /* Ensure dark utility classes win over custom brand utilities */
+    .dark .dark\:text-slate-100 { color: #f1f5f9 !important; }
+    .dark .dark\:text-slate-200 { color: #e2e8f0 !important; }
+    .dark .dark\:text-slate-300 { color: #cbd5e1 !important; }
+    .dark .dark\:text-white { color: #ffffff !important; }
+    .dark .dark\:focus\:text-slate-100:focus { color: #f1f5f9 !important; }
+    .dark .dark\:focus\:bg-slate-900:focus { background-color: #0f172a !important; }
+    .dark .text-caps-blue\/70 { color: rgb(148 163 184 / 0.95) !important; }
+    .dark .bg-caps-blue\/5 { background-color: rgb(148 163 184 / 0.14) !important; }
+
+    i.fa-solid,
+    i.fa-brands {
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    .footer-actions i,
+    .footer-linkedin i {
+      font-size: 0.95rem;
+      color: currentColor;
+    }
+
     .jvw-brand {
       display: flex;
       align-items: center;
@@ -255,6 +277,8 @@
     #diensten .card-icon {
       color: #0c2a3a;
       transition: color .2s ease, background-color .2s ease;
+      border: 1px solid rgba(13, 60, 96, 0.12);
+      box-shadow: 0 8px 20px rgba(13, 60, 96, 0.08);
     }
 
     #diensten .card:hover .card-icon {
@@ -283,11 +307,28 @@
     #diensten .kpi-card-icon {
       color: #0c2a3a;
       transition: color .2s ease, background-color .2s ease;
+      border: 1px solid rgba(13, 60, 96, 0.12);
+      box-shadow: 0 8px 20px rgba(13, 60, 96, 0.08);
     }
 
     #diensten .kpi-card:hover .kpi-card-icon {
       color: #ec7f24;
       background-color: rgba(236, 127, 36, 0.12);
+    }
+
+    .dark #diensten .card-icon,
+    .dark #diensten .kpi-card-icon {
+      color: #f1f5f9;
+      background-color: rgba(148, 163, 184, 0.16) !important;
+      border-color: rgba(226, 232, 240, 0.22);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+    }
+
+    .dark #diensten .card:hover .card-icon,
+    .dark #diensten .kpi-card:hover .kpi-card-icon {
+      color: #f5a84d;
+      background-color: rgba(245, 168, 77, 0.2) !important;
+      border-color: rgba(245, 168, 77, 0.45);
     }
 
     .bullet-icon {
@@ -301,6 +342,11 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
+    }
+
+    .dark .hero-bullets .bullet {
+      background-color: rgba(15, 23, 42, 0.45);
+      border-color: rgba(148, 163, 184, 0.35);
     }
 
     .project-cards-grid {
@@ -718,7 +764,7 @@
             <i class="fa-solid fa-stopwatch"></i>
           </div>
           <div>
-            <p class="font-black text-caps-blue transition group-hover:text-caps-orange">Snel inzetbaar</p>
+            <p class="font-black text-caps-blue dark:text-slate-100 transition group-hover:text-caps-orange">Snel inzetbaar</p>
             <p class="text-sm text-gray-600 dark:text-slate-300">Direct capaciteit op locatie</p>
           </div>
         </div>
@@ -727,7 +773,7 @@
             <i class="fa-solid fa-screwdriver-wrench"></i>
           </div>
           <div>
-            <p class="font-black text-caps-blue transition group-hover:text-caps-orange">Vakkundige uitvoering</p>
+            <p class="font-black text-caps-blue dark:text-slate-100 transition group-hover:text-caps-orange">Vakkundige uitvoering</p>
             <p class="text-sm text-gray-600 dark:text-slate-300">Kwaliteit in iedere projectfase</p>
           </div>
         </div>
@@ -736,7 +782,7 @@
             <i class="fa-solid fa-file-circle-check"></i>
           </div>
           <div>
-            <p class="font-black text-caps-blue transition group-hover:text-caps-orange">Duidelijke afspraken</p>
+            <p class="font-black text-caps-blue dark:text-slate-100 transition group-hover:text-caps-orange">Duidelijke afspraken</p>
             <p class="text-sm text-gray-600 dark:text-slate-300">Betrouwbaar van start tot oplevering</p>
           </div>
         </div>
