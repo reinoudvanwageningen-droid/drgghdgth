@@ -8,7 +8,7 @@
     return;
   }
 
-  const counterNamespace = "capsconsult-nl";
+  const counterNamespace = "jvw-infraservice-nl";
   const referrer = document.referrer.toLowerCase();
   const sourceKey = referrer.includes("linkedin.")
     ? "source-linkedin"

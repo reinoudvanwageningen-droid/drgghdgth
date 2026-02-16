@@ -6,14 +6,15 @@ module.exports = {
     extend: {
       colors: {
         caps: {
-          blue: "#0F3057",
-          light: "#1B4965",
-          orange: "#F05F22",
+          blue: "#0D3C60",
+          light: "#1A4D74",
+          orange: "#E97A08",
           gray: "#F3F4F6"
         }
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Arial", "sans-serif"]
+        sans: ["Outfit", "Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Arial", "sans-serif"],
+        display: ["Anybody", "Outfit", "Inter", "system-ui", "sans-serif"]
       },
       keyframes: {
         floaty: {
@@ -45,8 +46,8 @@ module.exports = {
         glow: "glow 3.5s ease-in-out infinite"
       },
       boxShadow: {
-        soft: "0 12px 30px rgba(15,48,87,0.12)",
-        soft2: "0 18px 50px rgba(15,48,87,0.18)"
+        soft: "0 12px 30px rgba(13,60,96,0.12)",
+        soft2: "0 18px 50px rgba(13,60,96,0.18)"
       }
     }
   }

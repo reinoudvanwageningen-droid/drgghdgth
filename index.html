@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caps Consult | Project- en Werkvoorbereiding in de Scheepsbouw</title>
-  <meta name="description" content="Caps Consult ondersteunt scheepsbouwprojecten met project- en werkvoorbereiding, werfbegeleiding en oplevering. Praktisch, onafhankelijk en resultaatgericht." />
-  <meta name="theme-color" content="#0F3057" />
+  <title>JVW Infraservice | Project- en Werkvoorbereiding in de Scheepsbouw</title>
+  <meta name="description" content="JVW Infraservice ondersteunt scheepsbouwprojecten met project- en werkvoorbereiding, werfbegeleiding en oplevering. Praktisch, onafhankelijk en resultaatgericht." />
+  <meta name="theme-color" content="#0D3C60" />
   <link rel="canonical" href="https://reinoudvanwageningen-droid.github.io/capsconsult/" />
   <meta property="og:locale" content="nl_NL" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Caps Consult | Project- en Werkvoorbereiding in de Scheepsbouw" />
-  <meta property="og:description" content="Caps Consult ondersteunt scheepsbouwprojecten met project- en werkvoorbereiding, werfbegeleiding en oplevering." />
+  <meta property="og:title" content="JVW Infraservice | Project- en Werkvoorbereiding in de Scheepsbouw" />
+  <meta property="og:description" content="JVW Infraservice ondersteunt scheepsbouwprojecten met project- en werkvoorbereiding, werfbegeleiding en oplevering." />
   <meta property="og:url" content="https://reinoudvanwageningen-droid.github.io/capsconsult/" />
-  <meta property="og:site_name" content="Caps Consult" />
+  <meta property="og:site_name" content="JVW Infraservice" />
   <meta property="og:image" content="https://reinoudvanwageningen-droid.github.io/capsconsult/images/kraaninstallatie-scheepsdek.jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Caps Consult | Project- en Werkvoorbereiding in de Scheepsbouw" />
-  <meta name="twitter:description" content="Caps Consult ondersteunt scheepsbouwprojecten met project- en werkvoorbereiding, werfbegeleiding en oplevering." />
+  <meta name="twitter:title" content="JVW Infraservice | Project- en Werkvoorbereiding in de Scheepsbouw" />
+  <meta name="twitter:description" content="JVW Infraservice ondersteunt scheepsbouwprojecten met project- en werkvoorbereiding, werfbegeleiding en oplevering." />
   <meta name="twitter:image" content="https://reinoudvanwageningen-droid.github.io/capsconsult/images/kraaninstallatie-scheepsdek.jpeg" />
   <link rel="preload" as="image" href="images/kraaninstallatie-scheepsdek-1920.webp" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS (static build) -->
   <link rel="stylesheet" href="assets/tailwind.css" />
@@ -36,6 +40,22 @@
   <style>
     :root {
       color-scheme: light dark;
+      --jvw-navy: #0d3c60;
+      --jvw-navy-90: #1a4d74;
+      --jvw-orange: #e97a08;
+      --jvw-orange-dk: #c96800;
+    }
+
+    body {
+      font-family: "Outfit", "Inter", "Arial", sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .brand-title {
+      font-family: "Anybody", "Outfit", "Inter", "Arial", sans-serif;
     }
 
     /* Subtiele text shadow voor hero */
@@ -46,9 +66,9 @@
     /* Hero overlay: dieper + premium */
     .hero-overlay {
       background:
-        radial-gradient(1200px 800px at 15% 20%, rgba(240, 95, 34, 0.25), transparent 55%),
-        radial-gradient(1000px 700px at 85% 15%, rgba(27, 73, 101, 0.35), transparent 55%),
-        linear-gradient(to bottom, rgba(15, 48, 87, 0.78), rgba(15, 48, 87, 0.35));
+        radial-gradient(1200px 800px at 15% 20%, rgba(233, 122, 8, 0.25), transparent 55%),
+        radial-gradient(1000px 700px at 85% 15%, rgba(13, 60, 96, 0.35), transparent 55%),
+        linear-gradient(to bottom, rgba(13, 60, 96, 0.82), rgba(13, 60, 96, 0.4));
     }
 
     /* Diagonals */
@@ -74,7 +94,7 @@
 
     /* Concept logo */
     .concept-logo {
-      background: #0F3057;
+      background: var(--jvw-navy);
       position: relative;
       overflow: hidden;
       display: flex;
@@ -90,7 +110,7 @@
       right: 0;
       width: 52%;
       height: 44%;
-      background: #F05F22;
+      background: var(--jvw-orange);
       clip-path: polygon(0 100%, 100% 0, 100% 100%);
       z-index: 0;
     }
@@ -106,7 +126,7 @@
 
     /* Fancy underline for links */
     .fancy-link {
-      background-image: linear-gradient(transparent 70%, rgba(240, 95, 34, 0.25) 0);
+      background-image: linear-gradient(transparent 70%, rgba(233, 122, 8, 0.25) 0);
       background-size: 100% 100%;
       background-repeat: no-repeat;
       transition: background-size 220ms ease;
@@ -115,6 +135,34 @@
     .fancy-link:hover {
       background-size: 100% 160%;
     }
+
+    .jvw-logo-chip {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(13, 60, 96, 0.12);
+      border-radius: 0.85rem;
+      padding: 0.35rem 0.45rem;
+    }
+
+    /* JvW brand overrides for Tailwind custom caps-* utilities */
+    .text-caps-blue { color: var(--jvw-navy) !important; }
+    .text-caps-orange { color: var(--jvw-orange) !important; }
+    .text-caps-blue\/70 { color: rgb(13 60 96 / 0.7) !important; }
+    .bg-caps-blue { background-color: var(--jvw-navy) !important; }
+    .bg-caps-orange { background-color: var(--jvw-orange) !important; }
+    .bg-caps-blue\/5 { background-color: rgb(13 60 96 / 0.05) !important; }
+    .bg-caps-blue\/10 { background-color: rgb(13 60 96 / 0.1) !important; }
+    .bg-caps-orange\/5 { background-color: rgb(233 122 8 / 0.05) !important; }
+    .bg-caps-orange\/10 { background-color: rgb(233 122 8 / 0.1) !important; }
+    .bg-caps-orange\/20 { background-color: rgb(233 122 8 / 0.2) !important; }
+    .hover\:text-caps-orange:hover { color: var(--jvw-orange) !important; }
+    .hover\:text-caps-blue:hover { color: var(--jvw-navy) !important; }
+    .hover\:bg-orange-600:hover { background-color: var(--jvw-orange-dk) !important; }
+    .hover\:border-caps-orange:hover { border-color: var(--jvw-orange) !important; }
+    .hover\:border-caps-orange\/30:hover { border-color: rgb(233 122 8 / 0.3) !important; }
+    .group:hover .group-hover\:bg-caps-orange { background-color: var(--jvw-orange) !important; }
+    .focus-visible\:ring-caps-orange:focus-visible { --tw-ring-color: var(--jvw-orange) !important; }
+    .shadow-soft { box-shadow: 0 12px 30px rgba(13, 60, 96, 0.12) !important; }
+    .shadow-soft2 { box-shadow: 0 18px 50px rgba(13, 60, 96, 0.18) !important; }
 
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
@@ -141,9 +189,9 @@
         {
           "@type": "Organization",
           "@id": "https://reinoudvanwageningen-droid.github.io/capsconsult/#organization",
-          "name": "Caps Consult",
+          "name": "JVW Infraservice",
           "url": "https://reinoudvanwageningen-droid.github.io/capsconsult/",
-          "logo": "https://reinoudvanwageningen-droid.github.io/capsconsult/images/caps-consult-logo-transparent.png",
+          "logo": "https://reinoudvanwageningen-droid.github.io/capsconsult/images/jvw-infraservice-logo.svg",
           "email": "capsconsult@outlook.com",
           "telephone": "+31 6 43 72 50 43",
           "sameAs": [
@@ -153,7 +201,7 @@
         {
           "@type": "LocalBusiness",
           "@id": "https://reinoudvanwageningen-droid.github.io/capsconsult/#localbusiness",
-          "name": "Caps Consult",
+          "name": "JVW Infraservice",
           "url": "https://reinoudvanwageningen-droid.github.io/capsconsult/",
           "image": "https://reinoudvanwageningen-droid.github.io/capsconsult/images/kraaninstallatie-scheepsdek.jpeg",
           "email": "capsconsult@outlook.com",
@@ -184,13 +232,15 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16 md:h-20">
         <!-- Logo -->
-        <div class="flex-shrink-0 flex items-center gap-2 md:gap-3">
-          <img src="images/caps-consult-logo-transparent.png" alt="Caps Consult logo" width="3375" height="3375" loading="eager" decoding="async" class="w-12 h-12 md:w-14 md:h-14 object-contain" />
+        <a href="#home" class="flex-shrink-0 flex items-center gap-2 md:gap-3" aria-label="Ga naar home">
+          <span class="jvw-logo-chip shadow-soft">
+            <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="w-10 h-10 md:w-12 md:h-12 object-contain" />
+          </span>
           <div>
-            <span class="block text-caps-blue font-extrabold text-base sm:text-lg md:text-xl leading-none tracking-tight">CAPS</span>
-            <span class="block text-caps-orange font-extrabold text-xs md:text-sm leading-none tracking-wide">CONSULT</span>
+            <span class="block brand-title text-caps-blue font-black text-base sm:text-lg md:text-xl leading-none tracking-tight">JVW</span>
+            <span class="block text-caps-orange font-extrabold text-[0.64rem] md:text-xs leading-none tracking-[0.16em] uppercase">Infraservice</span>
           </div>
-        </div>
+        </a>
 
         <!-- Desktop Menu -->
         <div class="hidden lg:flex space-x-8 items-center">
@@ -252,7 +302,7 @@
         </h1>
 
         <p class="text-base md:text-xl text-gray-100/90 mb-8 md:mb-10 max-w-2xl mx-auto font-light text-shadow px-2">
-          Caps Consult brengt structuur, planning en technische diepgang in uw project.
+          JVW Infraservice brengt structuur, planning en technische diepgang in uw project.
           Zo voorkomt u vertragingen, beperkt u faalkosten en houdt u controle van engineering tot oplevering.
         </p>
 
@@ -411,10 +461,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12 mt-4 md:mt-10">
         <div class="lg:w-1/2 order-2 lg:order-1">
-          <h2 class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Over Caps Consult</h2>
+          <h2 class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Over JVW Infraservice</h2>
           <h3 class="text-xl sm:text-2xl md:text-4xl font-black mb-4 md:mb-6">Over Matthias van Wageningen</h3>
           <p class="text-gray-200/90 mb-6 text-base md:text-lg leading-relaxed">
-            Matthias van Wageningen is scheepsingenieur en oprichter van CAPS Consult.
+            Matthias van Wageningen is scheepsingenieur en oprichter van JVW Infraservice.
             Met een hbo-opleiding in Scheepsbouwkunde en Maritieme Techniek (Rotterdam Mainport Institute)
             en de minor Advanced Engineering Tools for ShipX (NHL Stenden) combineert hij technische
             diepgang met een praktische aanpak.
@@ -465,7 +515,7 @@
 
   <!-- Projects -->
   <section id="referenties" class="py-12 md:py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
-    <div class="absolute inset-0 opacity-[0.08]" style="background-image: radial-gradient(circle at 1px 1px, rgba(15,48,87,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+    <div class="absolute inset-0 opacity-[0.08]" style="background-image: radial-gradient(circle at 1px 1px, rgba(13,60,96,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="text-center mb-10 md:mb-14">
           <h2 class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Projecten</h2>
@@ -523,6 +573,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="py-4 flex flex-col lg:flex-row gap-5 lg:gap-8 lg:items-center lg:justify-between">
         <div class="text-center lg:text-left">
+          <div class="inline-flex items-center justify-center lg:justify-start mb-4 rounded-xl bg-white px-3 py-2 shadow-soft">
+            <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="lazy" decoding="async" class="w-24 h-24 object-contain" />
+          </div>
           <div class="flex flex-col items-center lg:items-start gap-1 text-sm">
             <a href="bedrijfsgegevens.html" class="hover:text-caps-orange transition">Bedrijfsgegevens</a>
             <a href="cookiebeleid.html" class="hover:text-caps-orange transition">Cookiebeleid</a>
@@ -550,7 +603,7 @@
       </div>
 
       <div class="border-t border-white/10 pt-6 text-center text-sm text-gray-200">
-        <p>&copy; 2026 Caps Consult. Alle rechten voorbehouden.</p>
+        <p>&copy; 2026 JVW Infraservice. Alle rechten voorbehouden.</p>
       </div>
     </div>
   </footer>

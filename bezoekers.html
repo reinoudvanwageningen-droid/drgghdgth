@@ -4,29 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>Bezoekersstatistiek | Caps Consult</title>
-  <meta name="description" content="Overzicht van anonieme bezoekaantallen van de website van Caps Consult." />
+  <title>Bezoekersstatistiek | JVW Infraservice</title>
+  <meta name="description" content="Overzicht van anonieme bezoekaantallen van de website van JVW Infraservice." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
       color-scheme: light dark;
-      --bg: #f8fafc;
-      --text: #0f172a;
-      --muted: #475569;
+      --bg: #f7f8fa;
+      --text: #0d3c60;
+      --muted: #5a7085;
       --surface: #ffffff;
-      --border: #e2e8f0;
-      --brand: #0f3057;
-      --accent: #f05f22;
+      --border: #dfe3ea;
+      --brand: #0d3c60;
+      --accent: #e97a08;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #020617;
-        --text: #f1f5f9;
-        --muted: #cbd5e1;
-        --surface: #0f172a;
-        --border: #1e293b;
-        --brand: #93c5fd;
-        --accent: #fb923c;
+        --bg: #0a1a28;
+        --text: #e4eaef;
+        --muted: #86a1b0;
+        --surface: #0f2436;
+        --border: #1a3a52;
+        --brand: #e4eaef;
+        --accent: #f5a84d;
       }
     }
 
@@ -36,7 +39,7 @@
 
     body {
       margin: 0;
-      font-family: Inter, Arial, sans-serif;
+      font-family: Outfit, Inter, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -46,6 +49,28 @@
       max-width: 760px;
       margin: 0 auto;
       padding: 28px 16px 48px;
+    }
+
+    .brand-header {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .brand-logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      padding: 10px 14px;
+    }
+
+    .brand-logo {
+      width: 108px;
+      height: 108px;
+      object-fit: contain;
     }
 
     .top-links {
@@ -81,6 +106,7 @@
       font-size: clamp(1.7rem, 2.6vw, 2.2rem);
       line-height: 1.25;
       color: var(--brand);
+      font-family: Anybody, Outfit, Inter, Arial, sans-serif;
     }
 
     .muted {
@@ -146,6 +172,11 @@
 </head>
 <body>
   <main class="container">
+    <div class="brand-header">
+      <div class="brand-logo-wrap">
+        <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brand-logo" />
+      </div>
+    </div>
     <div class="top-links">
       <a class="top-link" href="index.html">&larr; Homepage</a>
       <a class="top-link" href="privacybeleid.html">Privacybeleid</a>
@@ -193,7 +224,7 @@
   </main>
 
   <script>
-    const namespace = "capsconsult-nl";
+    const namespace = "jvw-infraservice-nl";
     const counters = [
       { key: "page-visits", elementId: "visitor-count" },
       { key: "source-direct", elementId: "source-direct" },
