@@ -166,6 +166,10 @@
       display: block;
     }
 
+    .jvw-brand .brandkit-logo-dark {
+      display: none;
+    }
+
     .jvw-brand .brand-name {
       margin: 0;
       font-weight: 800;
@@ -186,6 +190,23 @@
       font-weight: 700;
       color: var(--jvw-navy);
       opacity: 0.95;
+    }
+
+    .dark .jvw-brand .brandkit-logo-light {
+      display: none;
+    }
+
+    .dark .jvw-brand .brandkit-logo-dark {
+      display: block;
+    }
+
+    .dark .jvw-brand .brand-name {
+      color: #f8fafc;
+    }
+
+    .dark .jvw-brand .brand-name .sub {
+      color: #e2e8f0;
+      opacity: 1;
     }
 
     @media (max-width: 768px) {
@@ -483,7 +504,8 @@
       <div class="flex justify-between items-center h-16 md:h-20">
         <!-- Logo -->
         <a href="#home" aria-label="Ga naar boven" class="jvw-brand flex-shrink-0">
-          <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo object-contain" />
+          <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo brandkit-logo-light object-contain" />
+          <img src="images/logo-jvw-brandkit-white.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo brandkit-logo-dark object-contain" />
           <div class="brand-name">
             <span class="jvw">JVW</span>
             <span class="sub">Infra Service</span>
