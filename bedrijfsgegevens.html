@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bedrijfsgegevens | Caps Consult</title>
+  <meta name="description" content="Officiele bedrijfsgegevens van Caps Consult, inclusief adres, telefoon, e-mail, LinkedIn, btw-nummer en KvK-nummer." />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --brand: #0f3057;
+      --accent: #f05f22;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #020617;
+        --text: #f1f5f9;
+        --muted: #cbd5e1;
+        --surface: #0f172a;
+        --border: #1e293b;
+        --brand: #93c5fd;
+        --accent: #fb923c;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+
+    .top-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .top-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .top-link:hover {
+      color: var(--accent);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+      line-height: 1.25;
+      color: var(--brand);
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      color: var(--brand);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .details-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .details-list li strong {
+      display: inline-block;
+      min-width: 110px;
+    }
+
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 700;
+      background: color-mix(in srgb, var(--surface) 88%, var(--bg));
+    }
+
+    .action-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="top-links">
+      <a class="top-link" href="index.html">&larr; Homepage</a>
+      <a class="top-link" href="cookiebeleid.html">Cookiebeleid</a>
+      <a class="top-link" href="privacybeleid.html">Privacyverklaring</a>
+    </div>
+
+    <section class="card">
+      <h1>Bedrijfsgegevens</h1>
+      <p class="muted">Laatst bijgewerkt: 10 februari 2026</p>
+      <ul class="details-list">
+        <li><strong>Bedrijf:</strong> Caps Consult</li>
+        <li><strong>Adres:</strong> Mastenbroek 13, 4822 XG Breda</li>
+        <li><strong>BTW-nummer:</strong> NL003482262B27</li>
+        <li><strong>KvK-nummer:</strong> 80757855</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Samenwerking (Wet DBA)</h2>
+      <p class="muted">Caps Consult werkt uitsluitend op opdrachtbasis.</p>
+      <ul class="details-list">
+        <li><strong>Contractvorm:</strong> Opdrachtovereenkomst (geen arbeidsovereenkomst)</li>
+        <li><strong>Uitvoering:</strong> Zelfstandig met eigen planning en verantwoordelijkheid</li>
+        <li><strong>Afspraken:</strong> Duidelijke scope, resultaat en oplevermomenten per opdracht</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Direct contact</h2>
+      <p class="muted">Klik op een van onderstaande opties om direct contact op te nemen.</p>
+      <div class="link-grid">
+        <a class="action-link" href="tel:+31643725043" aria-label="Bel Caps Consult op +31 6 43 72 50 43">
+          <span>Telefoon</span>
+          <span>+31 6 43 72 50 43</span>
+        </a>
+        <a class="action-link" href="mailto:capsconsult@outlook.com" aria-label="Mail Caps Consult op capsconsult@outlook.com">
+          <span>E-mail</span>
+          <span>capsconsult@outlook.com</span>
+        </a>
+        <a class="action-link" href="https://www.linkedin.com/in/matthias-van-wageningen-6a7758157/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk LinkedIn-profiel van Matthias van Wageningen (opent in nieuw tabblad)">
+          <span>LinkedIn</span>
+          <span>Matthias van Wageningen</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <script src="assets/visitor-tracker.js" defer></script>
+</body>
+</html>

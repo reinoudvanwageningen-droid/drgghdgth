@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /bezoekers.html
+
+Sitemap: https://reinoudvanwageningen-droid.github.io/capsconsult/sitemap.xml

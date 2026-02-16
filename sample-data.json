@@ -1,0 +1,64 @@
+{
+  "company": {
+    "name": "Skylink Travel B.V.",
+    "logo_text": "ST",
+    "street": "Keizersgracht 123",
+    "postcode": "1015 CJ",
+    "city": "Amsterdam",
+    "email": "finance@skylinktravel.nl",
+    "phone": "+31 20 123 4567",
+    "iban": "NL91 ABNA 0417 1643 00",
+    "kvk": "98765432",
+    "vat_id": "NL123456789B01"
+  },
+  "invoice": {
+    "number": "2024-0891",
+    "date": "08-02-2024",
+    "payment_term_days": 14,
+    "note": "Betaling onder vermelding van factuurnummer. Bij vragen: finance@skylinktravel.nl"
+  },
+  "bill_to": {
+    "name": "Wanderlust Events",
+    "street": "Damrak 45",
+    "postcode": "1012 LL",
+    "city": "Amsterdam",
+    "country": "Nederland",
+    "vat_id": "NL998877665B01"
+  },
+  "trip": {
+    "from": "Amsterdam",
+    "to": "Barcelona",
+    "date": "15-01-2024",
+    "flight": "KL1743",
+    "reference": "WL-TRIP-204"
+  },
+  "vat": {
+    "percentage": 21
+  },
+  "items": [
+    {
+      "description": "Return ticket AMS-BCN",
+      "subline": "Bruto tarief inclusief bagage",
+      "quantity": 4,
+      "unit": "stuk",
+      "price": 189.5,
+      "commission": 12.5
+    },
+    {
+      "description": "Luchthavenservice",
+      "subline": "Meet & assist service",
+      "quantity": 1,
+      "unit": "service",
+      "price": 145,
+      "commission": 0
+    },
+    {
+      "description": "Reisverzekering",
+      "subline": "Annuleringsdekking 60%",
+      "quantity": 4,
+      "unit": "polis",
+      "price": 32.75,
+      "commission": 5
+    }
+  ]
+}

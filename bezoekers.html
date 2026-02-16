@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Bezoekersstatistiek | Caps Consult</title>
+  <meta name="description" content="Overzicht van anonieme bezoekaantallen van de website van Caps Consult." />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --brand: #0f3057;
+      --accent: #f05f22;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #020617;
+        --text: #f1f5f9;
+        --muted: #cbd5e1;
+        --surface: #0f172a;
+        --border: #1e293b;
+        --brand: #93c5fd;
+        --accent: #fb923c;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+
+    .top-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .top-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .top-link:hover {
+      color: var(--accent);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+      line-height: 1.25;
+      color: var(--brand);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .metric {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .metric-value {
+      font-size: clamp(1.9rem, 3.2vw, 2.4rem);
+      font-weight: 800;
+      color: var(--brand);
+    }
+
+    .stats-grid {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+
+    .stat-box {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px;
+      background: color-mix(in srgb, var(--surface) 85%, var(--bg));
+    }
+
+    .stat-label {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .stat-value {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--brand);
+    }
+
+    button {
+      margin-top: 12px;
+      border: 1px solid var(--brand);
+      background: transparent;
+      color: var(--brand);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="top-links">
+      <a class="top-link" href="index.html">&larr; Homepage</a>
+      <a class="top-link" href="privacybeleid.html">Privacybeleid</a>
+      <a class="top-link" href="cookiebeleid.html">Cookiebeleid</a>
+    </div>
+
+    <section class="card">
+      <h1>Bezoekersstatistiek</h1>
+      <p class="muted">
+        Dit overzicht toont een anonieme teller van websitebezoeken. Er worden geen trackingcookies gebruikt.
+      </p>
+      <div class="metric">
+        <span>Totaal aantal websitebezoeken</span>
+        <span id="visitor-count" class="metric-value">...</span>
+        <span id="last-updated" class="muted"></span>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-label">Direct</span>
+          <span id="source-direct" class="stat-value">...</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">LinkedIn</span>
+          <span id="source-linkedin" class="stat-value">...</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Google</span>
+          <span id="source-google" class="stat-value">...</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Overig</span>
+          <span id="source-overig" class="stat-value">...</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Mobiel</span>
+          <span id="device-mobiel" class="stat-value">...</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Desktop</span>
+          <span id="device-desktop" class="stat-value">...</span>
+        </div>
+      </div>
+      <button id="refresh-button" type="button">Vernieuwen</button>
+    </section>
+  </main>
+
+  <script>
+    const namespace = "capsconsult-nl";
+    const counters = [
+      { key: "page-visits", elementId: "visitor-count" },
+      { key: "source-direct", elementId: "source-direct" },
+      { key: "source-linkedin", elementId: "source-linkedin" },
+      { key: "source-google", elementId: "source-google" },
+      { key: "source-overig", elementId: "source-overig" },
+      { key: "device-mobiel", elementId: "device-mobiel" },
+      { key: "device-desktop", elementId: "device-desktop" }
+    ];
+    const visitorCountElement = document.getElementById("visitor-count");
+    const lastUpdatedElement = document.getElementById("last-updated");
+    const refreshButton = document.getElementById("refresh-button");
+
+    async function fetchCounterValue(counterKey) {
+      const endpoint = `https://api.countapi.xyz/get/${namespace}/${counterKey}`;
+      const response = await fetch(endpoint, { cache: "no-store" });
+      if (!response.ok) {
+        return 0;
+      }
+      const data = await response.json();
+      return data.value || 0;
+    }
+
+    async function loadVisitorCount() {
+      try {
+        counters.forEach((counter) => {
+          const element = document.getElementById(counter.elementId);
+          if (element) {
+            element.textContent = "...";
+          }
+        });
+
+        const values = await Promise.all(counters.map((counter) => fetchCounterValue(counter.key)));
+        const formatter = new Intl.NumberFormat("nl-NL");
+
+        counters.forEach((counter, index) => {
+          const element = document.getElementById(counter.elementId);
+          if (element) {
+            element.textContent = formatter.format(values[index]);
+          }
+        });
+        lastUpdatedElement.textContent = `Laatst ververst: ${new Date().toLocaleString("nl-NL")}`;
+      } catch (error) {
+        visitorCountElement.textContent = "Niet beschikbaar";
+        lastUpdatedElement.textContent = "Probeer het later opnieuw.";
+      }
+    }
+
+    refreshButton.addEventListener("click", loadVisitorCount);
+    loadVisitorCount();
+  </script>
+</body>
+</html>

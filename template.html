@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factuur {{invoice.number}}</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <div class="logo-block">
+          <div class="logo">{{company.logo_text}}</div>
+          <div class="company-name">{{company.name}}</div>
+        </div>
+        <div class="invoice-title">
+          <h1>FACTUUR</h1>
+          <div class="invoice-meta">
+            <div>
+              <span class="label">Factuurnr</span>
+              <span class="value">{{invoice.number}}</span>
+            </div>
+            <div>
+              <span class="label">Datum</span>
+              <span class="value">{{invoice.date}}</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="info-cards">
+        <article class="card">
+          <h2>FACTUURADRES</h2>
+          <p class="strong">{{bill_to.name}}</p>
+          <p>{{bill_to.street}}</p>
+          <p>{{bill_to.postcode}} {{bill_to.city}}</p>
+          <p>{{bill_to.country}}</p>
+          <p class="muted">BTW: {{bill_to.vat_id}}</p>
+        </article>
+        <article class="card">
+          <h2>REISGEGEVENS</h2>
+          <div class="trip-row">
+            <span class="label">Traject</span>
+            <span class="value">{{trip.from}} → {{trip.to}}</span>
+          </div>
+          <div class="trip-row">
+            <span class="label">Reisdatum</span>
+            <span class="value">{{trip.date}}</span>
+          </div>
+          <div class="trip-row">
+            <span class="label">Vlucht</span>
+            <span class="value">{{trip.flight}}</span>
+          </div>
+          <div class="trip-row">
+            <span class="label">Referentie</span>
+            <span class="value">{{trip.reference}}</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="items">
+        <table>
+          <thead>
+            <tr>
+              <th>OMSCHRIJVING</th>
+              <th class="numeric">AANTAL</th>
+              <th class="numeric">EENHEID</th>
+              <th class="numeric">PRIJS</th>
+              <th class="numeric">PROVISIE</th>
+              <th class="numeric">TOTAAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each items}}
+            <tr>
+              <td>
+                <div class="description">{{description}}</div>
+                <div class="subline">{{subline}}</div>
+              </td>
+              <td class="numeric">{{quantity}}</td>
+              <td class="numeric">{{unit}}</td>
+              <td class="numeric">{{price_formatted}}</td>
+              <td class="numeric">{{commission_formatted}}</td>
+              <td class="numeric">{{total_formatted}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </section>
+
+      <section class="totals">
+        <div class="note">
+          <p class="muted">{{invoice.note}}</p>
+        </div>
+        <div class="totals-card">
+          <div class="row">
+            <span>Subtotaal</span>
+            <span>{{totals.subtotal}}</span>
+          </div>
+          <div class="row">
+            <span>BTW ({{vat.percentage}}%)</span>
+            <span>{{totals.vat}}</span>
+          </div>
+          <div class="row total">
+            <span>TOTAAL</span>
+            <span>{{totals.total}}</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="divider"></div>
+        <p class="payment-term">Gelieve dit bedrag binnen {{invoice.payment_term_days}} dagen over te maken.</p>
+        <div class="footer-grid">
+          <div>
+            <p class="strong">{{company.name}}</p>
+            <p>{{company.street}}</p>
+            <p>{{company.postcode}} {{company.city}}</p>
+          </div>
+          <div>
+            <p class="strong">Contact</p>
+            <p>{{company.email}}</p>
+            <p>{{company.phone}}</p>
+          </div>
+          <div>
+            <p class="strong">Betaling</p>
+            <p>IBAN: {{company.iban}}</p>
+            <p>KVK: {{company.kvk}}</p>
+            <p>BTW: {{company.vat_id}}</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacybeleid | Caps Consult</title>
+  <meta name="description" content="Privacybeleid van Caps Consult over welke gegevens wij verwerken en waarom." />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --brand: #0f3057;
+      --accent: #f05f22;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #020617;
+        --text: #f1f5f9;
+        --muted: #cbd5e1;
+        --surface: #0f172a;
+        --border: #1e293b;
+        --brand: #93c5fd;
+        --accent: #fb923c;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+
+    .top-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .top-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .top-link:hover {
+      color: var(--accent);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+      line-height: 1.25;
+      color: var(--brand);
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      color: var(--brand);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .list {
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+
+    .list li {
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="top-links">
+      <a class="top-link" href="index.html" aria-label="Terug naar homepage">&larr; Homepage</a>
+      <a class="top-link" href="cookiebeleid.html">Cookiebeleid</a>
+      <a class="top-link" href="bedrijfsgegevens.html">Bedrijfsgegevens</a>
+    </div>
+
+    <section class="card">
+      <h1>Privacybeleid</h1>
+      <p class="muted">Laatst bijgewerkt: 10 februari 2026</p>
+      <p style="margin-top: 10px;">
+        Caps Consult gaat zorgvuldig om met persoonsgegevens. Op deze website verzamelen wij alleen
+        gegevens die nodig zijn voor contact en een basisbezoekstatistiek zonder cookies.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Welke gegevens verwerken wij?</h2>
+      <ul class="list">
+        <li>Gegevens die u zelf verstrekt via e-mail of telefoon (bijvoorbeeld naam en vraag).</li>
+        <li>Anonieme bezoekersaantallen en verkeersbronnen via een externe tellerdienst (CountAPI) zonder trackingcookies.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Waarvoor gebruiken wij deze gegevens?</h2>
+      <ul class="list">
+        <li>Om uw vraag te beantwoorden en contact met u op te nemen.</li>
+        <li>Om in te zien hoeveel bezoekers de website ontvangt.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Externe tellerdienst</h2>
+      <p>
+        Voor de anonieme bezoekersmeting gebruiken wij CountAPI. Caps Consult ziet alleen
+        geaggregeerde telstanden en geen individuele bezoekersprofielen. De teller gebruikt geen
+        trackingcookies en wordt overgeslagen wanneer Do Not Track of Global Privacy Control actief is.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Hoe lang bewaren wij gegevens?</h2>
+      <p>
+        Contactgegevens bewaren wij niet langer dan noodzakelijk voor het afhandelen van uw vraag
+        of samenwerking. Anonieme bezoekstatistieken bevatten geen direct herleidbare persoonsgegevens.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Uw rechten</h2>
+      <p>
+        U kunt altijd vragen om inzage, correctie of verwijdering van persoonsgegevens die u aan
+        ons heeft verstrekt. Neem daarvoor contact op via onderstaande gegevens.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <p>
+        Contact opnemen kan via
+        <a href="mailto:capsconsult@outlook.com">capsconsult@outlook.com</a> of
+        <a href="tel:+31643725043">+31 6 43 72 50 43</a>.
+      </p>
+      <p style="margin-top: 8px;">
+        Alle bedrijfsgegevens, inclusief btw-nummer en KvK-nummer, staan op de pagina
+        <a href="bedrijfsgegevens.html">Bedrijfsgegevens</a>.
+      </p>
+    </section>
+  </main>
+  <script src="assets/visitor-tracker.js" defer></script>
+</body>
+</html>
