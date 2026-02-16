@@ -161,6 +161,15 @@
       stroke-linejoin: round;
     }
 
+    .bullet-icon { flex: 0 0 auto; display: block; }
+    .hero-bullets .bullet,
+    .hero-bullets .chip,
+    .hero-bullets li {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     .footer-inner {
       display: grid;
       grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr);
@@ -414,17 +423,33 @@
         </div>
 
         <!-- Mini credibility strip -->
-        <div class="mt-10 md:mt-12 relative -translate-y-2 sm:translate-y-0 flex flex-col sm:flex-row gap-3 justify-center items-center text-white/85">
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-            <i class="fa-solid fa-drafting-compass text-caps-orange"></i>
+        <div class="hero-bullets mt-10 md:mt-12 relative -translate-y-2 sm:translate-y-0 flex flex-col sm:flex-row gap-3 justify-center items-center text-white/85">
+          <div class="bullet inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 transition-colors hover:text-caps-orange">
+            <svg class="bullet-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M5 21l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M9 15l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M14.5 3.5l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12.8 5.2l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M11.2 6.8l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M3 19c2-1.2 4 1.2 6 0s4-1.2 6 0 4 1.2 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
             <span class="text-sm font-semibold">Grond-, weg- en waterbouw</span>
           </div>
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-            <i class="fa-solid fa-compass-drafting text-caps-orange"></i>
+          <div class="bullet inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 transition-colors hover:text-caps-orange">
+            <svg class="bullet-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M8.5 12.2l2.2 2.2 4.8-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             <span class="text-sm font-semibold">Vakmanschap en betrouwbaarheid</span>
           </div>
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-            <i class="fa-solid fa-clipboard-check text-caps-orange"></i>
+          <div class="bullet inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 transition-colors hover:text-caps-orange">
+            <svg class="bullet-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 7h7a3 3 0 013 3v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 7v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M14.5 14.5h3v3h-3v-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M18.5 14.5h3v3h-3v-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M14.5 18.5h3v3h-3v-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
             <span class="text-sm font-semibold">Van riolering tot verharding</span>
           </div>
         </div>
