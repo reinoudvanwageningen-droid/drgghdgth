@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bedrijfsgegevens | JVW Infraservice</title>
   <meta name="description" content="Officiele bedrijfsgegevens van JVW Infraservice, inclusief adres, telefoon, e-mail, LinkedIn en KvK-nummer." />
+  <link rel="stylesheet" href="assets/tailwind.css" />
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" />
+  <script>
+    (function () {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.classList.toggle("dark", prefersDark);
+    })();
+  </script>
   <style>
     :root {
       color-scheme: light dark;
@@ -15,6 +23,10 @@
       --border: #dfe3ea;
       --brand: #0d3c60;
       --accent: #e97a08;
+      --jvw-navy: #0d3c60;
+      --jvw-accent: #ec7f24;
+      --jvw-orange: #e97a08;
+      --jvw-orange-dk: #c96800;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -44,27 +56,68 @@
     .container {
       max-width: 920px;
       margin: 0 auto;
-      padding: 28px 16px 48px;
+      padding: 104px 16px 48px;
     }
 
-    .top-links {
+    @media (min-width: 768px) {
+      .container {
+        padding-top: 124px;
+      }
+    }
+
+    .text-caps-blue { color: var(--jvw-navy) !important; }
+    .text-caps-orange { color: var(--jvw-orange) !important; }
+    .bg-caps-orange { background-color: var(--jvw-orange) !important; }
+    .hover\:bg-orange-600:hover { background-color: var(--jvw-orange-dk) !important; }
+    .hover\:text-caps-orange:hover { color: var(--jvw-orange) !important; }
+    .focus-visible\:ring-caps-orange:focus-visible { --tw-ring-color: var(--jvw-orange) !important; }
+    .shadow-soft { box-shadow: 0 12px 30px rgba(13, 60, 96, 0.12) !important; }
+    .shadow-soft2 { box-shadow: 0 18px 50px rgba(13, 60, 96, 0.18) !important; }
+
+    .jvw-brand {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .top-link {
-      display: inline-flex;
       align-items: center;
-      gap: 8px;
-      color: var(--brand);
-      text-decoration: none;
-      font-weight: 700;
+      gap: 12px;
     }
 
-    .top-link:hover {
-      color: var(--accent);
+    .jvw-brand .brandkit-logo {
+      height: clamp(46px, 4.4vw, 62px);
+      width: auto;
+      display: block;
+    }
+
+    .jvw-brand .brand-name {
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+      line-height: 1.05;
+      color: var(--jvw-navy);
+      font-size: clamp(16px, 1.4vw, 20px);
+      text-transform: none;
+      white-space: nowrap;
+    }
+
+    .jvw-brand .brand-name .jvw {
+      color: var(--jvw-accent);
+      letter-spacing: -0.8px;
+    }
+
+    .jvw-brand .brand-name .sub {
+      font-weight: 700;
+      color: var(--jvw-navy);
+      opacity: 0.95;
+    }
+
+    @media (max-width: 768px) {
+      .jvw-brand .brandkit-logo {
+        height: 50px;
+      }
+
+      .jvw-brand .brand-name {
+        font-size: 16px;
+        letter-spacing: -0.4px;
+        max-width: 180px;
+      }
     }
 
     .card {
@@ -134,13 +187,52 @@
     }
   </style>
 </head>
-<body>
-  <main class="container">
-    <div class="top-links">
-      <a class="top-link" href="index.html">&larr; Homepage</a>
-      <a class="top-link" href="cookiebeleid.html">Cookiebeleid</a>
-      <a class="top-link" href="privacybeleid.html">Privacyverklaring</a>
+<body class="overflow-x-hidden">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:text-caps-blue dark:focus:bg-slate-900 dark:focus:text-slate-100 focus:px-4 focus:py-2 focus:rounded-lg shadow-soft">
+    Naar content
+  </a>
+
+  <nav class="fixed w-full z-50 bg-white/80 dark:bg-slate-950/85 backdrop-blur-md border-b border-gray-100 dark:border-slate-800 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 md:h-20">
+        <a href="index.html#home" aria-label="Ga naar homepage" class="jvw-brand flex-shrink-0">
+          <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo object-contain" />
+          <div class="brand-name">
+            <span class="jvw">JVW</span>
+            <span class="sub">Infra Service</span>
+          </div>
+        </a>
+
+        <div class="hidden lg:flex space-x-8 items-center">
+          <a href="index.html#home" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Home</a>
+          <a href="index.html#diensten" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Expertise</a>
+          <a href="index.html#over-ons" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Over ons</a>
+          <a href="projecten.html" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Projecten</a>
+          <a href="index.html#contact" class="bg-caps-orange text-white px-5 py-2.5 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft transform hover:-translate-y-0.5">
+            Contact <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+        <div class="lg:hidden flex items-center">
+          <button onclick="toggleMobileMenu()" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" id="mobile-menu-button" class="p-2 rounded-md text-caps-blue dark:text-slate-200 hover:text-caps-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
     </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 absolute w-full shadow-soft2 top-16 md:top-20">
+      <div class="px-4 pt-4 pb-6 space-y-2">
+        <a href="index.html#home" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl active:bg-gray-100 dark:active:bg-slate-700">Home</a>
+        <a href="index.html#diensten" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl active:bg-gray-100 dark:active:bg-slate-700">Expertise</a>
+        <a href="index.html#over-ons" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl active:bg-gray-100 dark:active:bg-slate-700">Over ons</a>
+        <a href="projecten.html" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl active:bg-gray-100 dark:active:bg-slate-700">Projecten</a>
+        <a href="index.html#contact" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-extrabold text-white bg-caps-orange rounded-xl text-center shadow-soft mt-3">Neem contact op</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content" class="container">
 
     <section class="card">
       <h1>Bedrijfsgegevens</h1>
@@ -182,5 +274,79 @@
     </section>
   </main>
   <script src="assets/visitor-tracker.js" defer></script>
+  <script>
+    const nav = document.querySelector("nav");
+    const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function applySystemTheme() {
+      const isDark = systemThemeQuery.matches;
+      document.documentElement.classList.toggle("dark", isDark);
+      updateNavBackground(window.scrollY > 20);
+    }
+
+    function updateNavBackground(scrolled) {
+      if (!nav) return;
+      if (scrolled) {
+        nav.classList.add("shadow-soft");
+        nav.classList.remove("bg-white/80", "dark:bg-slate-950/85");
+        nav.classList.add("bg-white/95", "dark:bg-slate-950/95");
+      } else {
+        nav.classList.remove("shadow-soft", "bg-white/95", "dark:bg-slate-950/95");
+        nav.classList.add("bg-white/80", "dark:bg-slate-950/85");
+      }
+    }
+
+    applySystemTheme();
+
+    if (typeof systemThemeQuery.addEventListener === "function") {
+      systemThemeQuery.addEventListener("change", applySystemTheme);
+    } else if (typeof systemThemeQuery.addListener === "function") {
+      systemThemeQuery.addListener(applySystemTheme);
+    }
+
+    window.addEventListener("scroll", () => {
+      updateNavBackground(window.scrollY > 20);
+    });
+
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+
+    function setMobileMenuOpen(isOpen) {
+      if (!mobileMenu || !mobileMenuButton) return;
+      mobileMenu.classList.toggle("hidden", !isOpen);
+      mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+      mobileMenuButton.setAttribute("aria-label", isOpen ? "Sluit menu" : "Open menu");
+      document.body.classList.toggle("overflow-hidden", isOpen);
+    }
+
+    window.toggleMobileMenu = function toggleMobileMenu() {
+      if (!mobileMenu) return;
+      const isOpen = !mobileMenu.classList.contains("hidden");
+      setMobileMenuOpen(!isOpen);
+    };
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        setMobileMenuOpen(false);
+      }
+    });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileMenu && !mobileMenu.classList.contains("hidden")) {
+        setMobileMenuOpen(false);
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!mobileMenu || !mobileMenuButton || mobileMenu.classList.contains("hidden")) {
+        return;
+      }
+      if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+        setMobileMenuOpen(false);
+      }
+    });
+
+    setMobileMenuOpen(false);
+  </script>
 </body>
 </html>
