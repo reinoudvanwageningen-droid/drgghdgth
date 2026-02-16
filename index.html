@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JVW Infraservice | Grond, Weg en Waterbouw</title>
-  <meta name="description" content="JVW Infraservice is actief in de grond-, weg- en waterbouw en levert vakmanschap en betrouwbaarheid bij ieder project. Van rioleringswerkzaamheden tot complete terreinverhardingen." />
+  <title>JVW Infraservice | Project- en Werkvoorbereiding in de Scheepsbouw</title>
+  <meta name="description" content="JVW Infraservice ondersteunt scheepsbouwprojecten met project- en werkvoorbereiding, werfbegeleiding en oplevering. Praktisch, onafhankelijk en resultaatgericht." />
   <meta name="theme-color" content="#0D3C60" />
   <link rel="canonical" href="https://reinoudvanwageningen-droid.github.io/capsconsult/" />
   <meta property="og:locale" content="nl_NL" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="JVW Infraservice | Grond, Weg en Waterbouw" />
-  <meta property="og:description" content="JVW Infraservice levert vakmanschap en betrouwbaarheid bij ieder project, van riolering tot terreinverharding." />
+  <meta property="og:title" content="JVW Infraservice | Project- en Werkvoorbereiding in de Scheepsbouw" />
+  <meta property="og:description" content="JVW Infraservice ondersteunt scheepsbouwprojecten met project- en werkvoorbereiding, werfbegeleiding en oplevering." />
   <meta property="og:url" content="https://reinoudvanwageningen-droid.github.io/capsconsult/" />
   <meta property="og:site_name" content="JVW Infraservice" />
-  <meta property="og:image" content="https://reinoudvanwageningen-droid.github.io/capsconsult/images/jvw-werf-1920.webp" />
+  <meta property="og:image" content="https://reinoudvanwageningen-droid.github.io/capsconsult/images/WhatsApp-Image-2025-12-11-at-20.50.36.jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="JVW Infraservice | Grond, Weg en Waterbouw" />
-  <meta name="twitter:description" content="JVW Infraservice levert vakmanschap en betrouwbaarheid bij ieder project, van riolering tot terreinverharding." />
-  <meta name="twitter:image" content="https://reinoudvanwageningen-droid.github.io/capsconsult/images/jvw-werf-1920.webp" />
-  <link rel="preload" as="image" href="images/jvw-werf-1920.webp" />
+  <meta name="twitter:title" content="JVW Infraservice | Project- en Werkvoorbereiding in de Scheepsbouw" />
+  <meta name="twitter:description" content="JVW Infraservice ondersteunt scheepsbouwprojecten met project- en werkvoorbereiding, werfbegeleiding en oplevering." />
+  <meta name="twitter:image" content="https://reinoudvanwageningen-droid.github.io/capsconsult/images/WhatsApp-Image-2025-12-11-at-20.50.36.jpeg" />
+  <link rel="preload" as="image" href="images/WhatsApp-Image-2025-12-11-at-20.50.36.jpeg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS (static build) -->
   <link rel="stylesheet" href="assets/tailwind.css" />
@@ -40,6 +44,18 @@
       --jvw-navy-90: #1a4d74;
       --jvw-orange: #e97a08;
       --jvw-orange-dk: #c96800;
+    }
+
+    body {
+      font-family: "Outfit", "Inter", "Arial", sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .brand-title {
+      font-family: "Anybody", "Outfit", "Inter", "Arial", sans-serif;
     }
 
     /* Subtiele text shadow voor hero */
@@ -120,6 +136,13 @@
       background-size: 100% 160%;
     }
 
+    .jvw-logo-chip {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(13, 60, 96, 0.12);
+      border-radius: 0.85rem;
+      padding: 0.35rem 0.45rem;
+    }
+
     /* JvW brand overrides for Tailwind custom caps-* utilities */
     .text-caps-blue { color: var(--jvw-navy) !important; }
     .text-caps-orange { color: var(--jvw-orange) !important; }
@@ -180,7 +203,7 @@
           "@id": "https://reinoudvanwageningen-droid.github.io/capsconsult/#localbusiness",
           "name": "JVW Infraservice",
           "url": "https://reinoudvanwageningen-droid.github.io/capsconsult/",
-          "image": "https://reinoudvanwageningen-droid.github.io/capsconsult/images/jvw-werf-1920.webp",
+          "image": "https://reinoudvanwageningen-droid.github.io/capsconsult/images/WhatsApp-Image-2025-12-11-at-20.50.36.jpeg",
           "email": "capsconsult@outlook.com",
           "telephone": "+31 6 43 72 50 43",
           "priceRange": "€€",
@@ -209,13 +232,15 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16 md:h-20">
         <!-- Logo -->
-        <div class="flex-shrink-0 flex items-center gap-2 md:gap-3">
-          <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="w-12 h-12 md:w-14 md:h-14 object-contain" />
+        <a href="#home" class="flex-shrink-0 flex items-center gap-2 md:gap-3" aria-label="Ga naar home">
+          <span class="jvw-logo-chip shadow-soft">
+            <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="w-10 h-10 md:w-12 md:h-12 object-contain" />
+          </span>
           <div>
-            <span class="block text-caps-blue font-extrabold text-base sm:text-lg md:text-xl leading-none tracking-tight">JVW</span>
-            <span class="block text-caps-orange font-extrabold text-xs md:text-sm leading-none tracking-wide">INFRASERVICE</span>
+            <span class="block brand-title text-caps-blue font-black text-base sm:text-lg md:text-xl leading-none tracking-tight">JVW</span>
+            <span class="block text-caps-orange font-extrabold text-[0.64rem] md:text-xs leading-none tracking-[0.16em] uppercase">Infraservice</span>
           </div>
-        </div>
+        </a>
 
         <!-- Desktop Menu -->
         <div class="hidden lg:flex space-x-8 items-center">
@@ -253,7 +278,7 @@
   <!-- Hero -->
   <section id="home" class="relative min-h-[max(480px,100svh)] sm:min-h-[max(560px,100svh)] md:min-h-[max(560px,100dvh)] flex items-center justify-center diagonal-divider overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img src="images/jvw-werf-1280.webp" srcset="images/jvw-werf-1280.webp 1280w, images/jvw-werf-1920.webp 1920w" sizes="100vw" alt="JVW Infraservice voertuig en tractor op projectlocatie" width="1920" height="1440" loading="eager" fetchpriority="high" decoding="async" class="w-full h-full object-cover scale-[1.02]" />
+      <img src="images/WhatsApp-Image-2025-12-11-at-20.50.36.jpeg" alt="JVW Infraservice op projectlocatie" width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async" class="w-full h-full object-cover scale-[1.02]" />
       <div class="absolute inset-0 hero-overlay"></div>
 
       <!-- Subtiele grid/filmgrain vibe -->
@@ -268,27 +293,27 @@
       <div class="animate-fadeUp">
         <span class="inline-flex items-center gap-2 py-1.5 px-3 rounded-full bg-white/10 backdrop-blur border border-white/15 text-white text-xs md:text-sm font-extrabold tracking-wider mb-5 uppercase shadow-soft">
           <span class="inline-block w-2 h-2 rounded-full bg-caps-orange animate-pulse"></span>
-          Grond · Weg · Waterbouw
+          Project- en werkvoorbereiding voor de scheepsbouw
         </span>
 
         <h1 class="text-3xl md:text-6xl font-black text-white mb-4 md:mb-6 leading-tight text-shadow tracking-tight">
-          Vakmanschap in infra,<br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-orange-400 to-orange-200 bg-[length:200%_200%] animate-shimmer">van riolering tot terreinverharding</span>
+          Grip op uw scheepsbouwproject,<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-200 via-orange-400 to-orange-200 bg-[length:200%_200%] animate-shimmer">van scope tot oplevering</span>
         </h1>
 
         <p class="text-base md:text-xl text-gray-100/90 mb-8 md:mb-10 max-w-2xl mx-auto font-light text-shadow px-2">
-          JVW Infraservice is een toonaangevend bedrijf in de grond-, weg- en waterbouw.
-          Wij leveren vakmanschap en betrouwbaarheid bij ieder project, van rioleringswerkzaamheden tot complete terreinverhardingen.
+          JVW Infraservice brengt structuur, planning en technische diepgang in uw project.
+          Zo voorkomt u vertragingen, beperkt u faalkosten en houdt u controle van engineering tot oplevering.
         </p>
 
         <div class="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-0">
           <a href="#contact" class="group bg-caps-orange text-white px-8 py-4 rounded-full font-extrabold text-lg hover:bg-orange-600 transition shadow-soft w-full sm:w-auto">
-            Offerte aanvragen
+            Plan een vrijblijvend gesprek
             <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
           </a>
 
           <a href="#diensten" class="bg-white/10 backdrop-blur-md border border-white/25 text-white px-8 py-4 rounded-full font-extrabold text-lg hover:bg-white hover:text-caps-blue transition shadow-soft w-full sm:w-auto">
-            Meer informatie
+            Bekijk onze expertise
           </a>
         </div>
 
@@ -296,15 +321,15 @@
         <div class="mt-10 md:mt-12 relative -translate-y-2 sm:translate-y-0 flex flex-col sm:flex-row gap-3 justify-center items-center text-white/85">
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
             <i class="fa-solid fa-drafting-compass text-caps-orange"></i>
-            <span class="text-sm font-semibold">Grond-, weg- en waterbouw</span>
+            <span class="text-sm font-semibold">Project- en werkvoorbereiding</span>
           </div>
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
             <i class="fa-solid fa-compass-drafting text-caps-orange"></i>
-            <span class="text-sm font-semibold">Vakmanschap en betrouwbaarheid</span>
+            <span class="text-sm font-semibold">Onafhankelijk en hands-on</span>
           </div>
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
             <i class="fa-solid fa-clipboard-check text-caps-orange"></i>
-            <span class="text-sm font-semibold">Van riolering tot verharding</span>
+            <span class="text-sm font-semibold">Heldere regie en communicatie</span>
           </div>
         </div>
       </div>
@@ -328,10 +353,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="text-center mb-10 md:mb-16">
         <h2 class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Diensten</h2>
-        <h3 class="text-2xl md:text-4xl font-black text-caps-blue dark:text-slate-100">Wat wij voor u uitvoeren</h3>
+        <h3 class="text-2xl md:text-4xl font-black text-caps-blue dark:text-slate-100">Wat wij voor u doen</h3>
         <div class="w-24 h-1 bg-caps-orange mx-auto mt-4 rounded-full"></div>
         <p class="mt-4 text-gray-600 dark:text-slate-300 max-w-2xl mx-auto text-base md:text-base">
-          Van eerste grondwerk tot de laatste afwerking: wij leveren complete infra-oplossingen, praktisch en met duidelijke planning.
+          Van scope en specificaties tot uitvoering op de werf: wij maken plannen uitvoerbaar en beheersbaar.
         </p>
       </div>
 
@@ -344,14 +369,14 @@
             </div>
             <span class="text-xs font-extrabold text-caps-blue/70 bg-caps-blue/5 px-3 py-1 rounded-full">01</span>
           </div>
-          <h4 class="text-lg md:text-xl font-black text-gray-900 dark:text-slate-100 mb-3">Grondwerk en bouwrijp maken</h4>
+          <h4 class="text-lg md:text-xl font-black text-gray-900 dark:text-slate-100 mb-3">Technische werkvoorbereiding</h4>
           <p class="text-gray-600 dark:text-slate-300 leading-relaxed mb-5 text-base md:text-base">
-            Wij verzorgen ontgraven, aanvullen en egaliseren als solide basis voor nieuwbouw, infra en terreininrichting.
+            Wij vertalen eisen en tekeningen naar uitvoerbare werkpakketten die passen bij planning, capaciteit en kwaliteitsdoelen.
           </p>
           <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-2">
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Uitgraven, afgraven en profileren</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Aan- en afvoer van grondstoffen</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Bouwrijp maken van kavels en terreinen</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Specificaties, tekeningen en revisies</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Materiaalkeuzes en leveranciersafstemming</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Bouwvolgorde, werkpakketten en planning</li>
           </ul>
         </div>
 
@@ -364,14 +389,14 @@
             </div>
             <span class="text-xs font-extrabold text-caps-blue/70 bg-caps-blue/5 px-3 py-1 rounded-full">02</span>
           </div>
-          <h4 class="text-lg md:text-xl font-black text-gray-900 dark:text-slate-100 mb-3">Rioleringswerkzaamheden</h4>
+          <h4 class="text-lg md:text-xl font-black text-gray-900 dark:text-slate-100 mb-3">Begeleiding op de werf</h4>
           <p class="text-gray-600 dark:text-slate-300 leading-relaxed mb-5 text-base md:text-base">
-            Aanleg, vervanging en herstel van riolering met focus op duurzame afwatering en betrouwbare werking.
+            Tijdens de uitvoering houden we overzicht, bewaken we kwaliteit en stemmen we dagelijks af met alle betrokken partijen.
           </p>
           <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-2">
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Huisaansluitingen en kolken</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Hemelwater- en vuilwaterriolering</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Inspectie, herstel en vervanging</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Casco, outfitting en installaties</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Testen, inbedrijfstelling en overdracht</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Oplevering, punchlists en restpunten</li>
           </ul>
         </div>
 
@@ -383,14 +408,14 @@
             </div>
             <span class="text-xs font-extrabold text-caps-blue/70 bg-caps-blue/5 px-3 py-1 rounded-full">03</span>
           </div>
-          <h4 class="text-lg md:text-xl font-black text-gray-900 dark:text-slate-100 mb-3">Terrein- en wegverharding</h4>
+          <h4 class="text-lg md:text-xl font-black text-gray-900 dark:text-slate-100 mb-3">Projectvoorbereiding</h4>
           <p class="text-gray-600 dark:text-slate-300 leading-relaxed mb-5 text-base md:text-base">
-            Van opritten en bedrijfsterreinen tot complete verhardingen: strak uitgevoerd en klaar voor intensief gebruik.
+            We leggen een solide basis met duidelijke scope, realistische planning en beheersing van risico's en budget.
           </p>
           <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-2">
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Bestrating en opsluitbanden</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Fundering en onderbouw</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Afwerking en oplevering</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Scope, planning en mijlpalen</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Budgettering en kostenbewaking</li>
+            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Contracten, inkoop en leverancierssturing</li>
           </ul>
         </div>
       </div>
@@ -402,8 +427,8 @@
             <i class="fa-solid fa-stopwatch text-caps-orange"></i>
           </div>
           <div>
-            <p class="font-black text-caps-blue">Snel inzetbaar</p>
-            <p class="text-sm text-gray-600 dark:text-slate-300">Direct capaciteit op locatie</p>
+            <p class="font-black text-caps-blue">Goed voorbereid</p>
+            <p class="text-sm text-gray-600 dark:text-slate-300">Duidelijke scope en heldere werkpakketten</p>
           </div>
         </div>
         <div class="rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft p-5 flex items-center gap-4">
@@ -411,8 +436,8 @@
             <i class="fa-solid fa-screwdriver-wrench text-caps-blue"></i>
           </div>
           <div>
-            <p class="font-black text-caps-blue">Vakkundige uitvoering</p>
-            <p class="text-sm text-gray-600 dark:text-slate-300">Kwaliteit in iedere projectfase</p>
+            <p class="font-black text-caps-blue">Minder faalkosten</p>
+            <p class="text-sm text-gray-600 dark:text-slate-300">Issues eerder signaleren en sneller bijsturen</p>
           </div>
         </div>
         <div class="rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft p-5 flex items-center gap-4">
@@ -420,8 +445,8 @@
             <i class="fa-solid fa-file-circle-check text-caps-orange"></i>
           </div>
           <div>
-            <p class="font-black text-caps-blue">Duidelijke afspraken</p>
-            <p class="text-sm text-gray-600 dark:text-slate-300">Betrouwbaar van start tot oplevering</p>
+            <p class="font-black text-caps-blue">Voorspelbare oplevering</p>
+            <p class="text-sm text-gray-600 dark:text-slate-300">Strakke planning met focus op overdracht</p>
           </div>
         </div>
       </div>
@@ -437,30 +462,32 @@
       <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12 mt-4 md:mt-10">
         <div class="lg:w-1/2 order-2 lg:order-1">
           <h2 class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Over JVW Infraservice</h2>
-          <h3 class="text-xl sm:text-2xl md:text-4xl font-black mb-4 md:mb-6">Betrouwbare partner in infra</h3>
+          <h3 class="text-xl sm:text-2xl md:text-4xl font-black mb-4 md:mb-6">Over Matthias van Wageningen</h3>
           <p class="text-gray-200/90 mb-6 text-base md:text-lg leading-relaxed">
-            JVW Infraservice is een toonaangevend bedrijf in de grond-, weg- en waterbouw.
-            Wij leveren vakmanschap en betrouwbaarheid bij ieder project, met een praktische aanpak
-            en focus op kwaliteit in uitvoering.
+            Matthias van Wageningen is scheepsingenieur en oprichter van JVW Infraservice.
+            Met een hbo-opleiding in Scheepsbouwkunde en Maritieme Techniek (Rotterdam Mainport Institute)
+            en de minor Advanced Engineering Tools for ShipX (NHL Stenden) combineert hij technische
+            diepgang met een praktische aanpak.
           </p>
           <p class="text-gray-200/90 mb-6 text-base md:text-lg leading-relaxed">
-            Van rioleringswerkzaamheden tot complete terreinverhardingen:
-            wij denken mee vanaf de voorbereiding, schakelen snel tijdens de uitvoering
-            en leveren projecten netjes en betrouwbaar op.
+            Hij heeft brede ervaring in de scheepvaart en scheepsafbouw. Hij werkte voor verschillende
+            werven en maritieme bedrijven, waaronder Holland Shipyards Group, Ulstein en CCM3, en was
+            eerder binnenvaartschipper bij Concordia Damen. Vandaag ondersteunt hij projectteams met
+            werkvoorbereiding, coördinatie en voortgang op de werf.
           </p>
-          <a href="https://www.linkedin.com/in/matthias-van-wageningen-6a7758157/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk LinkedIn-profiel van JVW Infraservice (opent in nieuw tabblad)" class="inline-flex items-center gap-2 text-white font-semibold hover:text-orange-200 transition mb-2">
-            Bekijk ons LinkedIn-profiel
+          <a href="https://www.linkedin.com/in/matthias-van-wageningen-6a7758157/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk LinkedIn-profiel van Matthias van Wageningen (opent in nieuw tabblad)" class="inline-flex items-center gap-2 text-white font-semibold hover:text-orange-200 transition mb-2">
+            Bekijk het LinkedIn-profiel van Matthias
             <i class="fa-brands fa-linkedin text-caps-orange"></i>
           </a>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-6 md:mt-8">
             <div class="bg-white/10 p-4 rounded-2xl backdrop-blur border border-white/10">
-              <h4 class="text-caps-orange font-black text-xl sm:text-2xl">Ruim</h4>
-              <p class="text-sm text-gray-200/80">Vakmanschap in uitvoering</p>
+              <h4 class="text-caps-orange font-black text-xl sm:text-2xl">Ruime</h4>
+              <p class="text-sm text-gray-200/80">Praktijkervaring</p>
             </div>
             <div class="bg-white/10 p-4 rounded-2xl backdrop-blur border border-white/10">
               <h4 class="text-caps-orange font-black text-xl sm:text-2xl">100%</h4>
-              <p class="text-sm text-gray-200/80">Betrouwbaarheid</p>
+              <p class="text-sm text-gray-200/80">Onafhankelijk</p>
             </div>
           </div>
 
@@ -475,10 +502,10 @@
         <div class="lg:w-1/2 relative order-1 lg:order-2 w-full">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
             <div class="bg-white/10 p-2 md:p-3 rounded-2xl shadow-soft2 transform -rotate-1 hover:rotate-0 transition duration-500 border border-white/10">
-              <img src="images/jvw-werf-1280.webp" srcset="images/jvw-werf-1280.webp 1280w, images/jvw-werf-1920.webp 1920w" sizes="(min-width: 1024px) 32vw, (min-width: 640px) 50vw, 100vw" alt="JVW Infraservice wagen en tractor op werkterrein" width="1920" height="1440" loading="lazy" decoding="async" data-scroll-color-reveal class="rounded-xl w-full object-cover h-40 md:h-56 grayscale transition duration-700" />
+              <img src="images/WhatsApp-Image-2025-12-11-at-20.50.36.jpeg" alt="JVW Infraservice materieel op locatie" width="2040" height="1530" loading="lazy" decoding="async" data-scroll-color-reveal class="rounded-xl w-full object-cover h-40 md:h-56 grayscale transition duration-700" />
             </div>
             <div class="bg-white/10 p-2 md:p-3 rounded-2xl shadow-soft2 transform rotate-1 hover:rotate-0 transition duration-500 border border-white/10 mt-6">
-              <img src="images/jvw-transport-1280.webp" srcset="images/jvw-transport-1280.webp 1280w, images/jvw-transport-1920.webp 1920w" sizes="(min-width: 1024px) 32vw, (min-width: 640px) 50vw, 100vw" alt="JVW Infraservice voertuig met aanhanger in stedelijke omgeving" width="1920" height="1440" loading="lazy" decoding="async" data-scroll-color-reveal class="rounded-xl w-full object-cover h-40 md:h-56 grayscale transition duration-700" />
+              <img src="images/whatsapp-werf.jpg" alt="JVW Infraservice werkzaamheden op terrein" width="2040" height="1530" loading="lazy" decoding="async" data-scroll-color-reveal class="rounded-xl w-full object-cover h-40 md:h-56 grayscale transition duration-700" />
             </div>
           </div>
         </div>
@@ -495,46 +522,46 @@
           <h3 class="text-2xl md:text-4xl font-black text-caps-blue dark:text-slate-100">Projecten in beeld</h3>
         <div class="w-24 h-1 bg-caps-orange mx-auto mt-4 rounded-full"></div>
           <p class="mt-4 text-gray-600 dark:text-slate-300 max-w-2xl mx-auto text-base md:text-base">
-            Een greep uit werkzaamheden waarin voorbereiding, uitvoering en oplevering naadloos op elkaar aansluiten.
+            Een greep uit trajecten waarin voorbereiding, uitvoering en oplevering naadloos op elkaar aansluiten.
           </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
         <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-          <img src="images/jvw-werf-1280.webp" srcset="images/jvw-werf-1280.webp 1280w, images/jvw-werf-1920.webp 1920w" sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw" alt="JVW Infraservice voertuig en tractor op projectlocatie" width="1920" height="1440" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
+          <img src="images/whatsapp-werf.jpg" alt="JVW Infraservice project op locatie" width="2040" height="1530" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
           <div class="p-6">
-            <h4 class="font-black text-lg text-caps-blue dark:text-white">Grondwerk op projectlocatie</h4>
-            <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Voorbereidende werkzaamheden met ontgraven, profileren en het bouwrijp maken van het terrein voor een efficiënte projectstart.</p>
+            <h4 class="font-black text-lg text-caps-blue dark:text-white">Holland Shipyards | Rijnvliet &amp; Maasvliet</h4>
+            <p class="text-base text-gray-600 dark:text-slate-200 mt-2">In opdracht van Holland Shipyards Group verzorgde Matthias de werkvoorbereiding en coördinatie van de afbouwwerkzaamheden voor Rijnvliet en Maasvliet, inclusief werkpakketten, leveranciersafstemming, voortgangsbewaking en opleverpunten.</p>
           </div>
         </article>
         <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-          <img src="images/jvw-transport-1280.webp" srcset="images/jvw-transport-1280.webp 1280w, images/jvw-transport-1920.webp 1920w" sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw" alt="JVW Infraservice voertuig met aanhanger op locatie" width="1920" height="1440" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
+          <img src="images/WhatsApp-Image-2025-12-11-at-20.50.36.jpeg" alt="JVW Infraservice inzet van materieel" width="2040" height="1530" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
           <div class="p-6">
-            <h4 class="font-black text-lg text-caps-blue dark:text-white">Transport en logistiek</h4>
-            <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Betrouwbare inzet van materieel en transportmiddelen om werkzaamheden soepel en volgens planning uit te voeren.</p>
+            <h4 class="font-black text-lg text-caps-blue dark:text-white">Retrofit vrachtschip</h4>
+            <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Voorbereiding van werkpakketten, planning en leveranciersafstemming voor een retrofit met minimale operationele stilstand.</p>
           </div>
         </article>
         <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-          <img src="images/jvw-werf-1280.webp" srcset="images/jvw-werf-1280.webp 1280w, images/jvw-werf-1920.webp 1920w" sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw" alt="JVW Infraservice op grondwerkproject" width="1920" height="1440" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
+          <img src="images/whatsapp-werf.jpg" alt="JVW Infraservice in uitvoering" width="2040" height="1530" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
           <div class="p-6">
-            <h4 class="font-black text-lg text-caps-blue dark:text-white">Riolering en afwatering</h4>
-            <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Aanleg en herstel van rioleringsoplossingen met aandacht voor een duurzame afvoer van hemel- en vuilwater.</p>
+            <h4 class="font-black text-lg text-caps-blue dark:text-white">Nieuwbouw werftraject</h4>
+            <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Ondersteuning vanaf engineering tot werfstart, met focus op haalbare planning en strakke revisiebeheersing.</p>
           </div>
         </article>
         <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-          <img src="images/jvw-transport-1280.webp" srcset="images/jvw-transport-1280.webp 1280w, images/jvw-transport-1920.webp 1920w" sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw" alt="JVW Infraservice materieeltransport" width="1920" height="1440" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
+          <img src="images/WhatsApp-Image-2025-12-11-at-20.50.36.jpeg" alt="JVW Infraservice op werklocatie" width="2040" height="1530" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
           <div class="p-6">
-            <h4 class="font-black text-lg text-caps-blue dark:text-white">Terreinverharding</h4>
-            <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Van fundering tot afwerking: complete terrein- en wegverharding voor functionele en nette buitenruimtes.</p>
+            <h4 class="font-black text-lg text-caps-blue dark:text-white">Casco &amp; outfitting</h4>
+            <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Coördinatie van uitvoering en restpunten om een voorspelbare oplevering en soepele overdracht te realiseren.</p>
           </div>
         </article>
       </div>
 
       <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <img src="images/jvw-werf-1280.webp" srcset="images/jvw-werf-1280.webp 1280w, images/jvw-werf-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="JVW Infraservice op werkterrein" width="1920" height="1440" loading="lazy" decoding="async" class="rounded-2xl shadow-soft h-40 md:h-48 w-full object-cover" />
-        <img src="images/jvw-transport-1280.webp" srcset="images/jvw-transport-1280.webp 1280w, images/jvw-transport-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="JVW Infraservice voertuig met aanhanger" width="1920" height="1440" loading="lazy" decoding="async" class="rounded-2xl shadow-soft h-40 md:h-48 w-full object-cover" />
-        <img src="images/jvw-werf-1280.webp" srcset="images/jvw-werf-1280.webp 1280w, images/jvw-werf-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="JVW Infraservice in uitvoering" width="1920" height="1440" loading="lazy" decoding="async" class="rounded-2xl shadow-soft h-40 md:h-48 w-full object-cover" />
-        <img src="images/jvw-transport-1280.webp" srcset="images/jvw-transport-1280.webp 1280w, images/jvw-transport-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" alt="JVW Infraservice transportwerk" width="1920" height="1440" loading="lazy" decoding="async" class="rounded-2xl shadow-soft h-40 md:h-48 w-full object-cover" />
+        <img src="images/whatsapp-werf.jpg" alt="JVW Infraservice projectfoto" width="2040" height="1530" loading="lazy" decoding="async" class="rounded-2xl shadow-soft h-40 md:h-48 w-full object-cover" />
+        <img src="images/WhatsApp-Image-2025-12-11-at-20.50.36.jpeg" alt="JVW Infraservice transportfoto" width="2040" height="1530" loading="lazy" decoding="async" class="rounded-2xl shadow-soft h-40 md:h-48 w-full object-cover" />
+        <img src="images/whatsapp-werf.jpg" alt="JVW Infraservice werk op locatie" width="2040" height="1530" loading="lazy" decoding="async" class="rounded-2xl shadow-soft h-40 md:h-48 w-full object-cover" />
+        <img src="images/WhatsApp-Image-2025-12-11-at-20.50.36.jpeg" alt="JVW Infraservice uitvoering op terrein" width="2040" height="1530" loading="lazy" decoding="async" class="rounded-2xl shadow-soft h-40 md:h-48 w-full object-cover" />
       </div>
     </div>
   </section>
@@ -546,6 +573,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="py-4 flex flex-col lg:flex-row gap-5 lg:gap-8 lg:items-center lg:justify-between">
         <div class="text-center lg:text-left">
+          <div class="inline-flex items-center justify-center lg:justify-start mb-4 rounded-xl bg-white px-3 py-2 shadow-soft">
+            <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="lazy" decoding="async" class="w-24 h-24 object-contain" />
+          </div>
           <div class="flex flex-col items-center lg:items-start gap-1 text-sm">
             <a href="bedrijfsgegevens.html" class="hover:text-caps-orange transition">Bedrijfsgegevens</a>
             <a href="cookiebeleid.html" class="hover:text-caps-orange transition">Cookiebeleid</a>
@@ -565,7 +595,7 @@
               <i class="fa-solid fa-envelope"></i>
             </a>
           </div>
-          <a href="https://www.linkedin.com/in/matthias-van-wageningen-6a7758157/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk LinkedIn-profiel van JVW Infraservice (opent in nieuw tabblad)" class="inline-flex items-center justify-center gap-2 border border-white/50 px-5 py-2.5 rounded-xl font-black hover:border-caps-orange hover:text-caps-orange transition w-full text-center mt-2.5">
+          <a href="https://www.linkedin.com/in/matthias-van-wageningen-6a7758157/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk LinkedIn-profiel van Matthias van Wageningen (opent in nieuw tabblad)" class="inline-flex items-center justify-center gap-2 border border-white/50 px-5 py-2.5 rounded-xl font-black hover:border-caps-orange hover:text-caps-orange transition w-full text-center mt-2.5">
             Bekijk LinkedIn-profiel
             <i class="fa-brands fa-linkedin"></i>
           </a>
