@@ -220,6 +220,7 @@
 
     .dark .jvw-brand .brandkit-logo-dark {
       display: block;
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.32));
     }
 
     .dark .jvw-brand .brand-name {
@@ -229,6 +230,11 @@
     .dark .jvw-brand .brand-name .sub {
       color: #e2e8f0;
       opacity: 1;
+    }
+
+    .dark .jvw-brand .brand-name .jvw {
+      color: #f8fafc;
+      letter-spacing: -0.6px;
     }
 
     @media (max-width: 768px) {
@@ -316,19 +322,34 @@
       background-color: rgba(236, 127, 36, 0.12);
     }
 
+    .dark #diensten .card,
+    .dark #diensten .kpi-card {
+      border-color: rgba(233, 122, 8, 0.38) !important;
+      border-width: 1px;
+    }
+
     .dark #diensten .card-icon,
     .dark #diensten .kpi-card-icon {
-      color: #f1f5f9;
-      background-color: rgba(148, 163, 184, 0.16) !important;
-      border-color: rgba(226, 232, 240, 0.22);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+      color: #f5a84d;
+      background-color: rgba(233, 122, 8, 0.14) !important;
+      border-color: rgba(233, 122, 8, 0.42);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
     }
 
     .dark #diensten .card:hover .card-icon,
     .dark #diensten .kpi-card:hover .kpi-card-icon {
-      color: #f5a84d;
-      background-color: rgba(245, 168, 77, 0.2) !important;
-      border-color: rgba(245, 168, 77, 0.45);
+      color: #ffffff;
+      background-color: rgba(248, 250, 252, 0.18) !important;
+      border-color: rgba(248, 250, 252, 0.42);
+    }
+
+    .dark #diensten .card .fa-check {
+      color: #f5a84d !important;
+      transition: color .2s ease;
+    }
+
+    .dark #diensten .card:hover .fa-check {
+      color: #ffffff !important;
     }
 
     .bullet-icon {
@@ -551,7 +572,7 @@
         <!-- Logo -->
         <a href="#home" aria-label="Ga naar boven" class="jvw-brand flex-shrink-0">
           <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo brandkit-logo-light object-contain" />
-          <img src="images/logo-jvw-brandkit-white.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo brandkit-logo-dark object-contain" />
+          <img src="logo-jvw-brandkit-white.svg?v=2" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo brandkit-logo-dark object-contain" />
           <div class="brand-name">
             <span class="jvw">JVW</span>
             <span class="sub">Infra Service</span>
