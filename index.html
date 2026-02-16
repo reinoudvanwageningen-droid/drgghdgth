@@ -252,6 +252,37 @@
       gap: 10px;
     }
 
+    .project-cards-grid {
+      align-items: stretch;
+    }
+
+    .project-card-link {
+      display: block;
+      height: 100%;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .project-card-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .project-card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .project-card-body p {
+      flex: 1;
+    }
+
     .footer-inner {
       display: grid;
       grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr);
@@ -731,38 +762,38 @@
           </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-        <a href="projecten.html#project-grondwerk" class="block" aria-label="Bekijk project Grondwerk op projectlocatie">
-          <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="Nauwkeurig-inmeten-1024x683.jpg" alt="Nauwkeurig inmeten op projectlocatie voor grondwerk" width="1024" height="683" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
-            <div class="p-6">
+      <div class="project-cards-grid grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <a href="projecten.html#project-grondwerk" class="project-card-link block h-full" aria-label="Bekijk project Grondwerk op projectlocatie">
+          <article class="project-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group h-full flex flex-col">
+            <img src="Nauwkeurig-inmeten-1024x683.jpg" alt="Nauwkeurig inmeten op projectlocatie voor grondwerk" width="1024" height="683" loading="lazy" decoding="async" class="project-card-image w-full object-cover group-hover:scale-[1.02] transition duration-500" />
+            <div class="project-card-body p-6">
               <h4 class="font-black text-lg text-caps-blue dark:text-white">Grondwerk op projectlocatie</h4>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Voorbereidende werkzaamheden met ontgraven, profileren en het bouwrijp maken van het terrein voor een efficiënte projectstart.</p>
             </div>
           </article>
         </a>
-        <a href="projecten.html#project-transport" class="block" aria-label="Bekijk project Transport en logistiek">
-          <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="WhatsApp-Image-2025-12-11-at-20.50.36.jpeg" alt="JVW Infraservice voertuig met aanhanger op projectlocatie" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
-            <div class="p-6">
+        <a href="projecten.html#project-transport" class="project-card-link block h-full" aria-label="Bekijk project Transport en logistiek">
+          <article class="project-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group h-full flex flex-col">
+            <img src="WhatsApp-Image-2025-12-11-at-20.50.36.jpeg" alt="JVW Infraservice voertuig met aanhanger op projectlocatie" width="1600" height="1200" loading="lazy" decoding="async" class="project-card-image w-full object-cover group-hover:scale-[1.02] transition duration-500" />
+            <div class="project-card-body p-6">
               <h4 class="font-black text-lg text-caps-blue dark:text-white">Transport en logistiek</h4>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Betrouwbare inzet van materieel en transportmiddelen om werkzaamheden soepel en volgens planning uit te voeren.</p>
             </div>
           </article>
         </a>
-        <a href="projecten.html#project-riolering" class="block" aria-label="Bekijk project Riolering en afwatering">
-          <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="WhatsApp-Image-2025-12-11-at-20.51.09.jpeg" alt="JVW Infraservice in uitvoering tijdens grondwerkproject" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
-            <div class="p-6">
+        <a href="projecten.html#project-riolering" class="project-card-link block h-full" aria-label="Bekijk project Riolering en afwatering">
+          <article class="project-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group h-full flex flex-col">
+            <img src="WhatsApp-Image-2025-12-11-at-20.51.09.jpeg" alt="JVW Infraservice in uitvoering tijdens grondwerkproject" width="1600" height="1200" loading="lazy" decoding="async" class="project-card-image w-full object-cover group-hover:scale-[1.02] transition duration-500" />
+            <div class="project-card-body p-6">
               <h4 class="font-black text-lg text-caps-blue dark:text-white">Riolering en afwatering</h4>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Aanleg en herstel van rioleringsoplossingen met aandacht voor een duurzame afvoer van hemel- en vuilwater.</p>
             </div>
           </article>
         </a>
-        <a href="projecten.html#project-terrein" class="block" aria-label="Bekijk project Terreinverharding">
-          <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="6fca6caa-83aa-4b54-b8ce-3cd0525b5e94.jpg" alt="JVW Infraservice materieel op locatie voor terreinwerk" width="2040" height="1530" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
-            <div class="p-6">
+        <a href="projecten.html#project-terrein" class="project-card-link block h-full" aria-label="Bekijk project Terreinverharding">
+          <article class="project-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group h-full flex flex-col">
+            <img src="6fca6caa-83aa-4b54-b8ce-3cd0525b5e94.jpg" alt="JVW Infraservice materieel op locatie voor terreinwerk" width="2040" height="1530" loading="lazy" decoding="async" class="project-card-image w-full object-cover group-hover:scale-[1.02] transition duration-500" />
+            <div class="project-card-body p-6">
               <h4 class="font-black text-lg text-caps-blue dark:text-white">Terreinverharding</h4>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Van fundering tot afwerking: complete terrein- en wegverharding voor functionele en nette buitenruimtes.</p>
             </div>
