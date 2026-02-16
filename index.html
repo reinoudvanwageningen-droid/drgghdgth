@@ -188,6 +188,37 @@
       }
     }
 
+    .about-photo {
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (min-width: 769px) {
+      .about-photo img {
+        height: 14rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-photo {
+        aspect-ratio: 4/3;
+        max-height: 260px;
+      }
+
+      .about-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 18%;
+      }
+    }
+
     #diensten .card-icon {
       color: #0c2a3a;
       transition: color .2s ease, background-color .2s ease;
@@ -675,7 +706,7 @@
 
         <div class="lg:w-1/2 relative order-1 lg:order-2 w-full">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-            <div class="bg-white/10 p-2 md:p-3 rounded-2xl shadow-soft2 transform -rotate-1 hover:rotate-0 transition duration-500 border border-white/10">
+            <div class="about-photo bg-white/10 p-2 md:p-3 rounded-2xl shadow-soft2 transform -rotate-1 hover:rotate-0 transition duration-500 border border-white/10">
               <img src="assets/images/Schermafbeelding-2026-01-12-144414.png" alt="Portret van Joost van Wageningen" width="797" height="798" loading="lazy" decoding="async" data-scroll-color-reveal class="rounded-xl w-full object-cover h-40 md:h-56 grayscale transition duration-700" />
             </div>
             <div class="bg-white/10 p-2 md:p-3 rounded-2xl shadow-soft2 transform rotate-1 hover:rotate-0 transition duration-500 border border-white/10 mt-6">
