@@ -166,6 +166,10 @@
       display: block;
     }
 
+    .jvw-brand .brandkit-logo-dark {
+      display: none;
+    }
+
     .jvw-brand .brand-name {
       margin: 0;
       font-weight: 800;
@@ -186,6 +190,23 @@
       font-weight: 700;
       color: var(--jvw-navy);
       opacity: 0.95;
+    }
+
+    .dark .jvw-brand .brandkit-logo-light {
+      display: none;
+    }
+
+    .dark .jvw-brand .brandkit-logo-dark {
+      display: block;
+    }
+
+    .dark .jvw-brand .brand-name {
+      color: #f8fafc;
+    }
+
+    .dark .jvw-brand .brand-name .sub {
+      color: #e2e8f0;
+      opacity: 1;
     }
 
     @media (max-width: 768px) {
@@ -483,7 +504,8 @@
       <div class="flex justify-between items-center h-16 md:h-20">
         <!-- Logo -->
         <a href="#home" aria-label="Ga naar boven" class="jvw-brand flex-shrink-0">
-          <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo object-contain" />
+          <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo brandkit-logo-light object-contain" />
+          <img src="images/logo-jvw-brandkit-white.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo brandkit-logo-dark object-contain" />
           <div class="brand-name">
             <span class="jvw">JVW</span>
             <span class="sub">Infra Service</span>
@@ -768,7 +790,7 @@
         <div class="lg:w-1/2 relative order-1 lg:order-2 w-full">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
             <div class="about-photo bg-white/10 p-2 md:p-3 rounded-2xl shadow-soft2 transform -rotate-1 hover:rotate-0 transition duration-500 border border-white/10">
-              <img src="assets/images/joost-van-wageningen-jvw-infraservice.webp" alt="Portret van Joost van Wageningen" width="797" height="798" loading="lazy" decoding="async" data-scroll-color-reveal class="rounded-xl w-full object-cover h-40 md:h-56 grayscale transition duration-700" />
+              <img src="WhatsApp Image 2026-01-27 at 22.08.24.jpeg" alt="Portret van Joost van Wageningen" width="797" height="798" loading="lazy" decoding="async" data-scroll-color-reveal class="rounded-xl w-full object-cover h-40 md:h-56 grayscale transition duration-700" />
             </div>
             <div class="bg-white/10 p-2 md:p-3 rounded-2xl shadow-soft2 transform rotate-1 hover:rotate-0 transition duration-500 border border-white/10 mt-6">
               <img src="images/jvw-infraservice-werkbus-aanhanger.webp" srcset="images/jvw-infraservice-werkbus-aanhanger.webp 1280w, images/jvw-infraservice-transport-gww.webp 1920w" sizes="(min-width: 1024px) 32vw, (min-width: 640px) 50vw, 100vw" alt="JVW Infraservice voertuig met aanhanger in stedelijke omgeving" width="1920" height="1440" loading="lazy" decoding="async" data-scroll-color-reveal class="rounded-xl w-full object-cover h-40 md:h-56 grayscale transition duration-700" />
