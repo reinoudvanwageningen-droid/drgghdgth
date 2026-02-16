@@ -161,6 +161,95 @@
       stroke-linejoin: round;
     }
 
+    .footer-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap: 2rem 2.5rem;
+      align-items: start;
+    }
+
+    .footer-left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .footer-address {
+      margin: 0;
+      padding-top: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      max-width: 34ch;
+      font-style: normal;
+      line-height: 1.65;
+      color: rgba(226, 232, 240, 0.92);
+    }
+
+    .footer-address-title {
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .footer-right-col {
+      width: 100%;
+      max-width: 460px;
+      margin-left: auto;
+    }
+
+    .footer-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.625rem;
+    }
+
+    .footer-bottom {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    @media (max-width: 720px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .footer-left-col,
+      .footer-right-col {
+        max-width: none;
+        margin-left: 0;
+      }
+
+      .footer-links {
+        align-items: center;
+      }
+
+      .footer-address {
+        max-width: 36ch;
+        margin-inline: auto;
+        text-align: center;
+      }
+
+      .footer-right-col > p {
+        text-align: center !important;
+      }
+
+      .footer-actions {
+        grid-template-columns: 1fr !important;
+      }
+
+      .footer-actions a,
+      .footer-linkedin {
+        width: 100% !important;
+        justify-content: center;
+      }
+    }
+
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
       .animate-fadeUp,
@@ -589,18 +678,26 @@
   <!-- Footer -->
   <footer id="contact" class="bg-caps-blue text-white pt-8 pb-8 border-t border-white/10 dark:bg-slate-900 dark:border-slate-700">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="py-4 flex flex-col lg:flex-row gap-5 lg:gap-8 lg:items-center lg:justify-between">
-        <div class="text-center lg:text-left">
-          <div class="flex flex-col items-center lg:items-start gap-1 text-sm">
+      <div class="footer-inner py-4">
+        <div class="footer-left-col text-center lg:text-left">
+          <div class="footer-links items-center lg:items-start text-sm">
             <a href="bedrijfsgegevens.html" class="hover:text-caps-orange transition">Bedrijfsgegevens</a>
             <a href="cookiebeleid.html" class="hover:text-caps-orange transition">Cookiebeleid</a>
             <a href="privacybeleid.html" class="hover:text-caps-orange transition">Privacyverklaring</a>
           </div>
+
+          <address class="footer-address text-sm">
+            <span class="footer-address-title block">JVW Infra Service</span>
+            <span class="block">Joost van Wageningen</span>
+            <span class="block">Dorpstraat 63</span>
+            <span class="block">3342 BC Hendrik-Ido-Ambacht</span>
+            <span class="block">Nederland</span>
+          </address>
         </div>
 
-        <div class="w-full lg:w-auto">
+        <div class="footer-right-col">
           <p class="text-center lg:text-left font-extrabold text-sm md:text-base mb-3">Neem contact met ons op:</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 lg:min-w-[420px]">
+          <div class="footer-actions">
             <a href="tel:+31643725043" class="inline-flex items-center justify-center gap-2 bg-caps-orange text-white px-5 py-2.5 rounded-xl font-black hover:bg-orange-600 transition w-full text-center shadow-soft">
               Bel ons
               <i class="fa-solid fa-phone"></i>
@@ -610,14 +707,14 @@
               <i class="fa-solid fa-envelope"></i>
             </a>
           </div>
-          <a href="https://www.linkedin.com/in/joost-van-wageningen-9538163a2/?originalSubdomain=nl" target="_blank" rel="noopener noreferrer" aria-label="Bekijk LinkedIn-profiel van JVW Infraservice (opent in nieuw tabblad)" class="inline-flex items-center justify-center gap-2 border border-white/50 px-5 py-2.5 rounded-xl font-black hover:border-caps-orange hover:text-caps-orange transition w-full text-center mt-2.5">
+          <a href="https://www.linkedin.com/in/joost-van-wageningen-9538163a2/?originalSubdomain=nl" target="_blank" rel="noopener noreferrer" aria-label="Bekijk LinkedIn-profiel van JVW Infraservice (opent in nieuw tabblad)" class="footer-linkedin inline-flex items-center justify-center gap-2 border border-white/50 px-5 py-2.5 rounded-xl font-black hover:border-caps-orange hover:text-caps-orange transition w-full text-center mt-2.5">
             Bekijk LinkedIn-profiel
             <i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
       </div>
 
-      <div class="border-t border-white/10 pt-6 text-center text-sm text-gray-200">
+      <div class="footer-bottom text-center text-sm text-gray-200">
         <p>&copy; 2026 JVW Infraservice. Alle rechten voorbehouden.</p>
       </div>
     </div>
