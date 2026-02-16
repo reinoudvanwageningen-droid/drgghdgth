@@ -239,6 +239,24 @@
       stroke-linejoin: round;
     }
 
+    #diensten .kpi-card {
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    #diensten .kpi-card:hover {
+      transform: translateY(-2px);
+    }
+
+    #diensten .kpi-card-icon {
+      color: #0c2a3a;
+      transition: color .2s ease, background-color .2s ease;
+    }
+
+    #diensten .kpi-card:hover .kpi-card-icon {
+      color: #ec7f24;
+      background-color: rgba(236, 127, 36, 0.12);
+    }
+
     .bullet-icon {
       flex: 0 0 auto;
       display: block;
@@ -661,30 +679,30 @@
 
       <!-- Extra: KPI strip -->
       <div class="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft p-5 flex items-center gap-4">
-          <div class="w-12 h-12 rounded-2xl bg-caps-orange/10 flex items-center justify-center">
-            <i class="fa-solid fa-stopwatch text-caps-orange"></i>
+        <div class="kpi-card group rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-soft2 hover:border-caps-orange/30 p-5 flex items-center gap-4">
+          <div class="kpi-card-icon w-12 h-12 rounded-2xl bg-caps-blue/10 flex items-center justify-center">
+            <i class="fa-solid fa-stopwatch"></i>
           </div>
           <div>
-            <p class="font-black text-caps-blue">Snel inzetbaar</p>
+            <p class="font-black text-caps-blue transition group-hover:text-caps-orange">Snel inzetbaar</p>
             <p class="text-sm text-gray-600 dark:text-slate-300">Direct capaciteit op locatie</p>
           </div>
         </div>
-        <div class="rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft p-5 flex items-center gap-4">
-          <div class="w-12 h-12 rounded-2xl bg-caps-blue/10 flex items-center justify-center">
-            <i class="fa-solid fa-screwdriver-wrench text-caps-blue"></i>
+        <div class="kpi-card group rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-soft2 hover:border-caps-orange/30 p-5 flex items-center gap-4">
+          <div class="kpi-card-icon w-12 h-12 rounded-2xl bg-caps-blue/10 flex items-center justify-center">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
           </div>
           <div>
-            <p class="font-black text-caps-blue">Vakkundige uitvoering</p>
+            <p class="font-black text-caps-blue transition group-hover:text-caps-orange">Vakkundige uitvoering</p>
             <p class="text-sm text-gray-600 dark:text-slate-300">Kwaliteit in iedere projectfase</p>
           </div>
         </div>
-        <div class="rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft p-5 flex items-center gap-4">
-          <div class="w-12 h-12 rounded-2xl bg-caps-orange/10 flex items-center justify-center">
-            <i class="fa-solid fa-file-circle-check text-caps-orange"></i>
+        <div class="kpi-card group rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-soft2 hover:border-caps-orange/30 p-5 flex items-center gap-4">
+          <div class="kpi-card-icon w-12 h-12 rounded-2xl bg-caps-blue/10 flex items-center justify-center">
+            <i class="fa-solid fa-file-circle-check"></i>
           </div>
           <div>
-            <p class="font-black text-caps-blue">Duidelijke afspraken</p>
+            <p class="font-black text-caps-blue transition group-hover:text-caps-orange">Duidelijke afspraken</p>
             <p class="text-sm text-gray-600 dark:text-slate-300">Betrouwbaar van start tot oplevering</p>
           </div>
         </div>
