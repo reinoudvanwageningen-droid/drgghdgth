@@ -192,6 +192,44 @@ const getSitemapHtmlPages = () => {
   return [...new Set(htmlPages)];
 };
 
+const getMetaDescriptionContent = (htmlContent) => {
+  const metaTagPattern = /<meta\b[^>]*>/gi;
+  const attrPattern = /([^\s=]+)\s*=\s*("([^"]*)"|'([^']*)'|([^\s"'>]+))/g;
+  let tagMatch;
+
+  while ((tagMatch = metaTagPattern.exec(htmlContent)) !== null) {
+    const tag = tagMatch[0];
+    const attributes = {};
+    let attrMatch;
+    while ((attrMatch = attrPattern.exec(tag)) !== null) {
+      const name = attrMatch[1].toLowerCase();
+      const value = (attrMatch[3] ?? attrMatch[4] ?? attrMatch[5] ?? "").trim();
+      attributes[name] = value;
+    }
+
+    if ((attributes.name || "").toLowerCase() === "description") {
+      return attributes.content || "";
+    }
+  }
+
+  return "";
+};
+
+const hasCanonicalLink = (htmlContent) =>
+  /<link\b[^>]*rel\s*=\s*["']canonical["'][^>]*href\s*=\s*["'][^"']+["'][^>]*>/i.test(
+    htmlContent
+  );
+
+const getHeadingLevels = (htmlContent) => {
+  const levels = [];
+  const headingPattern = /<h([1-6])\b/gi;
+  let match;
+  while ((match = headingPattern.exec(htmlContent)) !== null) {
+    levels.push(Number(match[1]));
+  }
+  return levels;
+};
+
 const run = () => {
   const errors = [];
 
@@ -229,6 +267,39 @@ const run = () => {
     const htmlContent = fs.readFileSync(htmlAbsolutePath, "utf8");
     const references = collectAttributeValues(htmlContent);
 
+    if (!/<title>\s*[^<]+<\/title>/i.test(htmlContent)) {
+      errors.push(`Ontbrekende of lege <title> in ${htmlPage}`);
+    }
+
+    const metaDescription = getMetaDescriptionContent(htmlContent);
+    if (!metaDescription) {
+      errors.push(`Ontbrekende of lege meta description in ${htmlPage}`);
+    }
+
+    if ((htmlPage === "index.html" || htmlPage === "projecten.html") && !hasCanonicalLink(htmlContent)) {
+      errors.push(`Ontbrekende canonical link in ${htmlPage}`);
+    }
+
+    const headingLevels = getHeadingLevels(htmlContent);
+    if (!headingLevels.length) {
+      errors.push(`Geen headings gevonden in ${htmlPage}`);
+    } else {
+      if (headingLevels[0] !== 1) {
+        errors.push(`Eerste heading moet <h1> zijn in ${htmlPage}, gevonden: <h${headingLevels[0]}>`);
+      }
+
+      for (let i = 1; i < headingLevels.length; i += 1) {
+        const previous = headingLevels[i - 1];
+        const current = headingLevels[i];
+        if (current - previous > 1) {
+          errors.push(
+            `Onlogische heading-sprong in ${htmlPage}: <h${previous}> gevolgd door <h${current}>`
+          );
+          break;
+        }
+      }
+    }
+
     references.forEach((reference) => {
       if (isExternalReference(reference)) {
         return;
@@ -252,11 +323,9 @@ const run = () => {
       });
     });
 
-    if (htmlPage === "projecten.html") {
-      const h1Count = (htmlContent.match(/<h1\b/gi) || []).length;
-      if (h1Count !== 1) {
-        errors.push(`projecten.html moet exact 1 <h1> bevatten, gevonden: ${h1Count}`);
-      }
+    const h1Count = (htmlContent.match(/<h1\b/gi) || []).length;
+    if (h1Count !== 1) {
+      errors.push(`${htmlPage} moet exact 1 <h1> bevatten, gevonden: ${h1Count}`);
     }
   });
 
