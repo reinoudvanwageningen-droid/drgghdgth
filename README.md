@@ -1,46 +1,48 @@
-# Factuurtemplate (A4)
+# JVW Infraservice website
 
-Deze repo bevat een printvriendelijke A4 factuurtemplate die qua layout overeenkomt met het voorbeeld. Je kunt voorbeelddata aanpassen en een PDF genereren of een statische HTML publiceren.
+Deze repository bevat de statische website van **JVW Infraservice** met de volgende publieke pagina’s:
 
-## Installatie
+- `index.html` (home)
+- `projecten.html`
+- `bedrijfsgegevens.html`
+- `privacybeleid.html`
+- `cookiebeleid.html`
+
+Daarnaast is er een aparte statistiekpagina:
+
+- `bezoekers.html` (niet geïndexeerd via `noindex` + `robots.txt` uitsluiting)
+
+## Structuur
+
+- `images/` — logo’s en geoptimaliseerde webafbeeldingen
+- `assets/` — Tailwind CSS en bezoekersscript
+- `vendor/` — lokale vendorbestanden (o.a. Font Awesome/Tailwind runtime)
+- `.github/workflows/static.yml` — GitHub Pages deployment
+
+## Lokale preview
+
+Omdat het een statische site is, kun je de HTML-bestanden direct openen in je browser of serveren met een simpele lokale webserver.
+
+Voorbeeld met Python:
 
 ```bash
-npm install
+python3 -m http.server 8080
 ```
 
-Installeer vervolgens de browser binaries voor Playwright:
+Open daarna:
 
-```bash
-npx playwright install
-```
+- `http://localhost:8080/index.html`
+- `http://localhost:8080/projecten.html`
 
-## PDF renderen
+## Deployment (GitHub Pages)
 
-```bash
-npm run render
-```
+Publicatie gebeurt via de workflow:
 
-De output staat in `./out/factuur.pdf` en de gerenderde HTML in `./out/factuur.html`.
+- `.github/workflows/static.yml`
 
-## Online zetten (GitHub Pages)
+Deze workflow maakt een `.pages` artefact met de pagina’s en statische assets en deployed dat naar GitHub Pages.
 
-Genereer een statische HTML preview in de `docs/` map:
+## Ontwikkelnotitie
 
-```bash
-npm run build
-```
-
-Commit vervolgens `docs/` en zet GitHub Pages op `main` (of de gekozen branch) met de folder `/docs` als source. De pagina wordt dan gepubliceerd als statische factuurvoorbeeld.
-
-## Data vervangen
-
-Pas `sample-data.json` aan. Velden zoals BTW-percentage, items en adresgegevens worden automatisch ingelezen.
-
-Belangrijke velden:
-- `invoice.number`, `invoice.date`, `invoice.payment_term_days`
-- `bill_to.*` (factuuradres)
-- `trip.*` (reisgegevens)
-- `vat.percentage`
-- `items[]` met `description`, `subline`, `quantity`, `unit`, `price`, `commission`
-
-Bij het renderen worden bedragen automatisch geformatteerd in NL-notatie met €.
+In de repo staan ook enkele legacy-bestanden/scripts voor een eerder factuursjabloon-experiment.  
+Die horen niet bij de live JVW-site en worden niet gebruikt voor de huidige websitepublicatie.
