@@ -34,6 +34,20 @@ Open daarna:
 - `http://localhost:8080/index.html`
 - `http://localhost:8080/projecten.html`
 
+## Kwaliteitscontrole
+
+Controleer links en deployment-artefact met:
+
+```bash
+npm run check:site
+```
+
+Deze check valideert:
+- lokale `src`/`href`/`srcset`-referenties op gedeployde pagina’s;
+- of alle gebruikte bestanden in het GitHub Pages artefact terechtkomen;
+- of sitemap-pagina’s meegenomen worden;
+- of `projecten.html` exact één `<h1>` bevat.
+
 ## Deployment (GitHub Pages)
 
 Publicatie gebeurt via de workflow:

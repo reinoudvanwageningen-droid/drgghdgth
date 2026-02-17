@@ -5,7 +5,8 @@
   "description": "A4 factuurtemplate met HTML/CSS en PDF-render via Playwright.",
   "scripts": {
     "build": "node build.js",
-    "render": "node render.js"
+    "render": "node render.js",
+    "check:site": "node scripts/validate-site.js"
   },
   "dependencies": {
     "handlebars": "^4.7.8",
