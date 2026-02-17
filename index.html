@@ -203,67 +203,28 @@
       }
     }
 
-    #diensten .card-icon {
-      color: #0c2a3a;
-      transition: color .2s ease, background-color .2s ease;
-      border: 1px solid rgba(13, 60, 96, 0.12);
-      box-shadow: 0 8px 20px rgba(13, 60, 96, 0.08);
+    #diensten .service-card-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 0.95rem;
     }
 
-    #diensten .card:hover .card-icon {
-      color: #ec7f24;
-      background-color: rgba(236, 127, 36, 0.12);
+    #diensten .service-card-badge {
+      background-color: rgb(255 255 255 / 0.92);
+      color: rgb(13 60 96 / 0.95);
+      box-shadow: 0 8px 20px rgba(13, 60, 96, 0.22);
     }
 
-    #diensten .card-icon svg {
-      width: 28px;
-      height: 28px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    #diensten .kpi-card {
-      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-    }
-
-    #diensten .kpi-card:hover {
-      transform: translateY(-2px);
-    }
-
-    #diensten .kpi-card-icon {
-      color: #0c2a3a;
-      transition: color .2s ease, background-color .2s ease;
-      border: 1px solid rgba(13, 60, 96, 0.12);
-      box-shadow: 0 8px 20px rgba(13, 60, 96, 0.08);
-    }
-
-    #diensten .kpi-card:hover .kpi-card-icon {
-      color: #ec7f24;
-      background-color: rgba(236, 127, 36, 0.12);
-    }
-
-    .dark #diensten .card,
-    .dark #diensten .kpi-card {
+    .dark #diensten .card {
       border-color: rgba(233, 122, 8, 0.38) !important;
       border-width: 1px;
     }
 
-    .dark #diensten .card-icon,
-    .dark #diensten .kpi-card-icon {
-      color: #f5a84d;
-      background-color: rgba(233, 122, 8, 0.14) !important;
-      border-color: rgba(233, 122, 8, 0.42);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
-    }
-
-    .dark #diensten .card:hover .card-icon,
-    .dark #diensten .kpi-card:hover .kpi-card-icon {
-      color: #ffffff;
-      background-color: rgba(248, 250, 252, 0.18) !important;
-      border-color: rgba(248, 250, 252, 0.42);
+    .dark #diensten .service-card-badge {
+      border-color: rgba(233, 122, 8, 0.38) !important;
+      background-color: rgb(15 23 42 / 0.84);
+      color: #f8fafc;
     }
 
     .dark #diensten .card .check-icon {
@@ -355,7 +316,8 @@
           "email": "info@jvwinfraservice.nl",
           "telephone": "+31 6 46970719",
           "sameAs": [
-            "https://www.linkedin.com/in/joost-van-wageningen-9538163a2/?originalSubdomain=nl"
+            "https://www.linkedin.com/in/joost-van-wageningen-9538163a2/?originalSubdomain=nl",
+            "https://youtube.com/@jvw4772?si=N6F5Ns075HbC5VlD"
           ]
         },
         {
@@ -404,7 +366,7 @@
         <!-- Desktop Menu -->
         <div class="hidden lg:flex space-x-8 items-center">
           <a href="#home" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Home</a>
-          <a href="#diensten" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Expertise</a>
+          <a href="expertises.html" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Expertise</a>
           <a href="#over-ons" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Over ons</a>
           <a href="projecten.html" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Projecten</a>
           <a href="#contact" class="bg-caps-orange text-white px-5 py-2.5 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft transform hover:-translate-y-0.5">
@@ -425,7 +387,7 @@
     <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 absolute w-full shadow-soft2 top-16 md:top-20">
       <div class="px-4 pt-4 pb-6 space-y-2">
         <a href="#home" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl active:bg-gray-100 dark:active:bg-slate-700">Home</a>
-        <a href="#diensten" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl active:bg-gray-100 dark:active:bg-slate-700">Expertise</a>
+        <a href="expertises.html" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl active:bg-gray-100 dark:active:bg-slate-700">Expertise</a>
         <a href="#over-ons" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl active:bg-gray-100 dark:active:bg-slate-700">Over ons</a>
         <a href="projecten.html" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl active:bg-gray-100 dark:active:bg-slate-700">Projecten</a>
         <a href="#contact" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-extrabold text-white bg-caps-orange rounded-xl text-center shadow-soft mt-3">Neem contact op</a>
@@ -467,7 +429,7 @@
             <span aria-hidden="true" class="ml-2 transition-transform group-hover:translate-x-1">→</span>
           </a>
 
-          <a href="#diensten" class="bg-white/10 backdrop-blur-md border border-white/25 text-white px-8 py-4 rounded-full font-extrabold text-lg hover:bg-white hover:text-caps-blue transition shadow-soft w-full sm:w-auto">
+          <a href="expertises.html" class="bg-white/10 backdrop-blur-md border border-white/25 text-white px-8 py-4 rounded-full font-extrabold text-lg hover:bg-white hover:text-caps-blue transition shadow-soft w-full sm:w-auto">
             Meer informatie
           </a>
         </div>
@@ -527,16 +489,9 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         <!-- Card 1 -->
         <div class="card group bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 shadow-soft hover:shadow-soft2 transition duration-300 border border-gray-100 dark:border-slate-700 hover:border-caps-orange/30">
-          <div class="flex items-center justify-between mb-5">
-            <div class="card-icon w-14 h-14 md:w-16 md:h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
-              <svg viewBox="0 0 32 32" aria-hidden="true">
-                <path d="M6 23h20"></path>
-                <path d="M11 23l3.5-10h3L21 23"></path>
-                <path d="M15 10h2"></path>
-                <path d="M10 27h12"></path>
-              </svg>
-            </div>
-            <span class="text-xs font-extrabold text-caps-blue/70 bg-caps-blue/5 px-3 py-1 rounded-full">01</span>
+          <div class="relative mb-5">
+            <img src="grondwerk-nauwkeurig-inmeten.webp" alt="Uitvoering van grondwerk op projectlocatie" width="1024" height="683" loading="lazy" decoding="async" class="service-card-image" />
+            <span class="service-card-badge absolute top-3 right-3 text-xs font-extrabold px-3 py-1 rounded-full">01</span>
           </div>
           <h4 class="text-lg md:text-xl font-black text-gray-900 dark:text-slate-100 mb-3">Grondwerk</h4>
           <p class="text-gray-600 dark:text-slate-300 leading-relaxed mb-5 text-base md:text-base">
@@ -552,17 +507,9 @@
         <!-- Card 2 -->
         <div class="card group bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 shadow-soft hover:shadow-soft2 transition duration-300 border border-gray-100 dark:border-slate-700 hover:border-caps-orange/30 relative overflow-hidden">
           <div class="absolute top-0 right-0 bg-caps-orange text-white text-xs font-extrabold px-3 py-1 rounded-bl-xl shadow-soft">Kernactiviteit</div>
-          <div class="flex items-center justify-between mb-5">
-            <div class="card-icon w-14 h-14 md:w-16 md:h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
-              <svg viewBox="0 0 32 32" aria-hidden="true">
-                <path d="M4 11h10l3 2h11"></path>
-                <path d="M16 13v5"></path>
-                <path d="M6 20h20"></path>
-                <path d="M6 20l-2 5h24l-2-5"></path>
-                <path d="M10 25v2M16 25v2M22 25v2"></path>
-              </svg>
-            </div>
-            <span class="text-xs font-extrabold text-caps-blue/70 bg-caps-blue/5 px-3 py-1 rounded-full">02</span>
+          <div class="relative mb-5">
+            <img src="riolering-aanleggen-afwatering.webp" alt="Sleufwerk en aanleg voor kabels en leidingen" width="1600" height="1200" loading="lazy" decoding="async" class="service-card-image" />
+            <span class="service-card-badge absolute top-3 right-3 text-xs font-extrabold px-3 py-1 rounded-full">02</span>
           </div>
           <h4 class="text-lg md:text-xl font-black text-gray-900 dark:text-slate-100 mb-3">Kabels &amp; leidingen</h4>
           <p class="text-gray-600 dark:text-slate-300 leading-relaxed mb-5 text-base md:text-base">
@@ -577,17 +524,9 @@
 
         <!-- Card 3 -->
         <div class="card group bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 shadow-soft hover:shadow-soft2 transition duration-300 border border-gray-100 dark:border-slate-700 hover:border-caps-orange/30">
-          <div class="flex items-center justify-between mb-5">
-            <div class="card-icon w-14 h-14 md:w-16 md:h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
-              <svg viewBox="0 0 32 32" aria-hidden="true">
-                <rect x="7" y="8" width="18" height="11" rx="2"></rect>
-                <path d="M16 19v6"></path>
-                <path d="M13 26h6"></path>
-                <path d="M16 7v-2"></path>
-                <path d="M11 25c0 2.2 2.2 4 5 4s5-1.8 5-4"></path>
-              </svg>
-            </div>
-            <span class="text-xs font-extrabold text-caps-blue/70 bg-caps-blue/5 px-3 py-1 rounded-full">03</span>
+          <div class="relative mb-5">
+            <img src="terreinverharding-fundering-maken.webp" alt="Plaatsing van voorzieningen en buitenkasten op terrein" width="2040" height="1530" loading="lazy" decoding="async" class="service-card-image" />
+            <span class="service-card-badge absolute top-3 right-3 text-xs font-extrabold px-3 py-1 rounded-full">03</span>
           </div>
           <h4 class="text-lg md:text-xl font-black text-gray-900 dark:text-slate-100 mb-3">Aarding &amp; buitenkasten</h4>
           <p class="text-gray-600 dark:text-slate-300 leading-relaxed mb-5 text-base md:text-base">
@@ -598,37 +537,6 @@
             <li class="flex items-center"><span class="check-icon text-caps-orange mr-2" aria-hidden="true">✓</span>Aardpennen slaan &amp; meten</li>
             <li class="flex items-center"><span class="check-icon text-caps-orange mr-2" aria-hidden="true">✓</span>Oplevering volgens afspraak</li>
           </ul>
-        </div>
-      </div>
-
-      <!-- Extra: KPI strip -->
-      <div class="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="kpi-card group rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-soft2 hover:border-caps-orange/30 p-5 flex items-center gap-4">
-          <div class="kpi-card-icon w-12 h-12 rounded-2xl bg-caps-blue/10 flex items-center justify-center">
-            <span aria-hidden="true">⏱</span>
-          </div>
-          <div>
-            <p class="font-black text-caps-blue dark:text-slate-100 transition group-hover:text-caps-orange">Snel inzetbaar</p>
-            <p class="text-sm text-gray-600 dark:text-slate-300">Direct capaciteit op locatie</p>
-          </div>
-        </div>
-        <div class="kpi-card group rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-soft2 hover:border-caps-orange/30 p-5 flex items-center gap-4">
-          <div class="kpi-card-icon w-12 h-12 rounded-2xl bg-caps-blue/10 flex items-center justify-center">
-            <span aria-hidden="true">🛠</span>
-          </div>
-          <div>
-            <p class="font-black text-caps-blue dark:text-slate-100 transition group-hover:text-caps-orange">Vakkundige uitvoering</p>
-            <p class="text-sm text-gray-600 dark:text-slate-300">Kwaliteit in iedere projectfase</p>
-          </div>
-        </div>
-        <div class="kpi-card group rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-soft2 hover:border-caps-orange/30 p-5 flex items-center gap-4">
-          <div class="kpi-card-icon w-12 h-12 rounded-2xl bg-caps-blue/10 flex items-center justify-center">
-            <span aria-hidden="true">✅</span>
-          </div>
-          <div>
-            <p class="font-black text-caps-blue dark:text-slate-100 transition group-hover:text-caps-orange">Duidelijke afspraken</p>
-            <p class="text-sm text-gray-600 dark:text-slate-300">Betrouwbaar van start tot oplevering</p>
-          </div>
         </div>
       </div>
     </div>
@@ -772,20 +680,20 @@
 
         <div class="footer-right-col">
           <p class="font-extrabold text-sm md:text-base mb-3">Neem contact met ons op (reactie binnen &eacute;&eacute;n werkdag):</p>
-          <div class="footer-actions">
-            <a href="tel:+31646970719" class="inline-flex items-center justify-center gap-2 bg-caps-orange text-white px-5 py-2.5 rounded-xl font-black hover:bg-orange-600 transition w-full text-center shadow-soft">
-              Bel ons
-              <span aria-hidden="true">☎</span>
+          <div class="footer-contact-list text-sm">
+            <a href="tel:+31646970719" class="footer-contact-link">+31 6 46970719</a>
+            <a href="mailto:info@jvwinfraservice.nl" class="footer-contact-link">info@jvwinfraservice.nl</a>
+          </div>
+          <div class="footer-socials mt-3">
+            <a href="https://www.linkedin.com/in/joost-van-wageningen-9538163a2/?originalSubdomain=nl" target="_blank" rel="noopener noreferrer" aria-label="Bekijk LinkedIn-profiel van JVW Infraservice (opent in nieuw tabblad)" class="footer-social-btn">
+              LinkedIn
+              <span aria-hidden="true">in</span>
             </a>
-            <a href="mailto:info@jvwinfraservice.nl" class="inline-flex items-center justify-center gap-2 bg-caps-orange text-white px-5 py-2.5 rounded-xl font-black hover:bg-orange-600 transition w-full text-center shadow-soft">
-              Mail ons
-              <span aria-hidden="true">✉</span>
+            <a href="https://youtube.com/@jvw4772?si=N6F5Ns075HbC5VlD" target="_blank" rel="noopener noreferrer" aria-label="Bekijk JVW Infraservice op YouTube (opent in nieuw tabblad)" class="footer-social-btn">
+              YouTube
+              <span aria-hidden="true">▶</span>
             </a>
           </div>
-          <a href="https://www.linkedin.com/in/joost-van-wageningen-9538163a2/?originalSubdomain=nl" target="_blank" rel="noopener noreferrer" aria-label="Bekijk LinkedIn-profiel van JVW Infraservice (opent in nieuw tabblad)" class="footer-linkedin inline-flex items-center justify-center gap-2 border border-white/50 px-5 py-2.5 rounded-xl font-black hover:border-caps-orange hover:text-caps-orange transition w-full text-center mt-2.5">
-            Bekijk LinkedIn-profiel
-            <span aria-hidden="true">in</span>
-          </a>
         </div>
       </div>
 
