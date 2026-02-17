@@ -37,7 +37,7 @@ jobs:
         run: |
           mkdir -p .pages
           cp index.html projecten.html cookiebeleid.html privacybeleid.html bedrijfsgegevens.html bezoekers.html robots.txt sitemap.xml .pages/
-          cp "grondwerk-nauwkeurig-inmeten.webp" "transport-materieel-infraservice.webp" "riolering-aanleggen-afwatering.webp" "terreinverharding-fundering-maken.webp" "WhatsApp Image 2026-01-27 at 22.08.24.jpeg" .pages/
+          cp "grondwerk-nauwkeurig-inmeten.webp" "transport-materieel-infraservice.webp" "riolering-aanleggen-afwatering.webp" "terreinverharding-fundering-maken.webp" "joost-van-wageningen-portret.jpeg" .pages/
           cp -R images .pages/images
           cp -R assets .pages/assets
           cp -R vendor .pages/vendor
