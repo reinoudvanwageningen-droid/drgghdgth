@@ -7,6 +7,7 @@
 
 .text-caps-blue { color: var(--jvw-navy) !important; }
 .text-caps-orange { color: var(--jvw-orange) !important; }
+.bg-caps-blue { background-color: var(--jvw-navy) !important; }
 .bg-caps-orange { background-color: var(--jvw-orange) !important; }
 .hover\:bg-orange-600:hover { background-color: var(--jvw-orange-dk) !important; }
 .hover\:text-caps-orange:hover { color: var(--jvw-orange) !important; }
@@ -17,8 +18,10 @@
 .dark .dark\:text-slate-100 { color: #f1f5f9 !important; }
 .dark .dark\:text-slate-200 { color: #e2e8f0 !important; }
 .dark .dark\:text-slate-300 { color: #cbd5e1 !important; }
+.dark .dark\:text-white { color: #ffffff !important; }
 .dark .dark\:focus\:text-slate-100:focus { color: #f1f5f9 !important; }
 .dark .dark\:focus\:bg-slate-900:focus { background-color: #0f172a !important; }
+.dark .bg-caps-blue\/5 { background-color: rgb(148 163 184 / 0.14) !important; }
 
 .jvw-brand {
   display: flex;
