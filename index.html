@@ -25,9 +25,6 @@
   <link rel="stylesheet" href="assets/tailwind.css" />
   <link rel="stylesheet" href="assets/site.css" />
 
-  <!-- FontAwesome Icons (self-hosted) -->
-  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" />
-
   <script>
     (function () {
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -166,18 +163,6 @@
     .dark .text-caps-blue\/70 { color: rgb(148 163 184 / 0.95) !important; }
     .dark .bg-caps-blue\/5 { background-color: rgb(148 163 184 / 0.14) !important; }
 
-    i.fa-solid,
-    i.fa-brands {
-      line-height: 1;
-      vertical-align: middle;
-    }
-
-    .footer-actions i,
-    .footer-linkedin i {
-      font-size: 0.95rem;
-      color: currentColor;
-    }
-
     .dark .jvw-brand .brandkit-logo-dark {
       filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.32));
     }
@@ -281,12 +266,12 @@
       border-color: rgba(248, 250, 252, 0.42);
     }
 
-    .dark #diensten .card .fa-check {
+    .dark #diensten .card .check-icon {
       color: #f5a84d !important;
       transition: color .2s ease;
     }
 
-    .dark #diensten .card:hover .fa-check {
+    .dark #diensten .card:hover .check-icon {
       color: #ffffff !important;
     }
 
@@ -423,14 +408,14 @@
           <a href="#over-ons" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Over ons</a>
           <a href="projecten.html" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Projecten</a>
           <a href="#contact" class="bg-caps-orange text-white px-5 py-2.5 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft transform hover:-translate-y-0.5">
-            Contact <i class="fa-solid fa-arrow-right ml-1"></i>
+            Contact <span aria-hidden="true" class="ml-1">→</span>
           </a>
         </div>
 
         <!-- Mobile Menu Button -->
         <div class="lg:hidden flex items-center">
           <button onclick="toggleMobileMenu()" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" id="mobile-menu-button" class="p-2 rounded-md text-caps-blue dark:text-slate-200 hover:text-caps-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950">
-            <i class="fa-solid fa-bars text-2xl"></i>
+            <span aria-hidden="true" class="text-2xl leading-none">☰</span>
           </button>
         </div>
       </div>
@@ -479,7 +464,7 @@
         <div class="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-0">
           <a href="#contact" class="group bg-caps-orange text-white px-8 py-4 rounded-full font-extrabold text-lg hover:bg-orange-600 transition shadow-soft w-full sm:w-auto">
             Vrijblijvende offerte aanvragen
-            <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            <span aria-hidden="true" class="ml-2 transition-transform group-hover:translate-x-1">→</span>
           </a>
 
           <a href="#diensten" class="bg-white/10 backdrop-blur-md border border-white/25 text-white px-8 py-4 rounded-full font-extrabold text-lg hover:bg-white hover:text-caps-blue transition shadow-soft w-full sm:w-auto">
@@ -558,9 +543,9 @@
             Uitgraven, aanvullen en voorbereiden voor funderingen, aanbouwen en terreinwerk.
           </p>
           <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-2">
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Bouwputten &amp; sleuven</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Afvoer/verwerking van grond</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Voorbereiding voor vervolgstappen</li>
+            <li class="flex items-center"><span class="check-icon text-caps-orange mr-2" aria-hidden="true">✓</span>Bouwputten &amp; sleuven</li>
+            <li class="flex items-center"><span class="check-icon text-caps-orange mr-2" aria-hidden="true">✓</span>Afvoer/verwerking van grond</li>
+            <li class="flex items-center"><span class="check-icon text-caps-orange mr-2" aria-hidden="true">✓</span>Voorbereiding voor vervolgstappen</li>
           </ul>
         </div>
 
@@ -584,9 +569,9 @@
             Sleuven graven en tracés maken voor elektra, data en leidingen, inclusief aanvullen.
           </p>
           <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-2">
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Tracé uitzetten &amp; sleufwerk</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Inleggen/aanvullen volgens voorschrift</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Veilig en overzichtelijk gewerkt</li>
+            <li class="flex items-center"><span class="check-icon text-caps-orange mr-2" aria-hidden="true">✓</span>Tracé uitzetten &amp; sleufwerk</li>
+            <li class="flex items-center"><span class="check-icon text-caps-orange mr-2" aria-hidden="true">✓</span>Inleggen/aanvullen volgens voorschrift</li>
+            <li class="flex items-center"><span class="check-icon text-caps-orange mr-2" aria-hidden="true">✓</span>Veilig en overzichtelijk gewerkt</li>
           </ul>
         </div>
 
@@ -609,9 +594,9 @@
             Plaatsen van buitenkasten en uitvoeren van aardpenwerk in afstemming met installateur.
           </p>
           <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-2">
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Buitenkast plaatsen/stellen</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Aardpennen slaan &amp; meten</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-caps-orange mr-2"></i>Oplevering volgens afspraak</li>
+            <li class="flex items-center"><span class="check-icon text-caps-orange mr-2" aria-hidden="true">✓</span>Buitenkast plaatsen/stellen</li>
+            <li class="flex items-center"><span class="check-icon text-caps-orange mr-2" aria-hidden="true">✓</span>Aardpennen slaan &amp; meten</li>
+            <li class="flex items-center"><span class="check-icon text-caps-orange mr-2" aria-hidden="true">✓</span>Oplevering volgens afspraak</li>
           </ul>
         </div>
       </div>
@@ -620,7 +605,7 @@
       <div class="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="kpi-card group rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-soft2 hover:border-caps-orange/30 p-5 flex items-center gap-4">
           <div class="kpi-card-icon w-12 h-12 rounded-2xl bg-caps-blue/10 flex items-center justify-center">
-            <i class="fa-solid fa-stopwatch"></i>
+            <span aria-hidden="true">⏱</span>
           </div>
           <div>
             <p class="font-black text-caps-blue dark:text-slate-100 transition group-hover:text-caps-orange">Snel inzetbaar</p>
@@ -629,7 +614,7 @@
         </div>
         <div class="kpi-card group rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-soft2 hover:border-caps-orange/30 p-5 flex items-center gap-4">
           <div class="kpi-card-icon w-12 h-12 rounded-2xl bg-caps-blue/10 flex items-center justify-center">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span aria-hidden="true">🛠</span>
           </div>
           <div>
             <p class="font-black text-caps-blue dark:text-slate-100 transition group-hover:text-caps-orange">Vakkundige uitvoering</p>
@@ -638,7 +623,7 @@
         </div>
         <div class="kpi-card group rounded-2xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-soft hover:shadow-soft2 hover:border-caps-orange/30 p-5 flex items-center gap-4">
           <div class="kpi-card-icon w-12 h-12 rounded-2xl bg-caps-blue/10 flex items-center justify-center">
-            <i class="fa-solid fa-file-circle-check"></i>
+            <span aria-hidden="true">✅</span>
           </div>
           <div>
             <p class="font-black text-caps-blue dark:text-slate-100 transition group-hover:text-caps-orange">Duidelijke afspraken</p>
@@ -670,7 +655,7 @@
           </p>
           <a href="https://www.linkedin.com/in/joost-van-wageningen-9538163a2/?originalSubdomain=nl" target="_blank" rel="noopener noreferrer" aria-label="Bekijk LinkedIn-profiel van JVW Infraservice (opent in nieuw tabblad)" class="inline-flex items-center gap-2 text-white font-semibold hover:text-orange-200 transition mb-2">
             Bekijk het LinkedIn-profiel van Joost
-            <i class="fa-brands fa-linkedin text-caps-orange"></i>
+            <span aria-hidden="true" class="text-caps-orange">in</span>
           </a>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-6 md:mt-8">
@@ -687,7 +672,7 @@
           <div class="mt-7">
             <a href="#contact" class="inline-flex items-center gap-2 font-extrabold text-white fancy-link">
               Plan een vrijblijvend gesprek
-              <i class="fa-solid fa-arrow-right text-caps-orange"></i>
+              <span aria-hidden="true" class="text-caps-orange">→</span>
             </a>
           </div>
         </div>
@@ -790,16 +775,16 @@
           <div class="footer-actions">
             <a href="tel:+31646970719" class="inline-flex items-center justify-center gap-2 bg-caps-orange text-white px-5 py-2.5 rounded-xl font-black hover:bg-orange-600 transition w-full text-center shadow-soft">
               Bel ons
-              <i class="fa-solid fa-phone"></i>
+              <span aria-hidden="true">☎</span>
             </a>
             <a href="mailto:info@jvwinfraservice.nl" class="inline-flex items-center justify-center gap-2 bg-caps-orange text-white px-5 py-2.5 rounded-xl font-black hover:bg-orange-600 transition w-full text-center shadow-soft">
               Mail ons
-              <i class="fa-solid fa-envelope"></i>
+              <span aria-hidden="true">✉</span>
             </a>
           </div>
           <a href="https://www.linkedin.com/in/joost-van-wageningen-9538163a2/?originalSubdomain=nl" target="_blank" rel="noopener noreferrer" aria-label="Bekijk LinkedIn-profiel van JVW Infraservice (opent in nieuw tabblad)" class="footer-linkedin inline-flex items-center justify-center gap-2 border border-white/50 px-5 py-2.5 rounded-xl font-black hover:border-caps-orange hover:text-caps-orange transition w-full text-center mt-2.5">
             Bekijk LinkedIn-profiel
-            <i class="fa-brands fa-linkedin"></i>
+            <span aria-hidden="true">in</span>
           </a>
         </div>
       </div>

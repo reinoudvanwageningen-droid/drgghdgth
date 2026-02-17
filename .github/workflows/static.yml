@@ -40,7 +40,6 @@ jobs:
           cp "grondwerk-nauwkeurig-inmeten.webp" "transport-materieel-infraservice.webp" "riolering-aanleggen-afwatering.webp" "terreinverharding-fundering-maken.webp" "joost-van-wageningen-portret.jpeg" .pages/
           cp -R images .pages/images
           cp -R assets .pages/assets
-          cp -R vendor .pages/vendor
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
