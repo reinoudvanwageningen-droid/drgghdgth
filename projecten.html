@@ -6,6 +6,7 @@
   <title>Projecten | JVW Infraservice</title>
   <meta name="description" content="Bekijk recente projecten van JVW Infraservice in grondwerk, kabels en leidingen, aarding en terreinwerk." />
   <meta name="theme-color" content="#0D3C60" />
+  <link rel="icon" type="image/svg+xml" href="images/jvw-infraservice-logo.svg" />
   <link rel="canonical" href="https://reinoudvanwageningen-droid.github.io/drgghdgth/projecten.html" />
   <meta property="og:locale" content="nl_NL" />
   <meta property="og:type" content="website" />
@@ -18,7 +19,7 @@
   <meta name="twitter:title" content="Projecten | JVW Infraservice" />
   <meta name="twitter:description" content="Een overzicht van recente projecten en werkzaamheden van JVW Infraservice." />
   <meta name="twitter:image" content="https://reinoudvanwageningen-droid.github.io/drgghdgth/images/jvw-infraservice-transport-gww.webp" />
-  <link rel="preload" as="image" href="images/jvw-infraservice-transport-gww.webp" />
+  <link rel="preload" as="image" href="images/jvw-infraservice-werkbus-aanhanger.webp" imagesrcset="images/jvw-infraservice-werkbus-aanhanger.webp 1280w, images/jvw-infraservice-transport-gww.webp 1920w" imagesizes="100vw" fetchpriority="high" />
 
   <link rel="stylesheet" href="assets/tailwind.css" />
   <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" />
@@ -260,10 +261,10 @@
       <div class="flex justify-between items-center h-16 md:h-20">
         <a href="index.html#home" aria-label="Ga naar homepage" class="jvw-brand flex-shrink-0">
           <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo brandkit-logo-light object-contain" />
-          <img src="images/logo-jvw-brandkit-white.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo brandkit-logo-dark object-contain" />
+          <img src="images/logo-jvw-brandkit-white.svg" alt="JVW Infraservice logo" width="425" height="425" loading="lazy" fetchpriority="low" decoding="async" class="brandkit-logo brandkit-logo-dark object-contain" />
           <div class="brand-name">
             <span class="jvw">JVW</span>
-            <span class="sub">Infra Service</span>
+            <span class="sub">Infraservice</span>
           </div>
         </a>
 
@@ -370,7 +371,7 @@
 
         <div class="footer-address-col">
           <address class="footer-address text-sm">
-            <span class="footer-address-title block">JVW Infra Service</span>
+            <span class="footer-address-title block">JVW Infraservice</span>
             <span class="block">Joost van Wageningen</span>
             <span class="block">Dorpstraat 63</span>
             <span class="block">3342 BC Hendrik-Ido-Ambacht</span>
@@ -402,77 +403,7 @@
     </div>
   </footer>
 
+  <script src="assets/site.js" defer></script>
   <script src="assets/visitor-tracker.js" defer></script>
-  <script>
-    const nav = document.querySelector("nav");
-    const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    function applySystemTheme() {
-      const isDark = systemThemeQuery.matches;
-      document.documentElement.classList.toggle("dark", isDark);
-      updateNavBackground(window.scrollY > 20);
-    }
-
-    function updateNavBackground(scrolled) {
-      if (scrolled) {
-        nav.classList.add("shadow-soft");
-        nav.classList.remove("bg-white/80", "dark:bg-slate-950/85");
-        nav.classList.add("bg-white/95", "dark:bg-slate-950/95");
-      } else {
-        nav.classList.remove("shadow-soft", "bg-white/95", "dark:bg-slate-950/95");
-        nav.classList.add("bg-white/80", "dark:bg-slate-950/85");
-      }
-    }
-
-    applySystemTheme();
-
-    if (typeof systemThemeQuery.addEventListener === "function") {
-      systemThemeQuery.addEventListener("change", applySystemTheme);
-    } else if (typeof systemThemeQuery.addListener === "function") {
-      systemThemeQuery.addListener(applySystemTheme);
-    }
-
-    window.addEventListener("scroll", () => {
-      updateNavBackground(window.scrollY > 20);
-    });
-
-    const mobileMenu = document.getElementById("mobile-menu");
-    const mobileMenuButton = document.getElementById("mobile-menu-button");
-
-    function setMobileMenuOpen(isOpen) {
-      mobileMenu.classList.toggle("hidden", !isOpen);
-      mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
-      mobileMenuButton.setAttribute("aria-label", isOpen ? "Sluit menu" : "Open menu");
-      document.body.classList.toggle("overflow-hidden", isOpen);
-    }
-
-    function toggleMobileMenu() {
-      const isOpen = !mobileMenu.classList.contains("hidden");
-      setMobileMenuOpen(!isOpen);
-    }
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth >= 1024) {
-        setMobileMenuOpen(false);
-      }
-    });
-
-    window.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
-        setMobileMenuOpen(false);
-      }
-    });
-
-    document.addEventListener("click", (event) => {
-      if (mobileMenu.classList.contains("hidden")) {
-        return;
-      }
-      if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
-        setMobileMenuOpen(false);
-      }
-    });
-
-    setMobileMenuOpen(false);
-  </script>
 </body>
 </html>

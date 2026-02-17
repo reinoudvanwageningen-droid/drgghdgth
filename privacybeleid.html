@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacybeleid | JVW Infraservice</title>
   <meta name="description" content="Privacybeleid van JVW Infraservice over welke gegevens wij verwerken en waarom." />
+  <meta name="theme-color" content="#0D3C60" />
+  <link rel="icon" type="image/svg+xml" href="images/jvw-infraservice-logo.svg" />
+  <link rel="canonical" href="https://reinoudvanwageningen-droid.github.io/drgghdgth/privacybeleid.html" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Privacybeleid | JVW Infraservice" />
+  <meta property="og:description" content="Privacybeleid van JVW Infraservice over welke gegevens wij verwerken en waarom." />
+  <meta property="og:url" content="https://reinoudvanwageningen-droid.github.io/drgghdgth/privacybeleid.html" />
+  <meta property="og:site_name" content="JVW Infraservice" />
+  <meta property="og:image" content="https://reinoudvanwageningen-droid.github.io/drgghdgth/images/jvw-infraservice-transport-gww.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacybeleid | JVW Infraservice" />
+  <meta name="twitter:description" content="Privacybeleid van JVW Infraservice over welke gegevens wij verwerken en waarom." />
+  <meta name="twitter:image" content="https://reinoudvanwageningen-droid.github.io/drgghdgth/images/jvw-infraservice-transport-gww.webp" />
   <link rel="stylesheet" href="assets/tailwind.css" />
   <script>
     (function () {
@@ -359,10 +373,10 @@
       <div class="flex justify-between items-center h-16 md:h-20">
         <a href="index.html#home" aria-label="Ga naar homepage" class="jvw-brand flex-shrink-0">
           <img src="images/jvw-infraservice-logo.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo brandkit-logo-light object-contain" />
-          <img src="images/logo-jvw-brandkit-white.svg" alt="JVW Infraservice logo" width="425" height="425" loading="eager" decoding="async" class="brandkit-logo brandkit-logo-dark object-contain" />
+          <img src="images/logo-jvw-brandkit-white.svg" alt="JVW Infraservice logo" width="425" height="425" loading="lazy" fetchpriority="low" decoding="async" class="brandkit-logo brandkit-logo-dark object-contain" />
           <div class="brand-name">
             <span class="jvw">JVW</span>
-            <span class="sub">Infra Service</span>
+            <span class="sub">Infraservice</span>
           </div>
         </a>
 
@@ -426,8 +440,9 @@
       <h2>Externe tellerdienst</h2>
       <p>
         Voor de anonieme bezoekersmeting gebruiken wij CountAPI. JVW Infraservice ziet alleen
-        geaggregeerde telstanden en geen individuele bezoekersprofielen. De teller gebruikt geen
+        geaggregeerde telstanden (indicatief) en geen individuele bezoekersprofielen. De teller gebruikt geen
         trackingcookies en wordt overgeslagen wanneer Do Not Track of Global Privacy Control actief is.
+        Deze meting onderscheidt geen unieke personen en is bedoeld als globale trend, niet als juridisch bewijs.
       </p>
     </section>
 
@@ -474,7 +489,7 @@
 
         <div>
           <address class="footer-address">
-            <strong>JVW Infra Service</strong><br />
+            <strong>JVW Infraservice</strong><br />
             Joost van Wageningen<br />
             Dorpstraat 63<br />
             3342 BC Hendrik-Ido-Ambacht<br />
@@ -500,80 +515,7 @@
     </div>
   </footer>
 
+  <script src="assets/site.js" defer></script>
   <script src="assets/visitor-tracker.js" defer></script>
-  <script>
-    const nav = document.querySelector("nav");
-    const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    function applySystemTheme() {
-      const isDark = systemThemeQuery.matches;
-      document.documentElement.classList.toggle("dark", isDark);
-      updateNavBackground(window.scrollY > 20);
-    }
-
-    function updateNavBackground(scrolled) {
-      if (!nav) return;
-      if (scrolled) {
-        nav.classList.add("shadow-soft");
-        nav.classList.remove("bg-white/80", "dark:bg-slate-950/85");
-        nav.classList.add("bg-white/95", "dark:bg-slate-950/95");
-      } else {
-        nav.classList.remove("shadow-soft", "bg-white/95", "dark:bg-slate-950/95");
-        nav.classList.add("bg-white/80", "dark:bg-slate-950/85");
-      }
-    }
-
-    applySystemTheme();
-
-    if (typeof systemThemeQuery.addEventListener === "function") {
-      systemThemeQuery.addEventListener("change", applySystemTheme);
-    } else if (typeof systemThemeQuery.addListener === "function") {
-      systemThemeQuery.addListener(applySystemTheme);
-    }
-
-    window.addEventListener("scroll", () => {
-      updateNavBackground(window.scrollY > 20);
-    });
-
-    const mobileMenu = document.getElementById("mobile-menu");
-    const mobileMenuButton = document.getElementById("mobile-menu-button");
-
-    function setMobileMenuOpen(isOpen) {
-      if (!mobileMenu || !mobileMenuButton) return;
-      mobileMenu.classList.toggle("hidden", !isOpen);
-      mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
-      mobileMenuButton.setAttribute("aria-label", isOpen ? "Sluit menu" : "Open menu");
-      document.body.classList.toggle("overflow-hidden", isOpen);
-    }
-
-    window.toggleMobileMenu = function toggleMobileMenu() {
-      if (!mobileMenu) return;
-      const isOpen = !mobileMenu.classList.contains("hidden");
-      setMobileMenuOpen(!isOpen);
-    };
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth >= 1024) {
-        setMobileMenuOpen(false);
-      }
-    });
-
-    window.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && mobileMenu && !mobileMenu.classList.contains("hidden")) {
-        setMobileMenuOpen(false);
-      }
-    });
-
-    document.addEventListener("click", (event) => {
-      if (!mobileMenu || !mobileMenuButton || mobileMenu.classList.contains("hidden")) {
-        return;
-      }
-      if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
-        setMobileMenuOpen(false);
-      }
-    });
-
-    setMobileMenuOpen(false);
-  </script>
 </body>
 </html>

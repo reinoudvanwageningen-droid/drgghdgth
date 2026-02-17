@@ -220,6 +220,32 @@ const hasCanonicalLink = (htmlContent) =>
     htmlContent
   );
 
+const hasFaviconLink = (htmlContent) =>
+  /<link\b[^>]*rel\s*=\s*["']icon["'][^>]*href\s*=\s*["'][^"']+["'][^>]*>/i.test(htmlContent);
+
+const hasRobotsNoindex = (htmlContent) =>
+  /<meta\b[^>]*name\s*=\s*["']robots["'][^>]*content\s*=\s*["'][^"']*noindex/i.test(htmlContent);
+
+const hasOpenGraphBundle = (htmlContent) => {
+  const requiredTags = [
+    /<meta\b[^>]*property\s*=\s*["']og:title["'][^>]*content\s*=\s*["'][^"']+["'][^>]*>/i,
+    /<meta\b[^>]*property\s*=\s*["']og:description["'][^>]*content\s*=\s*["'][^"']+["'][^>]*>/i,
+    /<meta\b[^>]*property\s*=\s*["']og:url["'][^>]*content\s*=\s*["'][^"']+["'][^>]*>/i,
+    /<meta\b[^>]*property\s*=\s*["']og:image["'][^>]*content\s*=\s*["'][^"']+["'][^>]*>/i
+  ];
+  return requiredTags.every((pattern) => pattern.test(htmlContent));
+};
+
+const hasTwitterBundle = (htmlContent) => {
+  const requiredTags = [
+    /<meta\b[^>]*name\s*=\s*["']twitter:card["'][^>]*content\s*=\s*["'][^"']+["'][^>]*>/i,
+    /<meta\b[^>]*name\s*=\s*["']twitter:title["'][^>]*content\s*=\s*["'][^"']+["'][^>]*>/i,
+    /<meta\b[^>]*name\s*=\s*["']twitter:description["'][^>]*content\s*=\s*["'][^"']+["'][^>]*>/i,
+    /<meta\b[^>]*name\s*=\s*["']twitter:image["'][^>]*content\s*=\s*["'][^"']+["'][^>]*>/i
+  ];
+  return requiredTags.every((pattern) => pattern.test(htmlContent));
+};
+
 const getHeadingLevels = (htmlContent) => {
   const levels = [];
   const headingPattern = /<h([1-6])\b/gi;
@@ -276,8 +302,21 @@ const run = () => {
       errors.push(`Ontbrekende of lege meta description in ${htmlPage}`);
     }
 
-    if ((htmlPage === "index.html" || htmlPage === "projecten.html") && !hasCanonicalLink(htmlContent)) {
+    if (!hasFaviconLink(htmlContent)) {
+      errors.push(`Ontbrekende favicon link in ${htmlPage}`);
+    }
+
+    const isNoindexPage = hasRobotsNoindex(htmlContent);
+    if (!isNoindexPage && !hasCanonicalLink(htmlContent)) {
       errors.push(`Ontbrekende canonical link in ${htmlPage}`);
+    }
+
+    if (!isNoindexPage && !hasOpenGraphBundle(htmlContent)) {
+      errors.push(`Ontbrekende Open Graph metadata in ${htmlPage}`);
+    }
+
+    if (!isNoindexPage && !hasTwitterBundle(htmlContent)) {
+      errors.push(`Ontbrekende Twitter metadata in ${htmlPage}`);
     }
 
     const headingLevels = getHeadingLevels(htmlContent);
