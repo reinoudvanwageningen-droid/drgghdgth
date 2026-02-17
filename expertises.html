@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projecten | JVW Infraservice</title>
-  <meta name="description" content="Bekijk recente projecten van JVW Infraservice in grondwerk, kabels en leidingen, aarding en terreinwerk." />
+  <title>Expertises | JVW Infraservice</title>
+  <meta name="description" content="Ontdek de expertises van JVW Infraservice in grondwerk, kabels en leidingen en aarding met praktische uitvoering in Zuid-Holland en de Randstad." />
   <meta name="theme-color" content="#0D3C60" />
   <link rel="icon" type="image/svg+xml" href="images/jvw-infraservice-logo.svg" />
-  <link rel="canonical" href="https://reinoudvanwageningen-droid.github.io/drgghdgth/projecten.html" />
+  <link rel="canonical" href="https://reinoudvanwageningen-droid.github.io/drgghdgth/expertises.html" />
   <meta property="og:locale" content="nl_NL" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Projecten | JVW Infraservice" />
-  <meta property="og:description" content="Een overzicht van recente projecten en werkzaamheden van JVW Infraservice." />
-  <meta property="og:url" content="https://reinoudvanwageningen-droid.github.io/drgghdgth/projecten.html" />
+  <meta property="og:title" content="Expertises | JVW Infraservice" />
+  <meta property="og:description" content="Praktische expertise in grondwerk, kabels en leidingen en aarding met heldere afspraken en nette oplevering." />
+  <meta property="og:url" content="https://reinoudvanwageningen-droid.github.io/drgghdgth/expertises.html" />
   <meta property="og:site_name" content="JVW Infraservice" />
   <meta property="og:image" content="https://reinoudvanwageningen-droid.github.io/drgghdgth/images/jvw-infraservice-transport-gww.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Projecten | JVW Infraservice" />
-  <meta name="twitter:description" content="Een overzicht van recente projecten en werkzaamheden van JVW Infraservice." />
+  <meta name="twitter:title" content="Expertises | JVW Infraservice" />
+  <meta name="twitter:description" content="Praktische expertise in grondwerk, kabels en leidingen en aarding met heldere afspraken en nette oplevering." />
   <meta name="twitter:image" content="https://reinoudvanwageningen-droid.github.io/drgghdgth/images/jvw-infraservice-transport-gww.webp" />
   <link rel="preload" as="image" href="images/jvw-infraservice-werkbus-aanhanger.webp" imagesrcset="images/jvw-infraservice-werkbus-aanhanger.webp 1280w, images/jvw-infraservice-transport-gww.webp 1920w" imagesizes="100vw" fetchpriority="high" />
 
@@ -47,10 +47,11 @@
         linear-gradient(to bottom, rgba(13, 60, 96, 0.82), rgba(13, 60, 96, 0.4));
     }
 
-    .text-shadow {
-      text-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+    .expertise-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
     }
-
   </style>
 </head>
 
@@ -73,9 +74,9 @@
 
         <div class="hidden lg:flex space-x-8 items-center">
           <a href="index.html#home" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Home</a>
-          <a href="expertises.html" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Expertise</a>
+          <a href="#expertises-grid" class="text-caps-orange font-extrabold transition">Expertise</a>
           <a href="index.html#over-ons" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Over ons</a>
-          <a href="#projecten-grid" class="text-caps-orange font-extrabold transition">Projecten</a>
+          <a href="projecten.html" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Projecten</a>
           <a href="index.html#contact" class="bg-caps-orange text-white px-5 py-2.5 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft transform hover:-translate-y-0.5">
             Contact <span aria-hidden="true" class="ml-1">→</span>
           </a>
@@ -92,9 +93,9 @@
     <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 absolute w-full shadow-soft2 top-16 md:top-20">
       <div class="px-4 pt-4 pb-6 space-y-2">
         <a href="index.html#home" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl">Home</a>
-        <a href="expertises.html" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl">Expertise</a>
+        <a href="#expertises-grid" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-extrabold text-caps-orange bg-caps-blue/5 rounded-xl">Expertise</a>
         <a href="index.html#over-ons" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl">Over ons</a>
-        <a href="#projecten-grid" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-extrabold text-caps-orange bg-caps-blue/5 rounded-xl">Projecten</a>
+        <a href="projecten.html" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl">Projecten</a>
         <a href="index.html#contact" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-extrabold text-white bg-caps-orange rounded-xl text-center shadow-soft mt-3">Neem contact op</a>
       </div>
     </div>
@@ -103,66 +104,100 @@
   <main id="main-content" class="flex-1">
     <section class="relative min-h-[360px] md:min-h-[420px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
-        <img src="images/jvw-infraservice-werkbus-aanhanger.webp" srcset="images/jvw-infraservice-werkbus-aanhanger.webp 1280w, images/jvw-infraservice-transport-gww.webp 1920w" sizes="100vw" alt="JVW Infraservice transport op projectlocatie" width="1920" height="1440" loading="eager" decoding="async" class="w-full h-full object-cover" />
+        <img src="images/jvw-infraservice-werkbus-aanhanger.webp" srcset="images/jvw-infraservice-werkbus-aanhanger.webp 1280w, images/jvw-infraservice-transport-gww.webp 1920w" sizes="100vw" alt="JVW Infraservice op projectlocatie" width="1920" height="1440" loading="eager" decoding="async" class="w-full h-full object-cover" />
         <div class="absolute inset-0 hero-overlay"></div>
       </div>
       <div class="relative z-10 text-center px-4 pt-20 md:pt-24">
         <span class="inline-flex items-center gap-2 py-1.5 px-3 rounded-full bg-white/10 backdrop-blur border border-white/15 text-white text-xs md:text-sm font-extrabold tracking-wider mb-4 uppercase shadow-soft">
-          Projecten
+          Expertise
         </span>
+        <h1 class="text-3xl md:text-5xl font-black text-white">Onze expertises in de praktijk</h1>
+        <p class="text-base md:text-xl text-gray-100/90 mt-4 max-w-3xl mx-auto">
+          JVW Infraservice voert infrawerk uit met duidelijke afspraken, korte lijnen en een nette oplevering. Hieronder leest u per expertise wat we doen en wanneer wij van meerwaarde zijn.
+        </p>
       </div>
     </section>
 
-    <section id="projecten-grid" class="py-12 md:py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
+    <section id="expertises-grid" class="py-12 md:py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
       <div class="absolute inset-0 opacity-[0.08]" style="background-image: radial-gradient(circle at 1px 1px, rgba(13,60,96,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="text-center mb-10 md:mb-14">
-          <p class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Projecten</p>
-          <h1 class="text-2xl md:text-4xl font-black text-caps-blue dark:text-slate-100">Werk in beeld</h1>
+          <p class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Uitgebreide toelichting</p>
+          <h2 class="text-2xl md:text-4xl font-black text-caps-blue dark:text-slate-100">Wat u van ons kunt verwachten</h2>
           <div class="w-24 h-1 bg-caps-orange mx-auto mt-4 rounded-full"></div>
-          <p class="mt-4 text-gray-600 dark:text-slate-300 max-w-2xl mx-auto text-base md:text-base">
-            Een helder overzicht van onze recente projecten, met beelden van voorbereiding, uitvoering en oplevering. Actief in Zuid-Holland en de Randstad.
+          <p class="mt-4 text-gray-600 dark:text-slate-300 max-w-3xl mx-auto text-base md:text-base">
+            We werken voor kleine en middelgrote projecten in Zuid-Holland en de Randstad. Van voorbereiding tot oplevering zorgen we voor overzicht, veilige uitvoering en helder contact.
           </p>
-          <div class="mt-6">
-            <a href="index.html#contact" class="inline-flex items-center gap-2 bg-caps-orange text-white px-6 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
-              Bespreek uw project
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
         </div>
 
-        <h2 class="sr-only">Recente projecten</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article id="project-grondwerk" class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="grondwerk-nauwkeurig-inmeten.webp" alt="Nauwkeurig inmeten op projectlocatie voor grondwerk" width="1024" height="683" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
-            <div class="p-6">
-              <h3 class="font-black text-lg text-caps-blue dark:text-white">Grondwerk op projectlocatie</h3>
-              <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Voorbereidende werkzaamheden met ontgraven, profileren en bouwrijp maken.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+            <img src="grondwerk-nauwkeurig-inmeten.webp" alt="Grondwerk en nauwkeurig inmeten op projectlocatie" width="1024" height="683" loading="lazy" decoding="async" class="expertise-image" />
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="font-black text-xl text-caps-blue dark:text-white">Grondwerk</h3>
+              <p class="text-base text-gray-600 dark:text-slate-200 mt-3">
+                Voor een goede projectstart is degelijk grondwerk essentieel. Wij verzorgen uitgraven, aanvullen en profileren, afgestemd op de vervolgstap in uw project.
+              </p>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-5">Wat we uitvoeren</h4>
+              <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-2 mt-2">
+                <li>• Bouwputten en sleuven ontgraven</li>
+                <li>• Grond afvoeren en terrein voorbereiden</li>
+                <li>• Nauwkeurige uitlijning voor fundering of vervolgwerk</li>
+              </ul>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-5">Wanneer inzetten</h4>
+              <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">
+                Bij nieuwbouw, uitbreidingen, herinrichting van terrein of voorbereidende infrastructuurwerkzaamheden.
+              </p>
             </div>
           </article>
-          <article id="project-transport" class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="transport-materieel-infraservice.webp" alt="JVW Infraservice voertuig met aanhanger op projectlocatie" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
-            <div class="p-6">
-              <h3 class="font-black text-lg text-caps-blue dark:text-white">Transport en logistiek</h3>
-              <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Betrouwbare inzet van materieel en transportmiddelen op projectlocaties.</p>
+
+          <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+            <img src="riolering-aanleggen-afwatering.webp" alt="Sleufwerk en leidingen op een infrastructuurproject" width="1600" height="1200" loading="lazy" decoding="async" class="expertise-image" />
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="font-black text-xl text-caps-blue dark:text-white">Kabels en leidingen</h3>
+              <p class="text-base text-gray-600 dark:text-slate-200 mt-3">
+                Wij realiseren sleufwerk en tracés voor kabels en leidingen met aandacht voor veiligheid, werkvolgorde en correcte aanvulling volgens voorschrift.
+              </p>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-5">Wat we uitvoeren</h4>
+              <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-2 mt-2">
+                <li>• Tracé uitzetten en sleuven aanbrengen</li>
+                <li>• Ruimte creëren voor elektra-, data- en leidingwerk</li>
+                <li>• Aanvullen en verdichten met nette afwerking</li>
+              </ul>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-5">Wanneer inzetten</h4>
+              <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">
+                Bij aanleg, uitbreiding of vervanging van ondergrondse infra voor woningbouw, bedrijfsterrein en utiliteit.
+              </p>
             </div>
           </article>
-          <article id="project-riolering" class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="riolering-aanleggen-afwatering.webp" alt="JVW Infraservice in uitvoering tijdens grondwerkproject" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
-            <div class="p-6">
-              <h3 class="font-black text-lg text-caps-blue dark:text-white">Riolering en afwatering</h3>
-              <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Aanleg en herstelwerk met focus op veilige en duurzame afvoer.</p>
-            </div>
-          </article>
-          <article id="project-terrein" class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="terreinverharding-fundering-maken.webp" alt="JVW Infraservice materieel op locatie voor terreinwerk" width="2040" height="1530" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
-            <div class="p-6">
-              <h3 class="font-black text-lg text-caps-blue dark:text-white">Terreinverharding</h3>
-              <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Uitvoering van onderbouw en verharding voor nette, functionele terreinen.</p>
+
+          <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+            <img src="terreinverharding-fundering-maken.webp" alt="Voorbereiding van terrein en plaatsing van voorzieningen buiten" width="2040" height="1530" loading="lazy" decoding="async" class="expertise-image" />
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="font-black text-xl text-caps-blue dark:text-white">Aarding en buitenkasten</h3>
+              <p class="text-base text-gray-600 dark:text-slate-200 mt-3">
+                Voor veilige en betrouwbare installaties verzorgen wij het plaatsen van buitenkasten en uitvoeren van aardingswerkzaamheden in afstemming met installateurs.
+              </p>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-5">Wat we uitvoeren</h4>
+              <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-2 mt-2">
+                <li>• Plaatsen en stellen van buitenkasten</li>
+                <li>• Aardpennen slaan en voorbereidend aardingswerk</li>
+                <li>• Opleveren op een veilige en overzichtelijke werkplek</li>
+              </ul>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-5">Wanneer inzetten</h4>
+              <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">
+                Bij installatiewerk buiten, uitbreidingen van aansluitingen en projecten waar aardingsvoorzieningen essentieel zijn.
+              </p>
             </div>
           </article>
         </div>
 
+        <div class="mt-10 text-center">
+          <a href="index.html#contact" class="inline-flex items-center gap-2 bg-caps-orange text-white px-6 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
+            Bespreek uw project
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>

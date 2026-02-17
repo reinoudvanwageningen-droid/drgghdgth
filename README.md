@@ -3,6 +3,7 @@
 Deze repository bevat de statische website van **JVW Infraservice** met de volgende publieke pagina’s:
 
 - `index.html` (home)
+- `expertises.html`
 - `projecten.html`
 - `bedrijfsgegevens.html`
 - `privacybeleid.html`
@@ -31,6 +32,7 @@ python3 -m http.server 8080
 Open daarna:
 
 - `http://localhost:8080/index.html`
+- `http://localhost:8080/expertises.html`
 - `http://localhost:8080/projecten.html`
 
 ## Kwaliteitscontrole
