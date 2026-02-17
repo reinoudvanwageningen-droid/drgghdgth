@@ -1,0 +1,240 @@
+:root {
+  --jvw-navy: #0d3c60;
+  --jvw-accent: #ec7f24;
+  --jvw-orange: #e97a08;
+  --jvw-orange-dk: #c96800;
+}
+
+.text-caps-blue { color: var(--jvw-navy) !important; }
+.text-caps-orange { color: var(--jvw-orange) !important; }
+.bg-caps-orange { background-color: var(--jvw-orange) !important; }
+.hover\:bg-orange-600:hover { background-color: var(--jvw-orange-dk) !important; }
+.hover\:text-caps-orange:hover { color: var(--jvw-orange) !important; }
+.focus-visible\:ring-caps-orange:focus-visible { --tw-ring-color: var(--jvw-orange) !important; }
+.shadow-soft { box-shadow: 0 12px 30px rgba(13, 60, 96, 0.12) !important; }
+.shadow-soft2 { box-shadow: 0 18px 50px rgba(13, 60, 96, 0.18) !important; }
+
+.dark .dark\:text-slate-100 { color: #f1f5f9 !important; }
+.dark .dark\:text-slate-200 { color: #e2e8f0 !important; }
+.dark .dark\:text-slate-300 { color: #cbd5e1 !important; }
+.dark .dark\:focus\:text-slate-100:focus { color: #f1f5f9 !important; }
+.dark .dark\:focus\:bg-slate-900:focus { background-color: #0f172a !important; }
+
+.jvw-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.jvw-brand .brandkit-logo {
+  height: clamp(46px, 4.4vw, 62px);
+  width: auto;
+  display: block;
+}
+
+.jvw-brand .brandkit-logo-dark {
+  display: none;
+}
+
+.jvw-brand .brand-name {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  line-height: 1.05;
+  color: var(--jvw-navy);
+  font-size: clamp(16px, 1.4vw, 20px);
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.jvw-brand .brand-name .jvw {
+  color: var(--jvw-accent);
+  letter-spacing: -0.8px;
+}
+
+.jvw-brand .brand-name .sub {
+  font-weight: 700;
+  color: var(--jvw-navy);
+  opacity: 0.95;
+}
+
+.dark .jvw-brand .brandkit-logo-light {
+  display: none;
+}
+
+.dark .jvw-brand .brandkit-logo-dark {
+  display: block;
+}
+
+.dark .jvw-brand .brand-name {
+  color: #f8fafc;
+}
+
+.dark .jvw-brand .brand-name .sub {
+  color: #e2e8f0;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .jvw-brand .brandkit-logo {
+    height: 50px;
+  }
+
+  .jvw-brand .brand-name {
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    max-width: 180px;
+  }
+}
+
+.legal-footer {
+  margin-top: 28px;
+  background: var(--jvw-navy);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 32px 0;
+}
+
+.legal-footer .footer-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.legal-footer .footer-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem 2rem;
+  align-items: start;
+}
+
+.legal-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.legal-footer .footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.legal-footer .footer-links a:hover {
+  color: var(--accent);
+}
+
+.legal-footer .footer-address {
+  margin: 0;
+  max-width: 34ch;
+  font-style: normal;
+  line-height: 1.65;
+  color: rgba(226, 232, 240, 0.92);
+  font-size: 0.95rem;
+}
+
+.legal-footer .footer-address strong {
+  color: #fff;
+  font-weight: 800;
+}
+
+.legal-footer .footer-right {
+  width: 100%;
+  max-width: 460px;
+  margin-left: auto;
+}
+
+.legal-footer .footer-right p {
+  margin: 0 0 12px;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.legal-footer .footer-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.legal-footer .footer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: background-color 0.2s ease;
+}
+
+.legal-footer .footer-btn:hover {
+  background: #c96800;
+  color: #fff;
+}
+
+.legal-footer .footer-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.legal-footer .footer-linkedin:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.legal-footer .footer-bottom {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(226, 232, 240, 0.92);
+}
+
+@media (max-width: 1024px) {
+  .legal-footer .footer-right {
+    max-width: none;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .legal-footer .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .legal-footer .footer-links,
+  .legal-footer .footer-address {
+    text-align: center;
+  }
+
+  .legal-footer .footer-links {
+    align-items: center;
+  }
+
+  .legal-footer .footer-address {
+    margin-inline: auto;
+  }
+
+  .legal-footer .footer-right p {
+    text-align: center;
+  }
+
+  .legal-footer .footer-actions {
+    grid-template-columns: 1fr;
+  }
+}
