@@ -16,7 +16,6 @@ Daarnaast is er een aparte statistiekpagina:
 
 - `images/` — logo’s en geoptimaliseerde webafbeeldingen
 - `assets/` — Tailwind CSS en bezoekersscript
-- `vendor/` — lokale vendorbestanden (o.a. Font Awesome/Tailwind runtime)
 - `.github/workflows/static.yml` — GitHub Pages deployment
 
 ## Lokale preview
