@@ -23,6 +23,7 @@
 
   <!-- Tailwind CSS (static build) -->
   <link rel="stylesheet" href="assets/tailwind.css" />
+  <link rel="stylesheet" href="assets/site.css" />
 
   <!-- FontAwesome Icons (self-hosted) -->
   <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" />
@@ -177,77 +178,13 @@
       color: currentColor;
     }
 
-    .jvw-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .jvw-brand .brandkit-logo {
-      height: clamp(46px, 4.4vw, 62px);
-      width: auto;
-      display: block;
-    }
-
-    .jvw-brand .brandkit-logo-dark {
-      display: none;
-    }
-
-    .jvw-brand .brand-name {
-      margin: 0;
-      font-weight: 800;
-      letter-spacing: -0.6px;
-      line-height: 1.05;
-      color: var(--jvw-navy);
-      font-size: clamp(16px, 1.4vw, 20px);
-      text-transform: none;
-      white-space: nowrap;
-    }
-
-    .jvw-brand .brand-name .jvw {
-      color: var(--jvw-accent);
-      letter-spacing: -0.8px;
-    }
-
-    .jvw-brand .brand-name .sub {
-      font-weight: 700;
-      color: var(--jvw-navy);
-      opacity: 0.95;
-    }
-
-    .dark .jvw-brand .brandkit-logo-light {
-      display: none;
-    }
-
     .dark .jvw-brand .brandkit-logo-dark {
-      display: block;
       filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.32));
-    }
-
-    .dark .jvw-brand .brand-name {
-      color: #f8fafc;
-    }
-
-    .dark .jvw-brand .brand-name .sub {
-      color: #e2e8f0;
-      opacity: 1;
     }
 
     .dark .jvw-brand .brand-name .jvw {
       color: #f8fafc;
       letter-spacing: -0.6px;
-    }
-
-    @media (max-width: 768px) {
-      .jvw-brand .brandkit-logo {
-        height: 50px;
-      }
-
-      .jvw-brand .brand-name {
-        font-size: 16px;
-        letter-spacing: -0.4px;
-        max-width: 180px;
-      }
     }
 
     .about-photo {
