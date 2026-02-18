@@ -109,6 +109,10 @@
   gap: 0.35rem;
 }
 
+.footer-links a {
+  font-weight: 800;
+}
+
 .footer-address-col .footer-address {
   margin: 0;
   max-width: 34ch;
@@ -268,6 +272,7 @@
 .legal-footer .footer-links a {
   color: #fff;
   text-decoration: none;
+  font-weight: 800;
 }
 
 .legal-footer .footer-links a:hover {
