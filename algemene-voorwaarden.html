@@ -74,13 +74,14 @@
       font-family: Inter, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 1.03rem;
     }
 
     .container {
-      max-width: 960px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 104px 16px 48px;
+      padding: 104px 16px 56px;
     }
 
     @media (min-width: 768px) {
@@ -93,8 +94,15 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 18px;
-      margin-bottom: 14px;
+      padding: 22px 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 24px rgba(13, 60, 96, 0.08);
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        padding: 24px 26px;
+      }
     }
 
     h1 {
@@ -105,8 +113,8 @@
     }
 
     h2 {
-      margin: 0 0 8px;
-      font-size: 1.2rem;
+      margin: 0 0 10px;
+      font-size: clamp(1.2rem, 1.5vw, 1.35rem);
       line-height: 1.3;
       color: var(--brand);
     }
@@ -115,17 +123,59 @@
       margin: 0;
     }
 
+    .card[id] {
+      scroll-margin-top: 110px;
+    }
+
     .muted {
       color: var(--muted);
     }
 
     .list {
-      margin: 8px 0 0 18px;
+      margin: 12px 0 0;
       padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
     }
 
     .list li {
-      margin: 4px 0;
+      margin: 0;
+      padding: 10px 12px;
+      border-left: 3px solid rgba(233, 122, 8, 0.5);
+      border-radius: 10px;
+      background: color-mix(in srgb, var(--surface) 86%, var(--bg));
+      line-height: 1.7;
+    }
+
+    .card p,
+    .list li {
+      max-width: 80ch;
+    }
+
+    .toc {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px 16px;
+      margin-top: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .toc {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .toc a {
+      display: block;
+      padding: 7px 0;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .toc a:hover {
+      border-bottom-color: var(--accent);
     }
 
     a {
@@ -193,6 +243,31 @@
     </section>
 
     <section class="card">
+      <h2>Inhoud</h2>
+      <nav class="toc" aria-label="Inhoudsopgave algemene voorwaarden">
+        <a href="#artikel-1">Artikel 1 - Definities</a>
+        <a href="#artikel-2">Artikel 2 - Toepasselijkheid</a>
+        <a href="#artikel-3">Artikel 3 - Offertes, prijzen en totstandkoming</a>
+        <a href="#artikel-4">Artikel 4 - Uitvoering, informatieplicht en bereikbaarheid werk</a>
+        <a href="#artikel-5">Artikel 5 - Inschakeling derden / onderaanneming</a>
+        <a href="#artikel-6">Artikel 6 - Termijnen, planning en vertraging</a>
+        <a href="#artikel-7">Artikel 7 - Wijzigingen en meerwerk</a>
+        <a href="#artikel-8">Artikel 8 - Oplevering, controle en herstel</a>
+        <a href="#artikel-9">Artikel 9 - Garantie</a>
+        <a href="#artikel-10">Artikel 10 - Risico, eigendom en retentierecht</a>
+        <a href="#artikel-11">Artikel 11 - Verzekering</a>
+        <a href="#artikel-12">Artikel 12 - Betaling, termijnen en incasso</a>
+        <a href="#artikel-13">Artikel 13 - Opschorting en ontbinding</a>
+        <a href="#artikel-14">Artikel 14 - Overmacht</a>
+        <a href="#artikel-15">Artikel 15 - Aansprakelijkheid</a>
+        <a href="#artikel-16">Artikel 16 - Klachten en vervaltermijn</a>
+        <a href="#artikel-17">Artikel 17 - Bijzondere bepalingen voor Consumenten</a>
+        <a href="#artikel-18">Artikel 18 - Toepasselijk recht en geschillen</a>
+        <a href="#contact-voorwaarden">Contact over deze voorwaarden</a>
+      </nav>
+    </section>
+
+    <section id="artikel-1" class="card">
       <h2>Artikel 1 - Definities</h2>
       <ul class="list">
         <li><strong>Opdrachtnemer:</strong> JVW Infraservice, gevestigd aan Dorpstraat 63, 3342 BC Hendrik-Ido-Ambacht, ingeschreven bij de Kamer van Koophandel onder nummer 86302086. BTW-identificatienummer wordt op facturen vermeld.</li>
@@ -203,7 +278,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-2" class="card">
       <h2>Artikel 2 - Toepasselijkheid</h2>
       <ul class="list">
         <li>2.1 Deze voorwaarden zijn van toepassing op alle offertes, aanbiedingen, werkzaamheden en overeenkomsten van Opdrachtnemer.</li>
@@ -213,7 +288,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-3" class="card">
       <h2>Artikel 3 - Offertes, prijzen en totstandkoming</h2>
       <ul class="list">
         <li>3.1 Offertes en prijsopgaven zijn vrijblijvend en geldig gedurende 30 dagen, tenzij anders vermeld.</li>
@@ -223,7 +298,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-4" class="card">
       <h2>Artikel 4 - Uitvoering, informatieplicht en bereikbaarheid werk</h2>
       <ul class="list">
         <li>4.1 Opdrachtnemer voert het werk uit naar beste inzicht en vermogen en volgens de eisen van goed vakmanschap.</li>
@@ -234,7 +309,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-5" class="card">
       <h2>Artikel 5 - Inschakeling derden / onderaanneming</h2>
       <ul class="list">
         <li>5.1 Opdrachtnemer is gerechtigd om bij uitvoering van het werk derden in te schakelen, waaronder onderaannemers en zelfstandigen zonder personeel.</li>
@@ -243,7 +318,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-6" class="card">
       <h2>Artikel 6 - Termijnen, planning en vertraging</h2>
       <ul class="list">
         <li>6.1 Opgegeven (oplever)termijnen zijn indicatief, tenzij schriftelijk uitdrukkelijk als fatale termijn overeengekomen.</li>
@@ -252,7 +327,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-7" class="card">
       <h2>Artikel 7 - Wijzigingen en meerwerk</h2>
       <ul class="list">
         <li>7.1 Wijzigingen of aanvullingen op het werk (meerwerk) worden zoveel mogelijk vooraf besproken en bij voorkeur schriftelijk bevestigd. Bevestiging per e-mail of WhatsApp volstaat.</li>
@@ -261,7 +336,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-8" class="card">
       <h2>Artikel 8 - Oplevering, controle en herstel</h2>
       <ul class="list">
         <li>8.1 Het werk geldt als opgeleverd wanneer Opdrachtnemer meldt dat het werk is afgerond en Opdrachtgever het werk aanvaardt, in gebruik neemt, of niet binnen een redelijke termijn (maximaal 7 dagen) na melding schriftelijk gebreken meldt.</li>
@@ -270,7 +345,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-9" class="card">
       <h2>Artikel 9 - Garantie</h2>
       <ul class="list">
         <li>9.1 Opdrachtnemer garandeert dat het opgeleverde werk voldoet aan de overeenkomst en aan de eisen van goed vakmanschap.</li>
@@ -280,7 +355,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-10" class="card">
       <h2>Artikel 10 - Risico, eigendom en retentierecht</h2>
       <ul class="list">
         <li>10.1 Het risico van het werk gaat over op Opdrachtgever bij oplevering.</li>
@@ -289,7 +364,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-11" class="card">
       <h2>Artikel 11 - Verzekering</h2>
       <ul class="list">
         <li>11.1 Opdrachtnemer beschikt over een bedrijfsaansprakelijkheidsverzekering (AVB) die is afgestemd op de aard en omvang van de werkzaamheden.</li>
@@ -298,7 +373,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-12" class="card">
       <h2>Artikel 12 - Betaling, termijnen en incasso</h2>
       <ul class="list">
         <li>12.1 Facturen dienen binnen 14 dagen na factuurdatum te worden voldaan, tenzij schriftelijk anders overeengekomen.</li>
@@ -308,7 +383,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-13" class="card">
       <h2>Artikel 13 - Opschorting en ontbinding</h2>
       <ul class="list">
         <li>13.1 Opdrachtnemer mag uitvoering van het werk opschorten als Opdrachtgever verplichtingen niet nakomt, waaronder betaling, informatieverstrekking of zorg voor toegang en veiligheid.</li>
@@ -316,7 +391,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-14" class="card">
       <h2>Artikel 14 - Overmacht</h2>
       <ul class="list">
         <li>14.1 Onder overmacht wordt verstaan elke omstandigheid buiten redelijke invloed van Opdrachtnemer, waaronder extreem weer, stakingen, pandemieen, overheidsmaatregelen, storingen bij netbeheerders, leveringsproblemen, bodemverontreiniging, onverwachte bodemgesteldheid en uitblijven van toestemmingen of vergunningen door derden.</li>
@@ -324,7 +399,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-15" class="card">
       <h2>Artikel 15 - Aansprakelijkheid</h2>
       <ul class="list">
         <li>15.1 Opdrachtnemer is uitsluitend aansprakelijk voor directe schade die het gevolg is van een toerekenbare tekortkoming in de uitvoering van het werk.</li>
@@ -335,7 +410,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-16" class="card">
       <h2>Artikel 16 - Klachten en vervaltermijn</h2>
       <ul class="list">
         <li>16.1 Klachten over facturen dienen binnen 14 dagen na factuurdatum schriftelijk te worden gemeld.</li>
@@ -344,7 +419,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-17" class="card">
       <h2>Artikel 17 - Bijzondere bepalingen voor Consumenten</h2>
       <ul class="list">
         <li>17.1 Dit artikel geldt uitsluitend wanneer Opdrachtgever een Consument is zoals bedoeld in Artikel 1.</li>
@@ -354,7 +429,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="artikel-18" class="card">
       <h2>Artikel 18 - Toepasselijk recht en geschillen</h2>
       <ul class="list">
         <li>18.1 Op alle rechtsverhoudingen tussen Opdrachtnemer en Opdrachtgever is Nederlands recht van toepassing.</li>
@@ -363,7 +438,7 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section id="contact-voorwaarden" class="card">
       <h2>Contact over deze voorwaarden</h2>
       <p>
         Vragen over deze algemene voorwaarden? Neem contact op via
