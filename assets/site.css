@@ -136,6 +136,8 @@
 
 .footer-contact-link {
   display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   width: fit-content;
   color: #fff;
   text-decoration: underline;
@@ -306,6 +308,8 @@
 
 .legal-footer .footer-contact-link {
   display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   width: fit-content;
   color: #fff;
   text-decoration: underline;

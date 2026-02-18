@@ -215,6 +215,17 @@ body {
   margin: 2px 0;
 }
 
+.footer-grid .contact-line {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.footer-grid .contact-line svg {
+  flex-shrink: 0;
+  stroke: currentColor;
+}
+
 .strong {
   font-weight: 600;
   color: var(--text);
