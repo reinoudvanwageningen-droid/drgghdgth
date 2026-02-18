@@ -143,8 +143,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.625rem 0.75rem;
-  background: rgba(233, 122, 8, 0.25);
-  border: 1px solid rgba(233, 122, 8, 0.5);
+  background: var(--jvw-orange);
+  border: none;
   border-radius: 10px;
   color: #fff;
   text-decoration: none;
@@ -153,12 +153,12 @@
   font-size: 0.9em;
   user-select: text;
   -webkit-user-select: text;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, filter 0.2s ease;
 }
 
 .footer-contact-link:hover {
-  background: rgba(233, 122, 8, 0.4);
-  border-color: var(--jvw-orange);
+  background: var(--jvw-orange);
+  filter: brightness(1.1);
   color: #fff;
 }
 
@@ -331,8 +331,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.625rem 0.75rem;
-  background: rgba(233, 122, 8, 0.25);
-  border: 1px solid rgba(233, 122, 8, 0.5);
+  background: var(--jvw-orange);
+  border: none;
   border-radius: 10px;
   color: #fff;
   text-decoration: none;
@@ -341,12 +341,12 @@
   font-size: 0.9em;
   user-select: text;
   -webkit-user-select: text;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, filter 0.2s ease;
 }
 
 .legal-footer .footer-contact-link:hover {
-  background: rgba(233, 122, 8, 0.4);
-  border-color: var(--accent);
+  background: var(--jvw-orange);
+  filter: brightness(1.1);
   color: #fff;
 }
 
