@@ -133,6 +133,111 @@
   margin-left: auto;
 }
 
+.footer-contact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-contact-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+}
+
+.footer-contact-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  padding: 0.72rem 0.9rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-contact-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(236, 127, 36, 0.9);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 24px rgba(8, 33, 56, 0.28);
+}
+
+.footer-contact-card:focus-visible {
+  outline: 2px solid rgba(236, 127, 36, 0.95);
+  outline-offset: 2px;
+}
+
+.footer-contact-icon {
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.footer-contact-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.footer-contact-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.84);
+}
+
+.footer-contact-value {
+  font-size: 0.99rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.footer-social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.footer-social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.85rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 24px rgba(8, 33, 56, 0.3);
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-social-button:hover {
+  transform: translateY(-1px);
+  filter: saturate(1.08);
+  box-shadow: 0 14px 28px rgba(8, 33, 56, 0.36);
+}
+
+.footer-social-button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.footer-social-button.is-linkedin {
+  background: linear-gradient(135deg, #0a66c2, #084d95);
+}
+
+.footer-social-button.is-youtube {
+  background: linear-gradient(135deg, #ff0033, #c70039);
+}
+
 .footer-bottom {
   margin-top: 1.5rem;
   padding-top: 1.25rem;
@@ -176,6 +281,11 @@
 
   .footer-right-col > p {
     text-align: center !important;
+  }
+
+  .footer-contact-list,
+  .footer-social-grid {
+    grid-template-columns: 1fr;
   }
 }
 
