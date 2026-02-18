@@ -3,6 +3,7 @@
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const contactIntentStorageKey = "jvw_contact_intent";
 
   const updateNavBackground = (scrolled) => {
     if (!nav) return;
@@ -115,7 +116,119 @@
     }
   };
 
+  const setupContactIntentTracking = () => {
+    const contactAnchors = document.querySelectorAll('a[href="#contact"], a[href="index.html#contact"]');
+    if (!contactAnchors.length) {
+      return;
+    }
+
+    contactAnchors.forEach((anchor) => {
+      anchor.addEventListener("click", () => {
+        const selectedIntent = anchor.getAttribute("data-contact-intent") || "contact";
+        try {
+          window.sessionStorage.setItem(contactIntentStorageKey, selectedIntent);
+        } catch (error) {
+          // Ignore storage issues in strict/private browser modes.
+        }
+      });
+    });
+  };
+
+  const setupContactForm = () => {
+    const contactForm = document.getElementById("contact-form");
+    if (!contactForm) {
+      return;
+    }
+
+    const requestTypeField = document.getElementById("contact-request-type");
+    const statusElement = document.getElementById("contact-form-status");
+
+    const requestTypeLabels = {
+      offerte: "Vrijblijvende offerte aanvragen",
+      contact: "Contact opnemen",
+      advies: "Informatie of advies",
+      terugbellen: "Terugbelverzoek",
+    };
+
+    const subjectLabels = {
+      offerte: "Vrijblijvende offerteaanvraag via JVW website",
+      contact: "Contactaanvraag via JVW website",
+      advies: "Vraag om informatie of advies via JVW website",
+      terugbellen: "Terugbelverzoek via JVW website",
+    };
+
+    const applyStoredIntent = () => {
+      if (!requestTypeField || window.location.hash !== "#contact") {
+        return;
+      }
+
+      let storedIntent = "";
+      try {
+        storedIntent = window.sessionStorage.getItem(contactIntentStorageKey) || "";
+      } catch (error) {
+        storedIntent = "";
+      }
+
+      if (!storedIntent) {
+        return;
+      }
+
+      if (requestTypeLabels[storedIntent]) {
+        requestTypeField.value = storedIntent;
+      }
+    };
+
+    applyStoredIntent();
+    window.addEventListener("hashchange", applyStoredIntent);
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!contactForm.reportValidity()) {
+        return;
+      }
+
+      const formData = new FormData(contactForm);
+      const getValue = (name) => (formData.get(name) || "").toString().trim();
+
+      const requestTypeValue = getValue("request_type");
+      const requestTypeLabel = requestTypeLabels[requestTypeValue] || requestTypeValue || "-";
+      const subject = subjectLabels[requestTypeValue] || "Aanvraag via JVW website";
+
+      const bodyLines = [
+        "Nieuwe aanvraag via jvwinfraservice.nl",
+        "",
+        `Onderwerp: ${requestTypeLabel}`,
+        `Expertise: ${getValue("service") || "-"}`,
+        `Naam: ${getValue("name") || "-"}`,
+        `Bedrijfsnaam: ${getValue("company") || "-"}`,
+        `E-mailadres: ${getValue("email") || "-"}`,
+        `Telefoonnummer: ${getValue("phone") || "-"}`,
+        `Type opdrachtgever: ${getValue("client_type") || "-"}`,
+        `Voorkeur contact: ${getValue("contact_preference") || "-"}`,
+        `Projectlocatie: ${getValue("project_location") || "-"}`,
+        `Gewenste start: ${getValue("desired_start") || "-"}`,
+        "",
+        "Vraag / toelichting:",
+        getValue("message") || "-",
+      ];
+
+      const mailtoAddress = contactForm.getAttribute("data-mail-to") || "info@jvwinfraservice.nl";
+      const mailtoUrl = `mailto:${mailtoAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+
+      window.location.href = mailtoUrl;
+
+      if (statusElement) {
+        statusElement.classList.remove("hidden");
+        statusElement.innerHTML =
+          'Uw e-mailprogramma wordt geopend. Lukt dat niet? Mail direct naar <a href="mailto:info@jvwinfraservice.nl" class="underline hover:no-underline">info@jvwinfraservice.nl</a>.';
+      }
+    });
+  };
+
   setupThemeListeners();
   setupMenuListeners();
   setupScrollColorReveal();
+  setupContactIntentTracking();
+  setupContactForm();
 })();
