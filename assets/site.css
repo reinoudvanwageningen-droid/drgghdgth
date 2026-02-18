@@ -157,6 +157,8 @@
   background: linear-gradient(135deg, #f4963d 0%, #e97a08 48%, #ca6500 100%);
   color: #fff;
   text-decoration: none;
+  -webkit-user-select: text;
+  user-select: text;
   box-shadow: 0 14px 28px rgba(8, 33, 56, 0.3);
   transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
@@ -178,9 +180,8 @@
 }
 
 .footer-contact-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.18;
+  display: block;
+  min-width: 0;
 }
 
 .footer-contact-label {
@@ -191,10 +192,13 @@
 }
 
 .footer-contact-value {
-  margin-top: 0.14rem;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.98rem;
+  font-weight: 900;
+  line-height: 1.2;
   color: rgba(255, 255, 255, 0.95);
+  -webkit-user-select: all;
+  user-select: all;
+  word-break: break-word;
 }
 
 .footer-social-grid {
