@@ -3,7 +3,6 @@
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const contactIntentStorageKey = "jvw_contact_intent";
 
   const updateNavBackground = (scrolled) => {
     if (!nav) return;
@@ -116,24 +115,6 @@
     }
   };
 
-  const setupContactIntentTracking = () => {
-    const contactAnchors = document.querySelectorAll('a[href="#contact"], a[href="index.html#contact"]');
-    if (!contactAnchors.length) {
-      return;
-    }
-
-    contactAnchors.forEach((anchor) => {
-      anchor.addEventListener("click", () => {
-        const selectedIntent = anchor.getAttribute("data-contact-intent") || "contact";
-        try {
-          window.sessionStorage.setItem(contactIntentStorageKey, selectedIntent);
-        } catch (error) {
-          // Ignore storage issues in strict/private browser modes.
-        }
-      });
-    });
-  };
-
   const setupContactForm = () => {
     const contactForm = document.getElementById("contact-form");
     if (!contactForm) {
@@ -157,29 +138,22 @@
       terugbellen: "Terugbelverzoek via JVW website",
     };
 
-    const applyStoredIntent = () => {
-      if (!requestTypeField || window.location.hash !== "#contact") {
+    const applyRequestedIntent = () => {
+      if (!requestTypeField) {
         return;
       }
 
-      let storedIntent = "";
-      try {
-        storedIntent = window.sessionStorage.getItem(contactIntentStorageKey) || "";
-      } catch (error) {
-        storedIntent = "";
-      }
-
-      if (!storedIntent) {
+      const requestedIntent = new URLSearchParams(window.location.search).get("intent") || "";
+      if (!requestedIntent) {
         return;
       }
 
-      if (requestTypeLabels[storedIntent]) {
-        requestTypeField.value = storedIntent;
+      if (requestTypeLabels[requestedIntent]) {
+        requestTypeField.value = requestedIntent;
       }
     };
 
-    applyStoredIntent();
-    window.addEventListener("hashchange", applyStoredIntent);
+    applyRequestedIntent();
 
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -229,6 +203,5 @@
   setupThemeListeners();
   setupMenuListeners();
   setupScrollColorReveal();
-  setupContactIntentTracking();
   setupContactForm();
 })();

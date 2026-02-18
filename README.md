@@ -3,6 +3,7 @@
 Deze repository bevat de statische website van **JVW Infraservice** met de volgende publieke pagina’s:
 
 - `index.html` (home)
+- `contact.htm` (contact/offerteformulier)
 - `expertises.html`
 - `projecten.html`
 - `bedrijfsgegevens.html`

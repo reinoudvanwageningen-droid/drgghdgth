@@ -36,7 +36,7 @@ jobs:
       - name: Prepare deploy artifact
         run: |
           mkdir -p .pages
-          cp index.html expertises.html projecten.html cookiebeleid.html privacybeleid.html bedrijfsgegevens.html algemene-voorwaarden.html bezoekers.html robots.txt sitemap.xml .pages/
+          cp index.html contact.htm expertises.html projecten.html cookiebeleid.html privacybeleid.html bedrijfsgegevens.html algemene-voorwaarden.html bezoekers.html robots.txt sitemap.xml .pages/
           cp "grondwerk-nauwkeurig-inmeten.webp" "transport-materieel-infraservice.webp" "riolering-aanleggen-afwatering.webp" "terreinverharding-fundering-maken.webp" "joost-van-wageningen-portret.jpeg" .pages/
           cp -R images .pages/images
           cp -R assets .pages/assets
