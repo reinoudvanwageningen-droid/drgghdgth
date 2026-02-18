@@ -6,6 +6,7 @@ Deze repository bevat de statische website van **JVW Infraservice** met de volge
 - `expertises.html`
 - `projecten.html`
 - `bedrijfsgegevens.html`
+- `algemene-voorwaarden.html`
 - `privacybeleid.html`
 - `cookiebeleid.html`
 

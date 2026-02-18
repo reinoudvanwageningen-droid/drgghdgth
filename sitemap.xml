@@ -2,38 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://reinoudvanwageningen-droid.github.io/drgghdgth/</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://reinoudvanwageningen-droid.github.io/drgghdgth/cookiebeleid.html</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://reinoudvanwageningen-droid.github.io/drgghdgth/privacybeleid.html</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://reinoudvanwageningen-droid.github.io/drgghdgth/bedrijfsgegevens.html</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://reinoudvanwageningen-droid.github.io/drgghdgth/projecten.html</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://reinoudvanwageningen-droid.github.io/drgghdgth/expertises.html</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://reinoudvanwageningen-droid.github.io/drgghdgth/algemene-voorwaarden.html</loc>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
