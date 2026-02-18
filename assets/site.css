@@ -243,25 +243,6 @@
   font-size: 0.95rem;
 }
 
-.legal-footer-social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 0.625rem 1.25rem;
-  border-radius: 0.75rem;
-  font-weight: 800;
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.legal-footer-social-link:hover {
-  border-color: var(--jvw-orange);
-  color: var(--jvw-orange);
-}
-
 .legal-footer .footer-bottom {
   margin-top: 24px;
   padding-top: 20px;
