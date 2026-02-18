@@ -113,52 +113,20 @@
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="text-center mb-10 md:mb-14">
-          <h2 class="text-caps-orange font-extrabold uppercase tracking-wider text-base mb-2">Contactformulier</h2>
-          <h3 class="text-2xl md:text-4xl font-black text-caps-blue dark:text-slate-100">Vraag een vrijblijvende offerte aan</h3>
+          <h2 class="text-caps-orange font-extrabold uppercase tracking-wider text-base mb-2">Contact</h2>
+          <h3 class="text-2xl md:text-4xl font-black text-caps-blue dark:text-slate-100">Neem direct contact op</h3>
           <div class="w-24 h-1 bg-caps-orange mx-auto mt-4 rounded-full"></div>
           <p class="mt-4 text-gray-600 dark:text-slate-300 max-w-3xl mx-auto text-base md:text-base">
-            Vertel ons kort wat u nodig heeft. Met onderstaande gegevens kunnen we snel en gericht reageren.
+            Laat uw gegevens en bericht achter. Wij nemen zo snel mogelijk contact met u op.
           </p>
         </div>
 
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-3xl mx-auto">
           <form id="contact-form" data-mail-to="info@jvwinfraservice.nl" class="bg-white dark:bg-slate-800 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 p-6 md:p-8 space-y-5">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div class="md:col-span-2">
-                <label for="contact-request-type" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">Waarmee kunnen we helpen? *</label>
-                <select id="contact-request-type" name="request_type" required class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange">
-                  <option value="">Selecteer een onderwerp</option>
-                  <option value="offerte">Vrijblijvende offerte aanvragen</option>
-                  <option value="contact">Contact opnemen</option>
-                  <option value="advies">Informatie of advies</option>
-                  <option value="terugbellen">Terugbelverzoek</option>
-                </select>
-              </div>
-
-              <div class="md:col-span-2">
-                <label for="contact-service" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">Welke expertise past het best? *</label>
-                <select id="contact-service" name="service" required class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange">
-                  <option value="">Selecteer een expertise</option>
-                  <option value="Grondwerk">Grondwerk</option>
-                  <option value="Kabels en leidingen">Kabels &amp; leidingen</option>
-                  <option value="Machinistenverhuur">Machinistenverhuur</option>
-                  <option value="Anders of combinatie">Anders of combinatie</option>
-                </select>
-              </div>
-
               <div>
                 <label for="contact-name" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">Naam *</label>
                 <input id="contact-name" name="name" type="text" autocomplete="name" required class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange" />
-              </div>
-
-              <div>
-                <label for="contact-company" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">Bedrijfsnaam (optioneel)</label>
-                <input id="contact-company" name="company" type="text" autocomplete="organization" class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange" />
-              </div>
-
-              <div>
-                <label for="contact-email" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">E-mailadres *</label>
-                <input id="contact-email" name="email" type="email" autocomplete="email" required class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange" />
               </div>
 
               <div>
@@ -166,49 +134,23 @@
                 <input id="contact-phone" name="phone" type="tel" autocomplete="tel" required class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange" />
               </div>
 
-              <div>
-                <label for="contact-client-type" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">Type opdrachtgever *</label>
-                <select id="contact-client-type" name="client_type" required class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange">
-                  <option value="">Selecteer</option>
-                  <option value="Zakelijk">Zakelijk</option>
-                  <option value="Particulier">Particulier</option>
-                  <option value="Overheid of instelling">Overheid of instelling</option>
-                  <option value="Anders">Anders</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="contact-preference" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">Voorkeur contact *</label>
-                <select id="contact-preference" name="contact_preference" required class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange">
-                  <option value="">Selecteer</option>
-                  <option value="Telefoon">Telefoon</option>
-                  <option value="E-mail">E-mail</option>
-                  <option value="WhatsApp">WhatsApp</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="contact-location" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">Projectlocatie</label>
-                <input id="contact-location" name="project_location" type="text" autocomplete="address-level2" placeholder="Bijv. Hendrik-Ido-Ambacht" class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange" />
-              </div>
-
-              <div>
-                <label for="contact-start" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">Gewenste start (optioneel)</label>
-                <input id="contact-start" name="desired_start" type="month" class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange" />
+              <div class="md:col-span-2">
+                <label for="contact-email" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">E-mailadres</label>
+                <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="optioneel" class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange" />
               </div>
 
               <div class="md:col-span-2">
-                <label for="contact-message" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">Omschrijf uw vraag of opdracht *</label>
-                <textarea id="contact-message" name="message" rows="6" required placeholder="Omschrijf kort de werkzaamheden, gewenste planning en bijzonderheden op locatie." class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange"></textarea>
+                <label for="contact-message" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">Bericht *</label>
+                <textarea id="contact-message" name="message" rows="6" required placeholder="Waarmee kunnen we u helpen?" class="w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange"></textarea>
               </div>
             </div>
 
             <div class="flex flex-col sm:flex-row sm:items-center gap-3 pt-1">
               <button type="submit" class="inline-flex items-center justify-center gap-2 bg-caps-orange text-white px-6 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
-                Verstuur aanvraag
+                Verstuur bericht
                 <span aria-hidden="true">→</span>
               </button>
-              <p class="text-sm text-gray-600 dark:text-slate-300">Na verzenden wordt uw e-mailprogramma geopend met alle ingevulde gegevens.</p>
+              <p class="text-sm text-gray-600 dark:text-slate-300">Na verzenden wordt uw e-mailprogramma geopend.</p>
             </div>
 
             <p id="contact-form-status" class="hidden text-sm font-semibold text-caps-blue dark:text-slate-200" aria-live="polite"></p>

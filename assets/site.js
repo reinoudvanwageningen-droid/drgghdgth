@@ -121,39 +121,20 @@
       return;
     }
 
-    const requestTypeField = document.getElementById("contact-request-type");
     const statusElement = document.getElementById("contact-form-status");
 
-    const requestTypeLabels = {
+    const intentLabels = {
       offerte: "Vrijblijvende offerte aanvragen",
       contact: "Contact opnemen",
-      advies: "Informatie of advies",
-      terugbellen: "Terugbelverzoek",
     };
 
     const subjectLabels = {
       offerte: "Vrijblijvende offerteaanvraag via JVW website",
       contact: "Contactaanvraag via JVW website",
-      advies: "Vraag om informatie of advies via JVW website",
-      terugbellen: "Terugbelverzoek via JVW website",
     };
 
-    const applyRequestedIntent = () => {
-      if (!requestTypeField) {
-        return;
-      }
-
-      const requestedIntent = new URLSearchParams(window.location.search).get("intent") || "";
-      if (!requestedIntent) {
-        return;
-      }
-
-      if (requestTypeLabels[requestedIntent]) {
-        requestTypeField.value = requestedIntent;
-      }
-    };
-
-    applyRequestedIntent();
+    const requestedIntent = new URLSearchParams(window.location.search).get("intent") || "contact";
+    const normalizedIntent = intentLabels[requestedIntent] ? requestedIntent : "contact";
 
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -165,25 +146,17 @@
       const formData = new FormData(contactForm);
       const getValue = (name) => (formData.get(name) || "").toString().trim();
 
-      const requestTypeValue = getValue("request_type");
-      const requestTypeLabel = requestTypeLabels[requestTypeValue] || requestTypeValue || "-";
-      const subject = subjectLabels[requestTypeValue] || "Aanvraag via JVW website";
+      const subject = subjectLabels[normalizedIntent] || "Contact via JVW website";
 
       const bodyLines = [
         "Nieuwe aanvraag via jvwinfraservice.nl",
         "",
-        `Onderwerp: ${requestTypeLabel}`,
-        `Expertise: ${getValue("service") || "-"}`,
+        `Type aanvraag: ${intentLabels[normalizedIntent] || "Contact opnemen"}`,
         `Naam: ${getValue("name") || "-"}`,
-        `Bedrijfsnaam: ${getValue("company") || "-"}`,
-        `E-mailadres: ${getValue("email") || "-"}`,
         `Telefoonnummer: ${getValue("phone") || "-"}`,
-        `Type opdrachtgever: ${getValue("client_type") || "-"}`,
-        `Voorkeur contact: ${getValue("contact_preference") || "-"}`,
-        `Projectlocatie: ${getValue("project_location") || "-"}`,
-        `Gewenste start: ${getValue("desired_start") || "-"}`,
+        `E-mailadres: ${getValue("email") || "-"}`,
         "",
-        "Vraag / toelichting:",
+        "Bericht:",
         getValue("message") || "-",
       ];
 
