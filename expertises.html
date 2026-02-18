@@ -49,8 +49,76 @@
 
     .expertise-image {
       width: 100%;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16 / 10;
       object-fit: cover;
+    }
+
+    .expertises-grid-section {
+      background:
+        radial-gradient(680px 400px at 4% 6%, rgba(233, 122, 8, 0.14), transparent 72%),
+        radial-gradient(620px 380px at 96% 94%, rgba(233, 122, 8, 0.12), transparent 74%),
+        linear-gradient(180deg, #fffdf9 0%, #ffffff 54%, #fffdf8 100%);
+      isolation: isolate;
+    }
+
+    .dark .expertises-grid-section {
+      background:
+        radial-gradient(620px 380px at 8% 8%, rgba(233, 122, 8, 0.16), transparent 76%),
+        radial-gradient(560px 340px at 94% 94%, rgba(233, 122, 8, 0.14), transparent 78%),
+        #020617;
+    }
+
+    .expertises-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .expertises-cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.75rem;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .expertises-cards-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .expertise-card {
+      transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(233, 122, 8, 0.28);
+      box-shadow: 0 18px 42px rgba(13, 60, 96, 0.2);
+    }
+
+    .dark .expertise-card:hover {
+      border-color: rgba(233, 122, 8, 0.48);
+      box-shadow: 0 24px 48px rgba(2, 6, 23, 0.58);
+    }
+
+    .expertise-card-body {
+      padding: 1.6rem;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    @media (min-width: 768px) {
+      .expertise-card-body {
+        padding: 1.75rem;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .expertise-card-body {
+        padding: 2rem;
+      }
     }
   </style>
 </head>
@@ -118,7 +186,7 @@
       </div>
     </section>
 
-    <section id="expertises-grid" class="py-12 md:py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
+    <section id="expertises-grid" class="expertises-grid-section py-12 md:py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
       <div class="absolute inset-0 opacity-[0.08]" style="background-image: radial-gradient(circle at 1px 1px, rgba(13,60,96,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="text-center mb-10 md:mb-14">
@@ -130,10 +198,10 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+        <div class="expertises-cards-grid">
+          <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <img src="grondwerk-nauwkeurig-inmeten.webp" alt="Grondwerk en nauwkeurig inmeten op projectlocatie" width="1024" height="683" loading="lazy" decoding="async" class="expertise-image" />
-            <div class="p-6 flex-1 flex flex-col">
+            <div class="expertise-card-body">
               <h3 class="font-black text-xl text-caps-blue dark:text-white">Grondwerk</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-3">
                 Voor een goede projectstart is degelijk grondwerk essentieel. Wij verzorgen uitgraven, aanvullen en profileren, afgestemd op de vervolgstap in uw project.
@@ -151,9 +219,9 @@
             </div>
           </article>
 
-          <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+          <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <img src="riolering-aanleggen-afwatering.webp" alt="Sleufwerk en leidingen op een infrastructuurproject" width="1600" height="1200" loading="lazy" decoding="async" class="expertise-image" />
-            <div class="p-6 flex-1 flex flex-col">
+            <div class="expertise-card-body">
               <h3 class="font-black text-xl text-caps-blue dark:text-white">Kabels en leidingen</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-3">
                 Wij realiseren sleufwerk en tracés voor kabels en leidingen met aandacht voor veiligheid, werkvolgorde en correcte aanvulling volgens voorschrift.
@@ -171,9 +239,9 @@
             </div>
           </article>
 
-          <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+          <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <img src="terreinverharding-fundering-maken.webp" alt="Voorbereiding van terrein en plaatsing van voorzieningen buiten" width="2040" height="1530" loading="lazy" decoding="async" class="expertise-image" />
-            <div class="p-6 flex-1 flex flex-col">
+            <div class="expertise-card-body">
               <h3 class="font-black text-xl text-caps-blue dark:text-white">Aarding en buitenkasten</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-3">
                 Voor veilige en betrouwbare installaties verzorgen wij het plaatsen van buitenkasten en uitvoeren van aardingswerkzaamheden in afstemming met installateurs.
