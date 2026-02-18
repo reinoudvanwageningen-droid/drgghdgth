@@ -93,7 +93,7 @@
 
 .footer-inner {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 0.9fr) minmax(0, 1.38fr);
   gap: 1.5rem 2rem;
   align-items: start;
 }
@@ -129,7 +129,7 @@
 
 .footer-right-col {
   width: 100%;
-  max-width: 680px;
+  max-width: none;
   margin-left: auto;
 }
 
@@ -141,18 +141,18 @@
 
 .footer-contact-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
 }
 
 .footer-contact-card {
   display: flex;
   align-items: center;
-  gap: 0.72rem;
+  gap: 0.58rem;
   width: 100%;
   min-width: 0;
-  min-height: 74px;
-  padding: 0.8rem 0.95rem;
+  min-height: 68px;
+  padding: 0.72rem 0.8rem;
   border-radius: 0.85rem;
   border: 1px solid rgba(255, 255, 255, 0.24);
   background: linear-gradient(135deg, #f4963d 0%, #e97a08 48%, #ca6500 100%);
@@ -196,7 +196,7 @@
 
 .footer-contact-value {
   display: block;
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   font-weight: 900;
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.95);
@@ -258,9 +258,14 @@
 }
 
 @media (max-width: 1024px) {
+  .footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .footer-right-col {
-    max-width: none;
-    margin-left: 0;
+    grid-column: 1 / -1;
+    max-width: 760px;
+    margin-inline: auto;
   }
 }
 
@@ -318,7 +323,7 @@
 
 .legal-footer .footer-inner {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 0.9fr) minmax(0, 1.38fr);
   gap: 1.5rem 2rem;
   align-items: start;
 }
@@ -356,7 +361,7 @@
 
 .legal-footer .footer-right {
   width: 100%;
-  max-width: 680px;
+  max-width: none;
   margin-left: auto;
 }
 
@@ -376,9 +381,14 @@
 }
 
 @media (max-width: 1024px) {
+  .legal-footer .footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .legal-footer .footer-right {
-    max-width: none;
-    margin-left: 0;
+    grid-column: 1 / -1;
+    max-width: 760px;
+    margin-inline: auto;
   }
 }
 
