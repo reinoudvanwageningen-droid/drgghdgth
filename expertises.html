@@ -54,18 +54,7 @@
     }
 
     .expertises-grid-section {
-      background:
-        radial-gradient(680px 400px at 4% 6%, rgba(233, 122, 8, 0.14), transparent 72%),
-        radial-gradient(620px 380px at 96% 94%, rgba(233, 122, 8, 0.12), transparent 74%),
-        linear-gradient(180deg, #fffdf9 0%, #ffffff 54%, #fffdf8 100%);
       isolation: isolate;
-    }
-
-    .dark .expertises-grid-section {
-      background:
-        radial-gradient(620px 380px at 8% 8%, rgba(233, 122, 8, 0.16), transparent 76%),
-        radial-gradient(560px 340px at 94% 94%, rgba(233, 122, 8, 0.14), transparent 78%),
-        #020617;
     }
 
     .expertises-cards-grid {
@@ -81,28 +70,16 @@
       }
     }
 
-    @media (min-width: 1440px) {
-      .expertises-cards-grid {
-        gap: 2rem;
-      }
-
-      .expertise-card-machinisten {
-        grid-column: 1 / -1;
-      }
-    }
-
     .expertise-card {
-      transition: border-color 220ms ease, box-shadow 220ms ease;
+      transition: border-color 220ms ease;
     }
 
     .expertise-card:hover {
-      border-color: rgba(233, 122, 8, 0.24);
-      box-shadow: 0 14px 32px rgba(13, 60, 96, 0.14);
+      border-color: rgba(148, 163, 184, 0.42);
     }
 
     .dark .expertise-card:hover {
-      border-color: rgba(233, 122, 8, 0.4);
-      box-shadow: 0 16px 34px rgba(2, 6, 23, 0.48);
+      border-color: rgba(71, 85, 105, 0.76);
     }
 
     .expertise-card-body {
@@ -154,11 +131,6 @@
       width: 100%;
       aspect-ratio: 16 / 10;
       object-fit: cover;
-      transition: transform 180ms ease;
-    }
-
-    .expertise-case-item:hover .expertise-case-image {
-      transform: scale(1.01);
     }
   </style>
 </head>
@@ -227,7 +199,6 @@
     </section>
 
     <section id="expertises-grid" class="expertises-grid-section py-12 md:py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle at 1px 1px, rgba(13,60,96,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="text-center mb-10 md:mb-14">
           <p class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Uitgebreide toelichting</p>
@@ -290,33 +261,59 @@
             </div>
           </article>
 
-          <article class="expertise-card expertise-card-machinisten bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+          <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <img src="images/expertises/mobiele-kraan-laden-lossen.jpeg" alt="Mobiele kraan tijdens laden en lossen op projectlocatie" width="768" height="1024" loading="lazy" decoding="async" class="expertise-image" />
             <div class="expertise-card-body">
               <h3 class="font-black text-xl text-caps-blue dark:text-white">Machinistenverhuur</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-4 leading-relaxed">
-                Machinistenverhuur voor machines in de grond-, weg- en waterbouw, met ervaren inzet op uiteenlopende projecten.
+                Ervaren machinisten voor grond-, weg- en waterbouw, met focus op mobiele kranen, knijperwagens, walsen en dumpers.
               </p>
               <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkbeelden</h4>
               <div class="expertise-case-gallery">
                 <div class="expertise-case-item">
-                  <img src="images/expertises/maaiboot-slootonderhoud.jpeg" alt="Maaiboot in combinatie met kraanwerk voor slootonderhoud" width="819" height="614" loading="lazy" decoding="async" class="expertise-case-image" />
-                </div>
-                <div class="expertise-case-item">
-                  <img src="images/expertises/maaiboot-kraanwerk-brug.jpeg" alt="Kraanwerk en maaiboot onder brug tijdens onderhoudswerk" width="819" height="614" loading="lazy" decoding="async" class="expertise-case-image" />
+                  <img src="images/expertises/tractor-machinisteninzet.jpeg" alt="Machinisteninzet met zwaar materieel op locatie" width="768" height="1024" loading="lazy" decoding="async" class="expertise-case-image" />
                 </div>
               </div>
               <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wat we uitvoeren</h4>
               <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-3 mt-3 leading-relaxed">
-                <li>• Mobiele en rupskranen</li>
-                <li>• Baggerschuifboten</li>
-                <li>• Maaiverzamelboot</li>
-                <li>• Knijperauto</li>
-                <li>• Shovel</li>
+                <li>• Mobiele kranen</li>
+                <li>• Knijperwagens</li>
+                <li>• Walsen</li>
+                <li>• Dumpers</li>
+                <li>• Shovels</li>
               </ul>
               <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wanneer inzetten</h4>
               <p class="text-sm text-gray-600 dark:text-slate-300 mt-3 leading-relaxed">
-                Bij projecten waar tijdelijke of structurele machinistencapaciteit nodig is voor graaf-, bagger-, maai- en laadwerkzaamheden.
+                Bij projecten waar tijdelijke of structurele machinistencapaciteit nodig is voor grondverzet, verdichten, transport en laadwerkzaamheden.
+              </p>
+            </div>
+          </article>
+
+          <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+            <img src="images/expertises/maaiboot-slootonderhoud.jpeg" alt="Bagger- en maaiwerk met maaiboot op projectlocatie" width="819" height="614" loading="lazy" decoding="async" class="expertise-image" />
+            <div class="expertise-card-body">
+              <h3 class="font-black text-xl text-caps-blue dark:text-white">Bagger- en maaiprojecten</h3>
+              <p class="text-base text-gray-600 dark:text-slate-200 mt-4 leading-relaxed">
+                JVW Infraservice neemt complete bagger- en maaiprojecten aan, van voorbereiding en uitvoering tot afronding.
+              </p>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkbeelden</h4>
+              <div class="expertise-case-gallery">
+                <div class="expertise-case-item">
+                  <img src="images/expertises/maaiboot-kraanwerk-brug.jpeg" alt="Combinatie van maaiboot en kraan bij onderhoud onder een brug" width="819" height="614" loading="lazy" decoding="async" class="expertise-case-image" />
+                </div>
+                <div class="expertise-case-item">
+                  <img src="images/expertises/maaiboot-nachtwerk-sneeuw.jpeg" alt="Maaiboot in inzet bij complex nachtwerk in winterse omstandigheden" width="1024" height="768" loading="lazy" decoding="async" class="expertise-case-image" />
+                </div>
+              </div>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wat we uitvoeren</h4>
+              <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-3 mt-3 leading-relaxed">
+                <li>• Baggerwerk en onderhoud van watergangen</li>
+                <li>• Maaiwerk op en rond water</li>
+                <li>• Complete projectcoördinatie en uitvoering</li>
+              </ul>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Werkgebied</h4>
+              <p class="text-sm text-gray-600 dark:text-slate-300 mt-3 leading-relaxed">
+                Door heel Nederland en, in overleg, ook daarbuiten. Ook complexe bagger- of maaiprojecten kunnen volledig door JVW Infraservice worden uitgevoerd.
               </p>
             </div>
           </article>
