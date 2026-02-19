@@ -171,8 +171,61 @@
     });
   };
 
+  const setupPhotoRotators = () => {
+    const rotatorImages = document.querySelectorAll("[data-photo-rotator]");
+    if (!rotatorImages.length) {
+      return;
+    }
+
+    const parseJsonArray = (value) => {
+      if (!value) return [];
+      try {
+        const parsed = JSON.parse(value);
+        return Array.isArray(parsed) ? parsed : [];
+      } catch {
+        return [];
+      }
+    };
+
+    rotatorImages.forEach((image, imageIndex) => {
+      const photos = parseJsonArray(image.dataset.photos).filter(Boolean);
+      if (photos.length <= 1) {
+        return;
+      }
+
+      const alts = parseJsonArray(image.dataset.photoAlts);
+      const intervalMs = Math.max(Number(image.dataset.photoInterval) || 5000, 2500);
+      let currentIndex = 0;
+
+      const preloadNext = (nextIndex) => {
+        const nextSrc = photos[nextIndex];
+        if (!nextSrc) return;
+        const preloadImage = new Image();
+        preloadImage.src = nextSrc;
+      };
+
+      preloadNext(1);
+
+      window.setInterval(() => {
+        const nextIndex = (currentIndex + 1) % photos.length;
+        image.classList.add("is-fading");
+
+        window.setTimeout(() => {
+          image.src = photos[nextIndex];
+          if (alts[nextIndex]) {
+            image.alt = alts[nextIndex];
+          }
+          image.classList.remove("is-fading");
+          currentIndex = nextIndex;
+          preloadNext((nextIndex + 1) % photos.length);
+        }, 180);
+      }, intervalMs + imageIndex * 150);
+    });
+  };
+
   setupThemeListeners();
   setupMenuListeners();
   setupScrollColorReveal();
   setupContactForm();
+  setupPhotoRotators();
 })();
