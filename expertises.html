@@ -120,6 +120,56 @@
         padding: 2.25rem;
       }
     }
+
+    .expertise-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    @media (min-width: 768px) {
+      .expertise-gallery-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+      }
+    }
+
+    .expertise-gallery-item {
+      border-radius: 0.95rem;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(2px);
+    }
+
+    .dark .expertise-gallery-item {
+      border-color: rgba(71, 85, 105, 0.7);
+      background: rgba(15, 23, 42, 0.72);
+    }
+
+    .expertise-gallery-image {
+      width: 100%;
+      aspect-ratio: 5 / 4;
+      object-fit: cover;
+      filter: saturate(0.88) contrast(0.98);
+      transition: transform 240ms ease;
+    }
+
+    .expertise-gallery-item:hover .expertise-gallery-image {
+      transform: scale(1.03);
+    }
+
+    .expertise-gallery-caption {
+      padding: 0.6rem 0.75rem 0.7rem;
+      font-size: 0.78rem;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #285173;
+    }
+
+    .dark .expertise-gallery-caption {
+      color: #e2e8f0;
+    }
   </style>
 </head>
 
@@ -261,11 +311,42 @@
           </article>
         </div>
 
-        <div class="mt-10 text-center">
+        <div class="mt-10 md:mt-12 max-w-5xl mx-auto">
+          <h3 class="text-caps-blue dark:text-slate-100 font-black text-xl md:text-2xl text-center">Meer werk in beeld, rustig gepresenteerd</h3>
+          <p class="text-center text-gray-600 dark:text-slate-300 mt-3 max-w-3xl mx-auto text-sm md:text-base">
+            Een korte beeldimpressie van verschillende werkzaamheden. Zo krijgt u extra context zonder dat de pagina druk wordt.
+          </p>
+          <div class="expertise-gallery-grid mt-5 md:mt-6">
+            <figure class="expertise-gallery-item">
+              <img src="transport-materieel-infraservice.webp" alt="Materieel en transport op locatie" width="1600" height="1200" loading="lazy" decoding="async" class="expertise-gallery-image" />
+              <figcaption class="expertise-gallery-caption">Transport &amp; logistiek</figcaption>
+            </figure>
+            <figure class="expertise-gallery-item">
+              <img src="riolering-aanleggen-afwatering.webp" alt="Aanleg van afwatering en riolering" width="1600" height="1200" loading="lazy" decoding="async" class="expertise-gallery-image" />
+              <figcaption class="expertise-gallery-caption">Afwatering &amp; riolering</figcaption>
+            </figure>
+            <figure class="expertise-gallery-item">
+              <img src="images/jvw-werf-1280.webp" alt="Werkzaamheden op de werf" width="1280" height="853" loading="lazy" decoding="async" class="expertise-gallery-image" />
+              <figcaption class="expertise-gallery-caption">Projectinrichting op de werf</figcaption>
+            </figure>
+            <figure class="expertise-gallery-item">
+              <img src="images/jvw-infraservice-werkbus-aanhanger.webp" alt="JVW Infraservice werkbus met aanhanger" width="1280" height="960" loading="lazy" decoding="async" class="expertise-gallery-image" />
+              <figcaption class="expertise-gallery-caption">Voorbereiding &amp; uitvoering</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="mt-10 text-center space-y-3">
           <a href="contact.htm?intent=offerte" class="inline-flex items-center gap-2 bg-caps-orange text-white px-6 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
             Bespreek uw project
             <span aria-hidden="true">→</span>
           </a>
+          <div>
+            <a href="https://youtube.com/@jvw4772?si=N6F5Ns075HbC5VlD" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-caps-blue dark:text-slate-200 font-extrabold hover:text-caps-orange transition" aria-label="Bekijk JVW Infraservice op YouTube (opent in nieuw tabblad)">
+              Bekijk ons op YouTube
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
