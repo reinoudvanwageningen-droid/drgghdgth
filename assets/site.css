@@ -553,6 +553,20 @@
     order: 2 !important;
   }
 
+  .footer-contact-card {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-contact-text {
+    flex: 0 1 auto;
+    text-align: center;
+  }
+
+  .footer-contact-value {
+    text-align: center;
+  }
+
   .footer-links-col {
     order: 3 !important;
     text-align: center;
