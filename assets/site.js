@@ -171,13 +171,11 @@
     });
   };
 
-  const setupPhotoRotators = () => {
-    const rotatorImages = document.querySelectorAll("[data-photo-rotator]");
-    if (!rotatorImages.length) {
+  const setupExpertiseGalleries = () => {
+    const galleryFrames = document.querySelectorAll("[data-photo-rotator-frame]");
+    if (!galleryFrames.length) {
       return;
     }
-
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const parseJsonArray = (value) => {
       if (!value) return [];
@@ -189,52 +187,128 @@
       }
     };
 
-    rotatorImages.forEach((image, imageIndex) => {
-      const photos = parseJsonArray(image.dataset.photos).filter(Boolean);
-      if (photos.length <= 1) {
+    const galleryStates = [];
+
+    const closeAllGalleries = (exceptFrame = null) => {
+      galleryStates.forEach(({ frame, setOpenState }) => {
+        if (frame !== exceptFrame) {
+          setOpenState(false);
+        }
+      });
+    };
+
+    galleryFrames.forEach((frame, frameIndex) => {
+      const mainImage = frame.querySelector("[data-photo-rotator]");
+      const toggleButton = frame.querySelector("[data-gallery-toggle]");
+      const thumbnailStrip = frame.querySelector("[data-gallery-strip]");
+      const counter = frame.querySelector("[data-photo-rotator-counter]");
+
+      if (!mainImage || !toggleButton || !thumbnailStrip) {
         return;
       }
 
-      const alts = parseJsonArray(image.dataset.photoAlts);
-      const intervalMs = Math.max(Number(image.dataset.photoInterval) || 5000, 2500);
-      const frame = image.closest("[data-photo-rotator-frame]");
-      const counter = frame ? frame.querySelector("[data-photo-rotator-counter]") : null;
+      const photos = parseJsonArray(mainImage.dataset.photos).filter(Boolean);
+      if (!photos.length) {
+        return;
+      }
+
+      const alts = parseJsonArray(mainImage.dataset.photoAlts);
       let currentIndex = 0;
 
-      const updateCounter = (index) => {
+      const thumbnailStripId = `expertise-gallery-strip-${frameIndex + 1}`;
+      thumbnailStrip.id = thumbnailStripId;
+      toggleButton.setAttribute("aria-controls", thumbnailStripId);
+
+      const updateCounter = () => {
         if (!counter) return;
-        counter.textContent = `${index + 1}/${photos.length}`;
+        counter.textContent = `${currentIndex + 1}/${photos.length}`;
       };
 
-      const preloadNext = (nextIndex) => {
-        const nextSrc = photos[nextIndex];
-        if (!nextSrc) return;
-        const preloadImage = new Image();
-        preloadImage.src = nextSrc;
+      const updateActiveThumbnails = () => {
+        const thumbs = thumbnailStrip.querySelectorAll("[data-gallery-thumb]");
+        thumbs.forEach((thumb, thumbIndex) => {
+          const isActive = thumbIndex === currentIndex;
+          thumb.classList.toggle("is-active", isActive);
+          thumb.setAttribute("aria-pressed", String(isActive));
+        });
       };
 
-      updateCounter(currentIndex);
-      preloadNext(1);
+      const setCurrentPhoto = (nextIndex) => {
+        if (nextIndex < 0 || nextIndex >= photos.length || nextIndex === currentIndex) {
+          return;
+        }
 
-      if (prefersReducedMotion) {
-        return;
+        mainImage.classList.add("is-fading");
+        window.setTimeout(() => {
+          mainImage.src = photos[nextIndex];
+          if (alts[nextIndex]) {
+            mainImage.alt = alts[nextIndex];
+          }
+          mainImage.classList.remove("is-fading");
+        }, 130);
+
+        currentIndex = nextIndex;
+        updateCounter();
+        updateActiveThumbnails();
+      };
+
+      thumbnailStrip.innerHTML = "";
+      photos.forEach((photoSrc, photoIndex) => {
+        const thumbButton = document.createElement("button");
+        thumbButton.type = "button";
+        thumbButton.className = "expertise-gallery-thumb";
+        thumbButton.dataset.galleryThumb = String(photoIndex);
+        thumbButton.setAttribute("aria-label", `Toon foto ${photoIndex + 1} van ${photos.length}`);
+
+        const thumbImage = document.createElement("img");
+        thumbImage.src = photoSrc;
+        thumbImage.alt = alts[photoIndex] || `Detailfoto ${photoIndex + 1}`;
+        thumbImage.loading = "lazy";
+        thumbImage.decoding = "async";
+        thumbImage.className = "expertise-gallery-thumb-image";
+        thumbButton.appendChild(thumbImage);
+
+        thumbButton.addEventListener("click", () => {
+          setCurrentPhoto(photoIndex);
+        });
+
+        thumbnailStrip.appendChild(thumbButton);
+      });
+
+      const setOpenState = (isOpen) => {
+        thumbnailStrip.classList.toggle("hidden", !isOpen);
+        toggleButton.setAttribute("aria-expanded", String(isOpen));
+        toggleButton.textContent = isOpen ? "Sluit foto's" : "Bekijk foto's";
+      };
+
+      if (mainImage.getAttribute("src") !== photos[0]) {
+        mainImage.setAttribute("src", photos[0]);
+      }
+      if (alts[0]) {
+        mainImage.setAttribute("alt", alts[0]);
       }
 
-      window.setInterval(() => {
-        const nextIndex = (currentIndex + 1) % photos.length;
-        image.classList.add("is-fading");
+      if (photos.length <= 1) {
+        toggleButton.classList.add("hidden");
+      } else {
+        toggleButton.addEventListener("click", () => {
+          const shouldOpen = thumbnailStrip.classList.contains("hidden");
+          closeAllGalleries(shouldOpen ? frame : null);
+          setOpenState(shouldOpen);
+        });
+      }
 
-        window.setTimeout(() => {
-          image.src = photos[nextIndex];
-          if (alts[nextIndex]) {
-            image.alt = alts[nextIndex];
-          }
-          image.classList.remove("is-fading");
-          currentIndex = nextIndex;
-          updateCounter(currentIndex);
-          preloadNext((nextIndex + 1) % photos.length);
-        }, 180);
-      }, intervalMs + imageIndex * 150);
+      updateCounter();
+      updateActiveThumbnails();
+      setOpenState(false);
+
+      galleryStates.push({ frame, setOpenState });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeAllGalleries();
+      }
     });
   };
 
@@ -242,5 +316,5 @@
   setupMenuListeners();
   setupScrollColorReveal();
   setupContactForm();
-  setupPhotoRotators();
+  setupExpertiseGalleries();
 })();
