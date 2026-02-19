@@ -345,6 +345,13 @@
   color: var(--accent);
 }
 
+.footer-links a[href="bedrijfsgegevens.html"],
+.footer-links a[href="privacybeleid.html"],
+.legal-footer .footer-links a[href="bedrijfsgegevens.html"],
+.legal-footer .footer-links a[href="privacybeleid.html"] {
+  font-weight: 900;
+}
+
 .legal-footer .footer-address {
   margin: 0;
   max-width: 34ch;
