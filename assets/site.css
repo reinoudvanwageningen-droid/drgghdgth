@@ -511,3 +511,23 @@
     padding-top: 0.9rem;
   }
 }
+
+@media (max-width: 900px) {
+  .footer-links-col,
+  .legal-footer .footer-links {
+    opacity: 0.72;
+  }
+
+  .footer-links,
+  .legal-footer .footer-links {
+    gap: 0.15rem 0.55rem;
+  }
+
+  .footer-links a,
+  .legal-footer .footer-links a {
+    font-size: 0.72rem !important;
+    font-weight: 500 !important;
+    color: rgba(226, 232, 240, 0.64) !important;
+    line-height: 1.35;
+  }
+}
