@@ -51,6 +51,122 @@
       text-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
     }
 
+    .expertise-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .expertise-image-frame {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .expertise-image-viewport {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expertise-gallery-toolbar {
+      position: absolute;
+      right: 0.75rem;
+      bottom: 0.75rem;
+      left: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+      pointer-events: none;
+    }
+
+    .expertise-gallery-toggle,
+    .expertise-image-counter {
+      pointer-events: auto;
+    }
+
+    .expertise-gallery-toggle {
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      background: rgba(15, 23, 42, 0.56);
+      color: #fff;
+      padding: 0.32rem 0.75rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      line-height: 1;
+      transition: background-color 180ms ease;
+      backdrop-filter: blur(2px);
+    }
+
+    .expertise-gallery-toggle:hover {
+      background: rgba(15, 23, 42, 0.72);
+    }
+
+    .expertise-image-counter {
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      background: rgba(15, 23, 42, 0.56);
+      padding: 0.2rem 0.5rem;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: #fff;
+      backdrop-filter: blur(2px);
+    }
+
+    .dark .expertise-image-counter {
+      border-color: rgba(148, 163, 184, 0.42);
+      background: rgba(2, 6, 23, 0.68);
+    }
+
+    .expertise-gallery-strip {
+      display: flex;
+      gap: 0.45rem;
+      padding: 0.65rem 0.75rem 0.75rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.22);
+      background: rgba(255, 255, 255, 0.96);
+      overflow-x: auto;
+    }
+
+    .dark .expertise-gallery-strip {
+      border-color: rgba(71, 85, 105, 0.62);
+      background: rgba(15, 23, 42, 0.86);
+    }
+
+    .expertise-gallery-thumb {
+      flex: 0 0 4.45rem;
+      border-radius: 0.7rem;
+      border: 1px solid rgba(148, 163, 184, 0.32);
+      overflow: hidden;
+      opacity: 0.84;
+      transition: opacity 180ms ease, border-color 180ms ease;
+    }
+
+    .expertise-gallery-thumb:hover {
+      opacity: 1;
+      border-color: rgba(233, 122, 8, 0.9);
+    }
+
+    .expertise-gallery-thumb.is-active {
+      opacity: 1;
+      border-color: rgba(233, 122, 8, 0.95);
+      box-shadow: 0 0 0 1px rgba(233, 122, 8, 0.35);
+    }
+
+    .expertise-gallery-thumb-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-rotator-image {
+      transition: opacity 240ms ease;
+    }
+
+    .photo-rotator-image.is-fading {
+      opacity: 0.42;
+    }
+
   </style>
 </head>
 
@@ -127,28 +243,72 @@
         <h2 class="sr-only">Recente projecten</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <article id="project-grondwerk" class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="grondwerk-nauwkeurig-inmeten.webp" alt="Nauwkeurig inmeten op projectlocatie voor grondwerk" width="1024" height="683" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
+            <div class="expertise-image-frame" data-photo-rotator-frame>
+              <div class="expertise-image-viewport">
+                <img src="grondwerk-nauwkeurig-inmeten.webp" alt="Nauwkeurig inmeten op projectlocatie voor grondwerk" width="1024" height="683" loading="lazy" decoding="async" class="expertise-image photo-rotator-image group-hover:scale-[1.02] transition duration-500" data-photo-rotator data-photos='["grondwerk-nauwkeurig-inmeten.webp","images/placeholder-project-foto.svg","images/placeholder-project-foto.svg"]' data-photo-alts='["Nauwkeurig inmeten op projectlocatie voor grondwerk","Projectfoto volgt","Projectfoto volgt"]' />
+                <div class="expertise-gallery-toolbar">
+                  <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
+                    Bekijk foto's
+                  </button>
+                  <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="expertise-gallery-strip hidden" data-gallery-strip></div>
+            </div>
             <div class="p-6">
               <h3 class="font-black text-lg text-caps-blue dark:text-white">Grondwerk op projectlocatie</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Voorbereidende werkzaamheden met ontgraven, profileren en bouwrijp maken.</p>
             </div>
           </article>
           <article id="project-transport" class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="transport-materieel-infraservice.webp" alt="JVW Infraservice voertuig met aanhanger op projectlocatie" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
+            <div class="expertise-image-frame" data-photo-rotator-frame>
+              <div class="expertise-image-viewport">
+                <img src="transport-materieel-infraservice.webp" alt="JVW Infraservice voertuig met aanhanger op projectlocatie" width="1600" height="1200" loading="lazy" decoding="async" class="expertise-image photo-rotator-image group-hover:scale-[1.02] transition duration-500" data-photo-rotator data-photos='["transport-materieel-infraservice.webp","images/placeholder-project-foto.svg","images/placeholder-project-foto.svg"]' data-photo-alts='["JVW Infraservice voertuig met aanhanger op projectlocatie","Projectfoto volgt","Projectfoto volgt"]' />
+                <div class="expertise-gallery-toolbar">
+                  <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
+                    Bekijk foto's
+                  </button>
+                  <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="expertise-gallery-strip hidden" data-gallery-strip></div>
+            </div>
             <div class="p-6">
               <h3 class="font-black text-lg text-caps-blue dark:text-white">Transport en logistiek</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Betrouwbare inzet van materieel en transportmiddelen op projectlocaties.</p>
             </div>
           </article>
           <article id="project-riolering" class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="riolering-aanleggen-afwatering.webp" alt="JVW Infraservice in uitvoering tijdens grondwerkproject" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
+            <div class="expertise-image-frame" data-photo-rotator-frame>
+              <div class="expertise-image-viewport">
+                <img src="riolering-aanleggen-afwatering.webp" alt="JVW Infraservice in uitvoering tijdens grondwerkproject" width="1600" height="1200" loading="lazy" decoding="async" class="expertise-image photo-rotator-image group-hover:scale-[1.02] transition duration-500" data-photo-rotator data-photos='["riolering-aanleggen-afwatering.webp","images/placeholder-project-foto.svg","images/placeholder-project-foto.svg"]' data-photo-alts='["JVW Infraservice in uitvoering tijdens grondwerkproject","Projectfoto volgt","Projectfoto volgt"]' />
+                <div class="expertise-gallery-toolbar">
+                  <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
+                    Bekijk foto's
+                  </button>
+                  <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="expertise-gallery-strip hidden" data-gallery-strip></div>
+            </div>
             <div class="p-6">
               <h3 class="font-black text-lg text-caps-blue dark:text-white">Riolering en afwatering</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Aanleg en herstelwerk met focus op veilige en duurzame afvoer.</p>
             </div>
           </article>
           <article id="project-terrein" class="bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden group">
-            <img src="terreinverharding-fundering-maken.webp" alt="JVW Infraservice materieel op locatie voor terreinwerk" width="2040" height="1530" loading="lazy" decoding="async" class="w-full h-56 object-cover group-hover:scale-[1.02] transition duration-500" />
+            <div class="expertise-image-frame" data-photo-rotator-frame>
+              <div class="expertise-image-viewport">
+                <img src="terreinverharding-fundering-maken.webp" alt="JVW Infraservice materieel op locatie voor terreinwerk" width="2040" height="1530" loading="lazy" decoding="async" class="expertise-image photo-rotator-image group-hover:scale-[1.02] transition duration-500" data-photo-rotator data-photos='["terreinverharding-fundering-maken.webp","images/placeholder-project-foto.svg","images/placeholder-project-foto.svg"]' data-photo-alts='["JVW Infraservice materieel op locatie voor terreinwerk","Projectfoto volgt","Projectfoto volgt"]' />
+                <div class="expertise-gallery-toolbar">
+                  <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
+                    Bekijk foto's
+                  </button>
+                  <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="expertise-gallery-strip hidden" data-gallery-strip></div>
+            </div>
             <div class="p-6">
               <h3 class="font-black text-lg text-caps-blue dark:text-white">Terreinverharding</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-2">Uitvoering van onderbouw en verharding voor nette, functionele terreinen.</p>
