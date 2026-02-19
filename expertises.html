@@ -54,6 +54,11 @@
     }
 
     .expertise-image-frame {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .expertise-image-viewport {
       position: relative;
       overflow: hidden;
     }
@@ -324,12 +329,14 @@
         <div class="expertises-cards-grid">
           <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <div class="expertise-image-frame" data-photo-rotator-frame>
-              <img src="grondwerk-nauwkeurig-inmeten.webp" alt="Grondwerk en nauwkeurig inmeten op projectlocatie" width="1024" height="683" loading="lazy" decoding="async" class="expertise-image photo-rotator-image" data-photo-rotator data-photos='["grondwerk-nauwkeurig-inmeten.webp","riolering-aanleggen-afwatering.webp","terreinverharding-fundering-maken.webp"]' data-photo-alts='["Grondwerk en nauwkeurig inmeten op projectlocatie","Aanleg van riolering en afwatering op locatie","Voorbereiding van fundering en terreinverharding"]' />
-              <div class="expertise-gallery-toolbar">
-                <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
-                  Bekijk foto's
-                </button>
-                <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+              <div class="expertise-image-viewport">
+                <img src="grondwerk-nauwkeurig-inmeten.webp" alt="Grondwerk en nauwkeurig inmeten op projectlocatie" width="1024" height="683" loading="lazy" decoding="async" class="expertise-image photo-rotator-image" data-photo-rotator data-photos='["grondwerk-nauwkeurig-inmeten.webp","riolering-aanleggen-afwatering.webp","terreinverharding-fundering-maken.webp"]' data-photo-alts='["Grondwerk en nauwkeurig inmeten op projectlocatie","Aanleg van riolering en afwatering op locatie","Voorbereiding van fundering en terreinverharding"]' />
+                <div class="expertise-gallery-toolbar">
+                  <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
+                    Bekijk foto's
+                  </button>
+                  <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+                </div>
               </div>
               <div class="expertise-gallery-strip hidden" data-gallery-strip></div>
             </div>
@@ -353,12 +360,14 @@
 
           <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <div class="expertise-image-frame" data-photo-rotator-frame>
-              <img src="images/laadpaal-kabels-leidingen.webp" alt="Laadpaal en kabels op projectlocatie" width="1600" height="1062" loading="lazy" decoding="async" class="expertise-image photo-rotator-image" data-photo-rotator data-photos='["images/laadpaal-kabels-leidingen.webp","images/jvw-werf-1280.webp","transport-materieel-infraservice.webp"]' data-photo-alts='["Laadpaal en kabels op projectlocatie","Voorbereiding van materiaal op de werf voor kabelwerk","Transport en logistieke inzet op projectlocatie"]' />
-              <div class="expertise-gallery-toolbar">
-                <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
-                  Bekijk foto's
-                </button>
-                <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+              <div class="expertise-image-viewport">
+                <img src="images/laadpaal-kabels-leidingen.webp" alt="Laadpaal en kabels op projectlocatie" width="1600" height="1062" loading="lazy" decoding="async" class="expertise-image photo-rotator-image" data-photo-rotator data-photos='["images/laadpaal-kabels-leidingen.webp","images/jvw-werf-1280.webp","transport-materieel-infraservice.webp"]' data-photo-alts='["Laadpaal en kabels op projectlocatie","Voorbereiding van materiaal op de werf voor kabelwerk","Transport en logistieke inzet op projectlocatie"]' />
+                <div class="expertise-gallery-toolbar">
+                  <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
+                    Bekijk foto's
+                  </button>
+                  <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+                </div>
               </div>
               <div class="expertise-gallery-strip hidden" data-gallery-strip></div>
             </div>
@@ -381,12 +390,14 @@
 
           <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <div class="expertise-image-frame" data-photo-rotator-frame>
-              <img src="images/expertises/mobiele-kraan-laden-lossen.jpeg" alt="Mobiele kraan tijdens laden en lossen op projectlocatie" width="768" height="1024" loading="lazy" decoding="async" class="expertise-image photo-rotator-image" data-photo-rotator data-photos='["images/expertises/mobiele-kraan-laden-lossen.jpeg","images/expertises/tractor-machinisteninzet.jpeg","images/expertises/servicevoertuig-winterdienst.jpeg"]' data-photo-alts='["Mobiele kraan tijdens laden en lossen op projectlocatie","Machinisteninzet met zwaar materieel op locatie","Servicevoertuig in inzet tijdens werk op locatie"]' />
-              <div class="expertise-gallery-toolbar">
-                <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
-                  Bekijk foto's
-                </button>
-                <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+              <div class="expertise-image-viewport">
+                <img src="images/expertises/mobiele-kraan-laden-lossen.jpeg" alt="Mobiele kraan tijdens laden en lossen op projectlocatie" width="768" height="1024" loading="lazy" decoding="async" class="expertise-image photo-rotator-image" data-photo-rotator data-photos='["images/expertises/mobiele-kraan-laden-lossen.jpeg","images/expertises/tractor-machinisteninzet.jpeg","images/expertises/servicevoertuig-winterdienst.jpeg"]' data-photo-alts='["Mobiele kraan tijdens laden en lossen op projectlocatie","Machinisteninzet met zwaar materieel op locatie","Servicevoertuig in inzet tijdens werk op locatie"]' />
+                <div class="expertise-gallery-toolbar">
+                  <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
+                    Bekijk foto's
+                  </button>
+                  <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+                </div>
               </div>
               <div class="expertise-gallery-strip hidden" data-gallery-strip></div>
             </div>
@@ -412,12 +423,14 @@
 
           <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <div class="expertise-image-frame" data-photo-rotator-frame>
-              <img src="images/expertises/maaiboot-slootonderhoud.jpeg" alt="Bagger- en maaiwerk met maaiboot op projectlocatie" width="819" height="614" loading="lazy" decoding="async" class="expertise-image photo-rotator-image" data-photo-rotator data-photos='["images/expertises/maaiboot-slootonderhoud.jpeg","images/expertises/maaiboot-kraanwerk-brug.jpeg","images/expertises/maaiboot-nachtwerk-sneeuw.jpeg"]' data-photo-alts='["Bagger- en maaiwerk met maaiboot op projectlocatie","Combinatie van maaiboot en kraan bij onderhoud onder een brug","Maaiboot in inzet bij complex nachtwerk in winterse omstandigheden"]' />
-              <div class="expertise-gallery-toolbar">
-                <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
-                  Bekijk foto's
-                </button>
-                <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+              <div class="expertise-image-viewport">
+                <img src="images/expertises/maaiboot-slootonderhoud.jpeg" alt="Bagger- en maaiwerk met maaiboot op projectlocatie" width="819" height="614" loading="lazy" decoding="async" class="expertise-image photo-rotator-image" data-photo-rotator data-photos='["images/expertises/maaiboot-slootonderhoud.jpeg","images/expertises/maaiboot-kraanwerk-brug.jpeg","images/expertises/maaiboot-nachtwerk-sneeuw.jpeg"]' data-photo-alts='["Bagger- en maaiwerk met maaiboot op projectlocatie","Combinatie van maaiboot en kraan bij onderhoud onder een brug","Maaiboot in inzet bij complex nachtwerk in winterse omstandigheden"]' />
+                <div class="expertise-gallery-toolbar">
+                  <button type="button" class="expertise-gallery-toggle" data-gallery-toggle aria-expanded="false">
+                    Bekijk foto's
+                  </button>
+                  <span class="expertise-image-counter" data-photo-rotator-counter aria-live="polite"></span>
+                </div>
               </div>
               <div class="expertise-gallery-strip hidden" data-gallery-strip></div>
             </div>
