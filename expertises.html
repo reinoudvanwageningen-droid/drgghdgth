@@ -92,18 +92,17 @@
     }
 
     .expertise-card {
-      transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+      transition: border-color 220ms ease, box-shadow 220ms ease;
     }
 
     .expertise-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(233, 122, 8, 0.28);
-      box-shadow: 0 18px 42px rgba(13, 60, 96, 0.2);
+      border-color: rgba(233, 122, 8, 0.24);
+      box-shadow: 0 14px 32px rgba(13, 60, 96, 0.14);
     }
 
     .dark .expertise-card:hover {
-      border-color: rgba(233, 122, 8, 0.48);
-      box-shadow: 0 24px 48px rgba(2, 6, 23, 0.58);
+      border-color: rgba(233, 122, 8, 0.4);
+      box-shadow: 0 16px 34px rgba(2, 6, 23, 0.48);
     }
 
     .expertise-card-body {
@@ -127,93 +126,39 @@
 
     .expertise-case-gallery {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.75rem;
+      grid-template-columns: 1fr;
+      gap: 0.7rem;
       margin-top: 1rem;
     }
 
     @media (min-width: 768px) {
       .expertise-case-gallery {
-        gap: 0.9rem;
-      }
-
-      .expertise-case-gallery.is-four {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.85rem;
       }
     }
 
     .expertise-case-item {
       border-radius: 0.85rem;
       overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.28);
-      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      background: rgba(255, 255, 255, 0.92);
     }
 
     .dark .expertise-case-item {
-      border-color: rgba(71, 85, 105, 0.68);
+      border-color: rgba(71, 85, 105, 0.56);
       background: rgba(15, 23, 42, 0.72);
     }
 
     .expertise-case-image {
       width: 100%;
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 16 / 10;
       object-fit: cover;
-      transition: transform 220ms ease;
+      transition: transform 180ms ease;
     }
 
     .expertise-case-item:hover .expertise-case-image {
-      transform: scale(1.02);
-    }
-
-    .expertise-case-caption {
-      padding: 0.55rem 0.65rem 0.7rem;
-      font-size: 0.74rem;
-      line-height: 1.3;
-      font-weight: 700;
-      color: #355b7a;
-    }
-
-    .dark .expertise-case-caption {
-      color: #dce6f2;
-    }
-
-    .expertise-proof-list {
-      margin-top: 0.95rem;
-      display: grid;
-      gap: 0.45rem;
-      font-size: 0.86rem;
-      color: #4b5f73;
-    }
-
-    .dark .expertise-proof-list {
-      color: #cbd5e1;
-    }
-
-    .expertise-proof-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.4rem;
-      line-height: 1.45;
-    }
-
-    .expertise-proof-list li::before {
-      content: "•";
-      color: var(--jvw-orange);
-      font-weight: 900;
-      margin-top: -1px;
-    }
-
-    @media (min-width: 768px) {
-      .expertise-case-caption {
-        font-size: 0.76rem;
-      }
-    }
-
-    @media (min-width: 1280px) {
-      .expertise-card-machinisten .expertise-case-gallery {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 1rem;
-      }
+      transform: scale(1.01);
     }
   </style>
 </head>
@@ -282,7 +227,7 @@
     </section>
 
     <section id="expertises-grid" class="expertises-grid-section py-12 md:py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-[0.08]" style="background-image: radial-gradient(circle at 1px 1px, rgba(13,60,96,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+      <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle at 1px 1px, rgba(13,60,96,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="text-center mb-10 md:mb-14">
           <p class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Uitgebreide toelichting</p>
@@ -301,21 +246,12 @@
               <p class="text-base text-gray-600 dark:text-slate-200 mt-4 leading-relaxed">
                 Wij voeren uiteenlopende grondwerkzaamheden uit, van bouwputten tot terreinverhardingen.
               </p>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkvoorbeelden</h4>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkbeeld</h4>
               <div class="expertise-case-gallery">
-                <figure class="expertise-case-item">
+                <div class="expertise-case-item">
                   <img src="riolering-aanleggen-afwatering.webp" alt="Aanleg van riolering en afwatering op locatie" width="1600" height="1200" loading="lazy" decoding="async" class="expertise-case-image" />
-                  <figcaption class="expertise-case-caption">Uitgraven en afwatering voorbereiden</figcaption>
-                </figure>
-                <figure class="expertise-case-item">
-                  <img src="terreinverharding-fundering-maken.webp" alt="Maken van fundering voor terreinverharding" width="2040" height="1530" loading="lazy" decoding="async" class="expertise-case-image" />
-                  <figcaption class="expertise-case-caption">Fundering en terreinverharding opbouw</figcaption>
-                </figure>
+                </div>
               </div>
-              <ul class="expertise-proof-list">
-                <li>Werkzaam in uiteenlopende bodem- en terreinomstandigheden.</li>
-                <li>Strakke planning van voorbereiding tot nette oplevering.</li>
-              </ul>
               <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wat we uitvoeren</h4>
               <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-3 mt-3 leading-relaxed">
                 <li>• Het uitgraven van bouwputten en funderingen</li>
@@ -336,21 +272,12 @@
               <p class="text-base text-gray-600 dark:text-slate-200 mt-4 leading-relaxed">
                 Het aanleggen van kabels en leidingen en de installatie van bijvoorbeeld buitenkasten of laadpalen.
               </p>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkvoorbeelden</h4>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkbeeld</h4>
               <div class="expertise-case-gallery">
-                <figure class="expertise-case-item">
+                <div class="expertise-case-item">
                   <img src="images/jvw-werf-1280.webp" alt="Voorbereiding van materiaal op de werf voor kabelwerk" width="1280" height="853" loading="lazy" decoding="async" class="expertise-case-image" />
-                  <figcaption class="expertise-case-caption">Materiaal klaarzetten en werkvoorbereiding</figcaption>
-                </figure>
-                <figure class="expertise-case-item">
-                  <img src="images/expertises/servicevoertuig-winterdienst.jpeg" alt="Servicevoertuig van JVW Infraservice tijdens inzet in winterse omstandigheden" width="1024" height="768" loading="lazy" decoding="async" class="expertise-case-image" />
-                  <figcaption class="expertise-case-caption">Inzetbaar onder wisselende omstandigheden</figcaption>
-                </figure>
+                </div>
               </div>
-              <ul class="expertise-proof-list">
-                <li>Heldere afstemming met opdrachtgever en uitvoerende partijen.</li>
-                <li>Flexibele uitvoering bij zowel reguliere als complexe locaties.</li>
-              </ul>
               <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wat we uitvoeren</h4>
               <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-3 mt-3 leading-relaxed">
                 <li>• Werkvoorbereiding</li>
@@ -368,31 +295,17 @@
             <div class="expertise-card-body">
               <h3 class="font-black text-xl text-caps-blue dark:text-white">Machinistenverhuur</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-4 leading-relaxed">
-                Machinistenverhuur voor machines in de grond-, weg- en waterbouw, met ervaren inzet op uiteenlopende projecten — ook op lastig bereikbare of technisch uitdagende locaties.
+                Machinistenverhuur voor machines in de grond-, weg- en waterbouw, met ervaren inzet op uiteenlopende projecten.
               </p>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijk op complexere projecten</h4>
-              <div class="expertise-case-gallery is-four">
-                <figure class="expertise-case-item">
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkbeelden</h4>
+              <div class="expertise-case-gallery">
+                <div class="expertise-case-item">
                   <img src="images/expertises/maaiboot-slootonderhoud.jpeg" alt="Maaiboot in combinatie met kraanwerk voor slootonderhoud" width="819" height="614" loading="lazy" decoding="async" class="expertise-case-image" />
-                  <figcaption class="expertise-case-caption">Maaiboot en kraan in gecombineerde inzet</figcaption>
-                </figure>
-                <figure class="expertise-case-item">
+                </div>
+                <div class="expertise-case-item">
                   <img src="images/expertises/maaiboot-kraanwerk-brug.jpeg" alt="Kraanwerk en maaiboot onder brug tijdens onderhoudswerk" width="819" height="614" loading="lazy" decoding="async" class="expertise-case-image" />
-                  <figcaption class="expertise-case-caption">Nauwkeurig werken bij beperkte ruimte</figcaption>
-                </figure>
-                <figure class="expertise-case-item">
-                  <img src="images/expertises/maaiboot-nachtwerk-sneeuw.jpeg" alt="Nachtwerk met maaiboot onder winterse omstandigheden" width="1024" height="768" loading="lazy" decoding="async" class="expertise-case-image" />
-                  <figcaption class="expertise-case-caption">Doorwerken in winter en buiten reguliere uren</figcaption>
-                </figure>
-                <figure class="expertise-case-item">
-                  <img src="images/expertises/tractor-machinisteninzet.jpeg" alt="Machinisteninzet met zwaar materieel op locatie" width="768" height="1024" loading="lazy" decoding="async" class="expertise-case-image" />
-                  <figcaption class="expertise-case-caption">Breed inzetbaar met zwaar materieel</figcaption>
-                </figure>
+                </div>
               </div>
-              <ul class="expertise-proof-list">
-                <li>Ervaring met maaiboten, mobiele kranen en gecombineerde machine-inzet.</li>
-                <li>Inzetbaar op moeilijk bereikbare locaties en bij complexe werkomstandigheden.</li>
-              </ul>
               <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wat we uitvoeren</h4>
               <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-3 mt-3 leading-relaxed">
                 <li>• Mobiele en rupskranen</li>
