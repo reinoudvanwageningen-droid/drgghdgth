@@ -17,14 +17,14 @@
 .shadow-soft2 { box-shadow: 0 18px 50px rgba(13, 60, 96, 0.18) !important; }
 
 .hero-media-offset {
-  top: 4rem;
-  bottom: -4rem;
+  top: 2rem;
+  bottom: -2rem;
 }
 
 @media (min-width: 768px) {
   .hero-media-offset {
-    top: 5rem;
-    bottom: -5rem;
+    top: 2.5rem;
+    bottom: -2.5rem;
   }
 }
 
