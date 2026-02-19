@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Expertises | JVW Infraservice</title>
-  <meta name="description" content="Ontdek de expertises van JVW Infraservice in grondwerk, kabels en leidingen en aarding met praktische uitvoering in Zuid-Holland en de Randstad." />
+  <meta name="description" content="Ontdek de expertises van JVW Infraservice in grondwerk, kabels en leidingen, machinistenverhuur en bagger- en maaiprojecten met duidelijke afspraken en nette oplevering." />
   <meta name="theme-color" content="#0D3C60" />
   <link rel="icon" type="image/svg+xml" href="images/jvw-infraservice-logo.svg" />
   <link rel="canonical" href="https://reinoudvanwageningen-droid.github.io/drgghdgth/expertises.html" />
   <meta property="og:locale" content="nl_NL" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Expertises | JVW Infraservice" />
-  <meta property="og:description" content="Praktische expertise in grondwerk, kabels en leidingen en aarding met heldere afspraken en nette oplevering." />
+  <meta property="og:description" content="Praktische expertise in grondwerk, kabels en leidingen, machinistenverhuur en bagger- en maaiprojecten met heldere afspraken en nette oplevering." />
   <meta property="og:url" content="https://reinoudvanwageningen-droid.github.io/drgghdgth/expertises.html" />
   <meta property="og:site_name" content="JVW Infraservice" />
   <meta property="og:image" content="https://reinoudvanwageningen-droid.github.io/drgghdgth/images/jvw-infraservice-transport-gww.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Expertises | JVW Infraservice" />
-  <meta name="twitter:description" content="Praktische expertise in grondwerk, kabels en leidingen en aarding met heldere afspraken en nette oplevering." />
+  <meta name="twitter:description" content="Praktische expertise in grondwerk, kabels en leidingen, machinistenverhuur en bagger- en maaiprojecten met heldere afspraken en nette oplevering." />
   <meta name="twitter:image" content="https://reinoudvanwageningen-droid.github.io/drgghdgth/images/jvw-infraservice-transport-gww.webp" />
   <link rel="preload" as="image" href="images/jvw-infraservice-werkbus-aanhanger.webp" imagesrcset="images/jvw-infraservice-werkbus-aanhanger.webp 1280w, images/jvw-infraservice-transport-gww.webp 1920w" imagesizes="100vw" fetchpriority="high" />
 
@@ -47,10 +47,76 @@
         linear-gradient(to bottom, rgba(13, 60, 96, 0.82), rgba(13, 60, 96, 0.4));
     }
 
-    .expertise-image {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-top: 1.75rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero-cta-group {
+        flex-direction: row;
+      }
+    }
+
+    .hero-trust-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-top: 1.15rem;
+    }
+
+    .hero-trust-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      background: rgba(15, 23, 42, 0.35);
+      backdrop-filter: blur(7px);
+    }
+
+    .hero-trust-chip::before {
+      content: "✓";
+      font-weight: 900;
+      color: #ffd8ae;
+    }
+
+    .trust-point {
+      border: 1px solid rgba(148, 163, 184, 0.24);
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1rem 1rem 0.9rem;
+      box-shadow: 0 10px 26px rgba(13, 60, 96, 0.1);
+    }
+
+    .dark .trust-point {
+      border-color: rgba(71, 85, 105, 0.52);
+      background: rgba(15, 23, 42, 0.84);
+    }
+
+    .quick-scan-card {
+      transition: border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+    }
+
+    .quick-scan-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(233, 122, 8, 0.34);
+      box-shadow: 0 14px 30px rgba(13, 60, 96, 0.12);
+    }
+
+    .dark .quick-scan-card:hover {
+      border-color: rgba(233, 122, 8, 0.62);
+      box-shadow: 0 18px 36px rgba(2, 6, 23, 0.48);
     }
 
     .expertises-grid-section {
@@ -82,6 +148,12 @@
       border-color: rgba(71, 85, 105, 0.76);
     }
 
+    .expertise-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
     .expertise-card-body {
       padding: 1.75rem;
       display: flex;
@@ -99,6 +171,52 @@
       .expertise-card-body {
         padding: 2.25rem;
       }
+    }
+
+    .expertise-tag {
+      align-self: flex-start;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #b45309;
+      background: rgba(251, 191, 36, 0.16);
+      border: 1px solid rgba(245, 158, 11, 0.34);
+      border-radius: 999px;
+      padding: 0.28rem 0.6rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .dark .expertise-tag {
+      color: #fed7aa;
+      background: rgba(233, 122, 8, 0.18);
+      border-color: rgba(233, 122, 8, 0.45);
+    }
+
+    .expertise-value-list {
+      margin-top: 0.8rem;
+      display: grid;
+      gap: 0.46rem;
+    }
+
+    .expertise-value-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+      font-size: 0.93rem;
+      line-height: 1.52;
+      color: #475569;
+    }
+
+    .expertise-value-list li::before {
+      content: "✓";
+      color: var(--jvw-orange);
+      font-weight: 900;
+      margin-top: -1px;
+    }
+
+    .dark .expertise-value-list li {
+      color: #cbd5e1;
     }
 
     .expertise-case-gallery {
@@ -132,6 +250,42 @@
       aspect-ratio: 16 / 10;
       object-fit: cover;
     }
+
+    .process-card {
+      border: 1px solid rgba(148, 163, 184, 0.24);
+      border-radius: 1rem;
+      background: #fff;
+      padding: 1.1rem 1rem;
+    }
+
+    .dark .process-card {
+      border-color: rgba(71, 85, 105, 0.54);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .process-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 900;
+      color: #fff;
+      background: var(--jvw-orange);
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-panel {
+      border-radius: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background:
+        radial-gradient(600px 300px at 20% 25%, rgba(255, 255, 255, 0.14), transparent 72%),
+        radial-gradient(520px 280px at 86% 78%, rgba(255, 255, 255, 0.08), transparent 70%),
+        linear-gradient(135deg, #0d3c60, #1a4d74);
+      box-shadow: 0 18px 42px rgba(2, 23, 40, 0.35);
+    }
   </style>
 </head>
 
@@ -154,7 +308,7 @@
 
         <div class="hidden lg:flex space-x-8 items-center">
           <a href="index.html#home" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Home</a>
-          <a href="#expertises-grid" class="text-caps-orange font-extrabold transition">Expertise</a>
+          <a href="#expertise-overzicht" class="text-caps-orange font-extrabold transition">Expertise</a>
           <a href="index.html#over-ons" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Over ons</a>
           <a href="projecten.html" class="text-gray-700 dark:text-slate-200 hover:text-caps-orange font-semibold transition">Projecten</a>
           <a href="contact.htm?intent=contact" class="bg-caps-orange text-white px-5 py-2.5 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft transform hover:-translate-y-0.5">
@@ -173,7 +327,7 @@
     <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 absolute w-full shadow-soft2 top-16 md:top-20">
       <div class="px-4 pt-4 pb-6 space-y-2">
         <a href="index.html#home" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl">Home</a>
-        <a href="#expertises-grid" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-extrabold text-caps-orange bg-caps-blue/5 rounded-xl">Expertise</a>
+        <a href="#expertise-overzicht" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-extrabold text-caps-orange bg-caps-blue/5 rounded-xl">Expertise</a>
         <a href="index.html#over-ons" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl">Over ons</a>
         <a href="projecten.html" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-semibold text-gray-700 dark:text-slate-200 hover:text-caps-orange hover:bg-gray-50 dark:hover:bg-slate-800 rounded-xl">Projecten</a>
         <a href="contact.htm?intent=contact" onclick="toggleMobileMenu()" class="block px-4 py-3 text-lg font-extrabold text-white bg-caps-orange rounded-xl text-center shadow-soft mt-3">Neem contact op</a>
@@ -182,19 +336,93 @@
   </nav>
 
   <main id="main-content" class="flex-1">
-    <section class="relative min-h-[360px] md:min-h-[420px] flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-[420px] md:min-h-[500px] flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="images/jvw-infraservice-werkbus-aanhanger.webp" srcset="images/jvw-infraservice-werkbus-aanhanger.webp 1280w, images/jvw-infraservice-transport-gww.webp 1920w" sizes="100vw" alt="JVW Infraservice op projectlocatie" width="1920" height="1440" loading="eager" decoding="async" class="w-full h-full object-cover" />
         <div class="absolute inset-0 hero-overlay"></div>
       </div>
-      <div class="relative z-10 text-center px-4 pt-20 md:pt-24">
+      <div class="relative z-10 text-center px-4 pt-20 md:pt-24 max-w-5xl mx-auto">
         <span class="inline-flex items-center gap-2 py-1.5 px-3 rounded-full bg-white/10 backdrop-blur border border-white/15 text-white text-xs md:text-sm font-extrabold tracking-wider mb-4 uppercase shadow-soft">
           Expertise
         </span>
-        <h1 class="text-3xl md:text-5xl font-black text-white">Onze expertises in de praktijk</h1>
+        <h1 class="text-3xl md:text-5xl font-black text-white">Infra-expertise die planning, veiligheid en oplevering borgt</h1>
         <p class="text-base md:text-xl text-gray-100/90 mt-4 max-w-3xl mx-auto">
-          JVW Infraservice voert infrawerk uit met duidelijke afspraken, korte lijnen en een nette oplevering. Hieronder leest u per expertise wat we doen en wanneer wij van meerwaarde zijn.
+          JVW Infraservice helpt opdrachtgevers met grondwerk, kabels en leidingen, machinisteninzet en bagger- en maaiprojecten. U krijgt korte lijnen, duidelijke afspraken en een uitvoering die gewoon goed geregeld is.
         </p>
+        <div class="hero-cta-group">
+          <a href="contact.htm?intent=offerte" class="inline-flex items-center gap-2 bg-caps-orange text-white px-6 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
+            Vrijblijvende offerte aanvragen
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="#expertises-grid" class="inline-flex items-center gap-2 border border-white/30 bg-white/10 text-white px-6 py-3 rounded-full font-extrabold hover:bg-white hover:text-caps-blue transition">
+            Bekijk expertises
+          </a>
+        </div>
+        <ul class="hero-trust-list" aria-label="Belangrijkste voordelen">
+          <li class="hero-trust-chip">Vast aanspreekpunt</li>
+          <li class="hero-trust-chip">Landelijke inzet</li>
+          <li class="hero-trust-chip">Veilig &amp; praktisch uitgevoerd</li>
+          <li class="hero-trust-chip">Nette oplevering</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="expertise-overzicht" class="py-8 md:py-12 bg-white dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          <article class="trust-point">
+            <p class="text-[0.72rem] uppercase tracking-[0.12em] text-caps-orange font-extrabold">Projectbeheersing</p>
+            <h2 class="text-base font-black text-caps-blue dark:text-slate-100 mt-1">Heldere planning en communicatie</h2>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">U weet vooraf wie wat doet, wanneer en onder welke voorwaarden.</p>
+          </article>
+          <article class="trust-point">
+            <p class="text-[0.72rem] uppercase tracking-[0.12em] text-caps-orange font-extrabold">Operationele slagkracht</p>
+            <h2 class="text-base font-black text-caps-blue dark:text-slate-100 mt-1">Snel schakelen op locatie</h2>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">Van voorbereiding tot uitvoering houden we tempo en overzicht.</p>
+          </article>
+          <article class="trust-point">
+            <p class="text-[0.72rem] uppercase tracking-[0.12em] text-caps-orange font-extrabold">Kwaliteit &amp; veiligheid</p>
+            <h2 class="text-base font-black text-caps-blue dark:text-slate-100 mt-1">Doordacht en verantwoord werken</h2>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">Wij combineren praktische uitvoering met aandacht voor veiligheid.</p>
+          </article>
+          <article class="trust-point">
+            <p class="text-[0.72rem] uppercase tracking-[0.12em] text-caps-orange font-extrabold">Werkgebied</p>
+            <h2 class="text-base font-black text-caps-blue dark:text-slate-100 mt-1">Door heel Nederland inzetbaar</h2>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">Ook voor technisch uitdagende projecten en inzet op aanvraag buiten NL.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 md:py-14 bg-gray-50 dark:bg-slate-900 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8 md:mb-10">
+          <p class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Snel oriënteren</p>
+          <h2 class="text-2xl md:text-3xl font-black text-caps-blue dark:text-slate-100">Welke expertise past bij uw project?</h2>
+          <p class="mt-3 text-gray-600 dark:text-slate-300 max-w-3xl mx-auto text-base">Klik direct door naar de expertise die u nodig heeft en bekijk wat dit concreet oplevert voor uw planning, budget en uitvoering.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+          <a href="#expertise-grondwerk" class="quick-scan-card block rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-5">
+            <h3 class="font-black text-lg text-caps-blue dark:text-slate-100">Grondwerk</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">Van bouwput tot terreinvoorbereiding met grip op uitvoering.</p>
+            <span class="inline-flex items-center gap-1 mt-4 text-caps-orange font-extrabold text-sm">Bekijk details <span aria-hidden="true">→</span></span>
+          </a>
+          <a href="#expertise-kabels" class="quick-scan-card block rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-5">
+            <h3 class="font-black text-lg text-caps-blue dark:text-slate-100">Kabels &amp; leidingen</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">Aanleg met voorbereiding, materiaal en afstemming op locatie.</p>
+            <span class="inline-flex items-center gap-1 mt-4 text-caps-orange font-extrabold text-sm">Bekijk details <span aria-hidden="true">→</span></span>
+          </a>
+          <a href="#expertise-machinisten" class="quick-scan-card block rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-5">
+            <h3 class="font-black text-lg text-caps-blue dark:text-slate-100">Machinistenverhuur</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">Ervaren machinisten als tijdelijke of structurele versterking.</p>
+            <span class="inline-flex items-center gap-1 mt-4 text-caps-orange font-extrabold text-sm">Bekijk details <span aria-hidden="true">→</span></span>
+          </a>
+          <a href="#expertise-bagger" class="quick-scan-card block rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-950 p-5">
+            <h3 class="font-black text-lg text-caps-blue dark:text-slate-100">Bagger- en maaiprojecten</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">Complete aanpak van voorbereiding tot afronding van waterwerk.</p>
+            <span class="inline-flex items-center gap-1 mt-4 text-caps-orange font-extrabold text-sm">Bekijk details <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -202,20 +430,31 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="text-center mb-10 md:mb-14">
           <p class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Uitgebreide toelichting</p>
-          <h2 class="text-2xl md:text-4xl font-black text-caps-blue dark:text-slate-100">Wat u van ons kunt verwachten</h2>
+          <h2 class="text-2xl md:text-4xl font-black text-caps-blue dark:text-slate-100">Onze expertises in detail</h2>
           <div class="w-24 h-1 bg-caps-orange mx-auto mt-4 rounded-full"></div>
           <p class="mt-4 text-gray-600 dark:text-slate-300 max-w-3xl mx-auto text-base md:text-base">
-            We werken door heel Nederland en op aanvraag ook in het buitenland. Juist bij complexe en technisch uitdagende projecten blinken we uit met een veilige, doordachte uitvoering van voorbereiding tot oplevering.
+            Elke expertise hieronder laat zien wat we uitvoeren, welk resultaat u daarvan merkt en in welke situaties JVW Infraservice van meerwaarde is.
           </p>
         </div>
 
         <div class="expertises-cards-grid">
-          <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+          <article id="expertise-grondwerk" class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <img src="grondwerk-nauwkeurig-inmeten.webp" alt="Grondwerk en nauwkeurig inmeten op projectlocatie" width="1024" height="683" loading="lazy" decoding="async" class="expertise-image" />
             <div class="expertise-card-body">
+              <span class="expertise-tag">Grondwerk</span>
               <h3 class="font-black text-xl text-caps-blue dark:text-white">Grondwerk</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-4 leading-relaxed">
-                Wij voeren uiteenlopende grondwerkzaamheden uit, van bouwputten tot terreinverhardingen.
+                Wij verzorgen grondwerkzaamheden van ontgraven en bouwrijp maken tot terreinverharding en voorbereidende infra.
+              </p>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Wat levert het op</h4>
+              <ul class="expertise-value-list">
+                <li>Strakke voorbereiding waardoor vervolgstappen sneller starten.</li>
+                <li>Minder faalkosten door praktisch en nauwkeurig uitgevoerde basiswerkzaamheden.</li>
+                <li>Één partij die tempo houdt van eerste graafwerk tot nette oplevering.</li>
+              </ul>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Wanneer inzetten</h4>
+              <p class="text-sm text-gray-600 dark:text-slate-300 mt-3 leading-relaxed">
+                Bij nieuwbouw, uitbreidingen, herinrichting van terrein of voorbereidende infrastructuurwerkzaamheden.
               </p>
               <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkbeeld</h4>
               <div class="expertise-case-gallery">
@@ -223,25 +462,26 @@
                   <img src="riolering-aanleggen-afwatering.webp" alt="Aanleg van riolering en afwatering op locatie" width="1600" height="1200" loading="lazy" decoding="async" class="expertise-case-image" />
                 </div>
               </div>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wat we uitvoeren</h4>
-              <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-3 mt-3 leading-relaxed">
-                <li>• Het uitgraven van bouwputten en funderingen</li>
-                <li>• Het bouwrijp maken van terreinen</li>
-                <li>• Het verzorgen van terreinverhardingen</li>
-              </ul>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wanneer inzetten</h4>
-              <p class="text-sm text-gray-600 dark:text-slate-300 mt-3 leading-relaxed">
-                Bij nieuwbouw, uitbreidingen, herinrichting van terrein of voorbereidende infrastructuurwerkzaamheden.
-              </p>
             </div>
           </article>
 
-          <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+          <article id="expertise-kabels" class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <img src="images/laadpaal-kabels-leidingen.webp" alt="Laadpaal en kabels op projectlocatie" width="1600" height="1062" loading="lazy" decoding="async" class="expertise-image" />
             <div class="expertise-card-body">
+              <span class="expertise-tag">Kabels &amp; leidingen</span>
               <h3 class="font-black text-xl text-caps-blue dark:text-white">Kabels &amp; leidingen</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-4 leading-relaxed">
-                Het aanleggen van kabels en leidingen en de installatie van bijvoorbeeld buitenkasten of laadpalen.
+                Wij realiseren aanleg en uitbreiding van kabels en leidingen inclusief voorbereiding en logistieke ondersteuning op locatie.
+              </p>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Wat levert het op</h4>
+              <ul class="expertise-value-list">
+                <li>Duidelijke afstemming met opdrachtgever, uitvoering en planning.</li>
+                <li>Soepel verloop door tijdige werkvoorbereiding en materiaalinzet.</li>
+                <li>Praktische uitvoering op reguliere én technisch uitdagende locaties.</li>
+              </ul>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Wanneer inzetten</h4>
+              <p class="text-sm text-gray-600 dark:text-slate-300 mt-3 leading-relaxed">
+                Bij aanleg en uitbreiding van ondergrondse infra en bij projecten met buitenkasten of laadvoorzieningen.
               </p>
               <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkbeeld</h4>
               <div class="expertise-case-gallery">
@@ -249,54 +489,55 @@
                   <img src="images/jvw-werf-1280.webp" alt="Voorbereiding van materiaal op de werf voor kabelwerk" width="1280" height="853" loading="lazy" decoding="async" class="expertise-case-image" />
                 </div>
               </div>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wat we uitvoeren</h4>
-              <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-3 mt-3 leading-relaxed">
-                <li>• Werkvoorbereiding</li>
-                <li>• Levering van materiaal</li>
-              </ul>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wanneer inzetten</h4>
-              <p class="text-sm text-gray-600 dark:text-slate-300 mt-3 leading-relaxed">
-                Bij aanleg en uitbreiding van ondergrondse infra en bij projecten met buitenkasten of laadvoorzieningen.
-              </p>
             </div>
           </article>
 
-          <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+          <article id="expertise-machinisten" class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <img src="images/expertises/mobiele-kraan-laden-lossen.jpeg" alt="Mobiele kraan tijdens laden en lossen op projectlocatie" width="768" height="1024" loading="lazy" decoding="async" class="expertise-image" />
             <div class="expertise-card-body">
+              <span class="expertise-tag">Machinistenverhuur</span>
               <h3 class="font-black text-xl text-caps-blue dark:text-white">Machinistenverhuur</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-4 leading-relaxed">
                 Ervaren machinisten voor grond-, weg- en waterbouw, met focus op mobiele kranen, knijperwagens, walsen en dumpers.
               </p>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkbeelden</h4>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Wat levert het op</h4>
+              <ul class="expertise-value-list">
+                <li>Snel extra capaciteit zonder lange inwerktijd op uw project.</li>
+                <li>Betrouwbare machinisten die veilig werken en productie maken.</li>
+                <li>Flexibiliteit bij piekbelasting of specialistische machine-inzet.</li>
+              </ul>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Wanneer inzetten</h4>
+              <p class="text-sm text-gray-600 dark:text-slate-300 mt-3 leading-relaxed">
+                Bij projecten waar tijdelijke of structurele machinistencapaciteit nodig is voor grondverzet, verdichten, transport en laadwerkzaamheden.
+              </p>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkbeeld</h4>
               <div class="expertise-case-gallery">
                 <div class="expertise-case-item">
                   <img src="images/expertises/tractor-machinisteninzet.jpeg" alt="Machinisteninzet met zwaar materieel op locatie" width="768" height="1024" loading="lazy" decoding="async" class="expertise-case-image" />
                 </div>
               </div>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wat we uitvoeren</h4>
-              <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-3 mt-3 leading-relaxed">
-                <li>• Mobiele kranen</li>
-                <li>• Knijperwagens</li>
-                <li>• Walsen</li>
-                <li>• Dumpers</li>
-                <li>• Shovels</li>
-              </ul>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wanneer inzetten</h4>
-              <p class="text-sm text-gray-600 dark:text-slate-300 mt-3 leading-relaxed">
-                Bij projecten waar tijdelijke of structurele machinistencapaciteit nodig is voor grondverzet, verdichten, transport en laadwerkzaamheden.
-              </p>
             </div>
           </article>
 
-          <article class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+          <article id="expertise-bagger" class="expertise-card bg-white dark:bg-slate-900 rounded-2xl shadow-soft border border-gray-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
             <img src="images/expertises/maaiboot-slootonderhoud.jpeg" alt="Bagger- en maaiwerk met maaiboot op projectlocatie" width="819" height="614" loading="lazy" decoding="async" class="expertise-image" />
             <div class="expertise-card-body">
+              <span class="expertise-tag">Bagger- en maaiprojecten</span>
               <h3 class="font-black text-xl text-caps-blue dark:text-white">Bagger- en maaiprojecten</h3>
               <p class="text-base text-gray-600 dark:text-slate-200 mt-4 leading-relaxed">
                 JVW Infraservice neemt complete bagger- en maaiprojecten aan, van voorbereiding en uitvoering tot afronding.
               </p>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkbeelden</h4>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Wat levert het op</h4>
+              <ul class="expertise-value-list">
+                <li>Eén aanspreekpunt voor planning, coördinatie en uitvoering.</li>
+                <li>Efficiënte aanpak van watergangen met minimale verstoring rondom het project.</li>
+                <li>Ervaring met complexe omstandigheden, inclusief nacht- en winterinzet.</li>
+              </ul>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Wanneer inzetten</h4>
+              <p class="text-sm text-gray-600 dark:text-slate-300 mt-3 leading-relaxed">
+                Bij onderhoud of herstel van watergangen, oevers en zones waar specialistisch materieel nodig is.
+              </p>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Praktijkbeeld</h4>
               <div class="expertise-case-gallery">
                 <div class="expertise-case-item">
                   <img src="images/expertises/maaiboot-kraanwerk-brug.jpeg" alt="Combinatie van maaiboot en kraan bij onderhoud onder een brug" width="819" height="614" loading="lazy" decoding="async" class="expertise-case-image" />
@@ -305,27 +546,69 @@
                   <img src="images/expertises/maaiboot-nachtwerk-sneeuw.jpeg" alt="Maaiboot in inzet bij complex nachtwerk in winterse omstandigheden" width="1024" height="768" loading="lazy" decoding="async" class="expertise-case-image" />
                 </div>
               </div>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Wat we uitvoeren</h4>
-              <ul class="text-[0.95rem] text-gray-600 dark:text-slate-300 space-y-3 mt-3 leading-relaxed">
-                <li>• Baggerwerk en onderhoud van watergangen</li>
-                <li>• Maaiwerk op en rond water</li>
-                <li>• Complete projectcoördinatie en uitvoering</li>
-              </ul>
-              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-7">Werkgebied</h4>
+              <h4 class="font-extrabold text-caps-blue dark:text-slate-100 mt-6">Werkgebied</h4>
               <p class="text-sm text-gray-600 dark:text-slate-300 mt-3 leading-relaxed">
                 Door heel Nederland en, in overleg, ook daarbuiten. Ook complexe bagger- of maaiprojecten kunnen volledig door JVW Infraservice worden uitgevoerd.
               </p>
             </div>
           </article>
         </div>
+      </div>
+    </section>
 
-        <div class="mt-10 text-center space-y-3">
-          <a href="contact.htm?intent=offerte" class="inline-flex items-center gap-2 bg-caps-orange text-white px-6 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
-            Bespreek uw project
-            <span aria-hidden="true">→</span>
-          </a>
+    <section class="py-12 md:py-16 bg-gray-50 dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8 md:mb-10">
+          <p class="text-caps-orange font-extrabold uppercase tracking-wider text-sm mb-2">Aanpak</p>
+          <h2 class="text-2xl md:text-3xl font-black text-caps-blue dark:text-slate-100">Zo werken we samen aan uw project</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+          <article class="process-card">
+            <span class="process-step">1</span>
+            <h3 class="font-black text-base text-caps-blue dark:text-slate-100">Intake &amp; locatiebeeld</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">We bespreken doel, planning en randvoorwaarden zodat de uitvoering direct klopt.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-step">2</span>
+            <h3 class="font-black text-base text-caps-blue dark:text-slate-100">Voorbereiding</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">Materieel, personeel en aanpak worden concreet afgestemd op uw projectomgeving.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-step">3</span>
+            <h3 class="font-black text-base text-caps-blue dark:text-slate-100">Uitvoering op tempo</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">We schakelen praktisch op locatie en houden u tussentijds helder op de hoogte.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-step">4</span>
+            <h3 class="font-black text-base text-caps-blue dark:text-slate-100">Nette oplevering</h3>
+            <p class="text-sm text-gray-600 dark:text-slate-300 mt-2">Afronding met duidelijke terugkoppeling zodat u gecontroleerd verder kunt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 md:py-16 bg-white dark:bg-slate-950">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="cta-panel text-white text-center p-7 md:p-10">
+          <p class="text-orange-100 uppercase tracking-[0.18em] font-extrabold text-xs md:text-sm">Project bespreken</p>
+          <h2 class="mt-3 text-2xl md:text-4xl font-black">Wilt u snel duidelijkheid over de juiste inzet?</h2>
+          <p class="mt-4 text-slate-100/90 max-w-2xl mx-auto">Vertel ons kort uw situatie. U ontvangt snel een praktisch voorstel met heldere afspraken over uitvoering, planning en inzet.</p>
+          <div class="hero-cta-group mt-7">
+            <a href="contact.htm?intent=offerte" class="inline-flex items-center gap-2 bg-caps-orange text-white px-6 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
+              Vraag een vrijblijvende offerte aan
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="contact.htm?intent=contact" class="inline-flex items-center gap-2 border border-white/40 bg-white/10 text-white px-6 py-3 rounded-full font-extrabold hover:bg-white hover:text-caps-blue transition">
+              Neem direct contact op
+            </a>
+          </div>
+          <div class="mt-6 flex flex-col sm:flex-row sm:justify-center gap-3 text-sm md:text-base">
+            <a href="tel:+31646970719" class="font-bold hover:text-orange-200 transition">Bel direct: +31 6 46970719</a>
+            <span class="hidden sm:inline text-slate-300/70">•</span>
+            <a href="mailto:info@jvwinfraservice.nl" class="font-bold hover:text-orange-200 transition">Mail: info@jvwinfraservice.nl</a>
+          </div>
           <div>
-            <a href="https://youtube.com/@jvw4772?si=N6F5Ns075HbC5VlD" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-caps-blue dark:text-slate-200 font-extrabold hover:text-caps-orange transition" aria-label="Bekijk JVW Infraservice op YouTube (opent in nieuw tabblad)">
+            <a href="https://youtube.com/@jvw4772?si=N6F5Ns075HbC5VlD" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-5 text-orange-100 font-extrabold hover:text-orange-200 transition" aria-label="Bekijk JVW Infraservice op YouTube (opent in nieuw tabblad)">
               Bekijk ons op YouTube
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
