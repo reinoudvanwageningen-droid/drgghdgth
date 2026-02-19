@@ -16,16 +16,6 @@
 .shadow-soft { box-shadow: 0 12px 30px rgba(13, 60, 96, 0.12) !important; }
 .shadow-soft2 { box-shadow: 0 18px 50px rgba(13, 60, 96, 0.18) !important; }
 
-.hero-image-crop-top {
-  object-position: center 32%;
-}
-
-@media (max-width: 768px) {
-  .hero-image-crop-top {
-    object-position: center 28%;
-  }
-}
-
 .dark .dark\:text-slate-100 { color: #f1f5f9 !important; }
 .dark .dark\:text-slate-200 { color: #e2e8f0 !important; }
 .dark .dark\:text-slate-300 { color: #cbd5e1 !important; }
