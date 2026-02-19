@@ -533,20 +533,25 @@
 
   .footer-address-col {
     order: 1 !important;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
   }
 
-  .footer-address-col .footer-address,
-  .legal-footer .footer-address {
+  .footer-address-col .footer-address {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    display: block !important;
     text-align: center !important;
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-    max-width: 100%;
+  }
+
+  .legal-footer .footer-address {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    display: block !important;
+    text-align: center !important;
   }
 
   .footer-address-title,
@@ -606,8 +611,9 @@
 
   .legal-footer .footer-inner > div:nth-child(2) {
     order: 1 !important;
-    display: flex;
-    justify-content: center;
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
   }
 
   .legal-footer .footer-inner > div:nth-child(3) {
