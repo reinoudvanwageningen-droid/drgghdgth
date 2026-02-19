@@ -111,6 +111,9 @@
 }
 
 .footer-links a {
+  color: rgba(226, 232, 240, 0.92);
+  line-height: 1.65;
+  text-decoration: none;
   font-size: inherit;
   font-weight: 400;
 }
@@ -337,7 +340,8 @@
 }
 
 .legal-footer .footer-links a {
-  color: #fff;
+  color: rgba(226, 232, 240, 0.92);
+  line-height: 1.65;
   text-decoration: none;
   font-size: inherit;
   font-weight: 400;
