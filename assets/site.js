@@ -122,6 +122,8 @@
     }
 
     const statusElement = document.getElementById("contact-form-status");
+    const subjectInput = document.getElementById("contact-form-subject");
+    const nextInput = document.getElementById("contact-form-next");
 
     const intentLabels = {
       offerte: "Vrijblijvende offerte aanvragen",
@@ -133,42 +135,38 @@
       contact: "Contactaanvraag via JVW website",
     };
 
-    const requestedIntent = new URLSearchParams(window.location.search).get("intent") || "contact";
+    const searchParams = new URLSearchParams(window.location.search);
+    const requestedIntent = searchParams.get("intent") || "contact";
     const normalizedIntent = intentLabels[requestedIntent] ? requestedIntent : "contact";
+    const showSuccessMessage = searchParams.get("sent") === "1";
+
+    if (showSuccessMessage && statusElement) {
+      statusElement.classList.remove("hidden");
+      statusElement.innerHTML =
+        'Bedankt! Uw bericht is verzonden. Wij nemen zo snel mogelijk contact op. Geen bevestiging ontvangen? Mail direct naar <a href="mailto:info@jvwinfraservice.nl" class="underline hover:no-underline">info@jvwinfraservice.nl</a>.';
+    }
 
     contactForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
       if (!contactForm.reportValidity()) {
+        event.preventDefault();
         return;
       }
 
-      const formData = new FormData(contactForm);
-      const getValue = (name) => (formData.get(name) || "").toString().trim();
-
       const subject = subjectLabels[normalizedIntent] || "Contact via JVW website";
+      if (subjectInput) {
+        subjectInput.value = subject;
+      }
 
-      const bodyLines = [
-        "Nieuwe aanvraag via jvwinfraservice.nl",
-        "",
-        `Type aanvraag: ${intentLabels[normalizedIntent] || "Contact opnemen"}`,
-        `Naam: ${getValue("name") || "-"}`,
-        `Telefoonnummer: ${getValue("phone") || "-"}`,
-        `E-mailadres: ${getValue("email") || "-"}`,
-        "",
-        "Bericht:",
-        getValue("message") || "-",
-      ];
-
-      const mailtoAddress = contactForm.getAttribute("data-mail-to") || "info@jvwinfraservice.nl";
-      const mailtoUrl = `mailto:${mailtoAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
-
-      window.location.href = mailtoUrl;
+      if (nextInput) {
+        const redirectUrl = new URL(window.location.href);
+        redirectUrl.searchParams.set("sent", "1");
+        redirectUrl.searchParams.delete("intent");
+        nextInput.value = redirectUrl.toString();
+      }
 
       if (statusElement) {
         statusElement.classList.remove("hidden");
-        statusElement.innerHTML =
-          'Uw e-mailprogramma wordt geopend. Lukt dat niet? Mail direct naar <a href="mailto:info@jvwinfraservice.nl" class="underline hover:no-underline">info@jvwinfraservice.nl</a>.';
+        statusElement.textContent = `${intentLabels[normalizedIntent]}: bericht wordt verzonden...`;
       }
     });
   };
