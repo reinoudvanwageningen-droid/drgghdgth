@@ -177,6 +177,8 @@
       return;
     }
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     const parseJsonArray = (value) => {
       if (!value) return [];
       try {
@@ -195,7 +197,14 @@
 
       const alts = parseJsonArray(image.dataset.photoAlts);
       const intervalMs = Math.max(Number(image.dataset.photoInterval) || 5000, 2500);
+      const frame = image.closest("[data-photo-rotator-frame]");
+      const counter = frame ? frame.querySelector("[data-photo-rotator-counter]") : null;
       let currentIndex = 0;
+
+      const updateCounter = (index) => {
+        if (!counter) return;
+        counter.textContent = `${index + 1}/${photos.length}`;
+      };
 
       const preloadNext = (nextIndex) => {
         const nextSrc = photos[nextIndex];
@@ -204,7 +213,12 @@
         preloadImage.src = nextSrc;
       };
 
+      updateCounter(currentIndex);
       preloadNext(1);
+
+      if (prefersReducedMotion) {
+        return;
+      }
 
       window.setInterval(() => {
         const nextIndex = (currentIndex + 1) % photos.length;
@@ -217,6 +231,7 @@
           }
           image.classList.remove("is-fading");
           currentIndex = nextIndex;
+          updateCounter(currentIndex);
           preloadNext((nextIndex + 1) % photos.length);
         }, 180);
       }, intervalMs + imageIndex * 150);
