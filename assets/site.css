@@ -534,19 +534,12 @@
   .footer-address-col {
     order: 1 !important;
     text-align: center;
-    display: flex;
-    justify-content: center;
   }
 
   .footer-address-col .footer-address,
   .legal-footer .footer-address {
     text-align: center !important;
     margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-    max-width: 100%;
   }
 
   .footer-address-title,
@@ -606,8 +599,6 @@
 
   .legal-footer .footer-inner > div:nth-child(2) {
     order: 1 !important;
-    display: flex;
-    justify-content: center;
   }
 
   .legal-footer .footer-inner > div:nth-child(3) {
