@@ -177,6 +177,65 @@
       border-radius: 18px;
     }
 
+    .about-contact-card {
+      margin-top: 2rem;
+      width: min(100%, 25rem);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(22, 74, 112, 0.8);
+      box-shadow: 0 16px 34px rgba(6, 30, 52, 0.36);
+      padding: 1.15rem 1.2rem;
+      backdrop-filter: blur(2px);
+    }
+
+    @media (min-width: 768px) {
+      .about-contact-card {
+        padding: 1.3rem 1.35rem;
+      }
+    }
+
+    .about-contact-title {
+      color: var(--jvw-orange);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+
+    .about-contact-list {
+      margin-top: 0.9rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .about-contact-row {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      text-decoration: none;
+      transition: color 180ms ease;
+    }
+
+    .about-contact-row:hover .about-contact-text {
+      color: #fde9d2;
+    }
+
+    .about-contact-icon-wrap {
+      width: 1.35rem;
+      min-width: 1.35rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.96);
+    }
+
+    .about-contact-text {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
     .about-photo img {
       width: 100%;
       height: auto;
@@ -571,22 +630,27 @@
           <p class="text-gray-200/90 mb-6 text-base md:text-lg leading-relaxed">
             Wat u van JVW Infraservice kunt verwachten: een vast aanspreekpunt, helder contact en een aanpak die praktisch en betrouwbaar is. Heeft u een klus of project dat gewoon goed moet gebeuren? Dan regelen wij dat van start tot oplevering.
           </p>
-          <div class="mt-8 inline-block rounded-2xl border border-white/15 bg-white/5 p-4 md:p-5 backdrop-blur-sm" style="min-width: 22rem; max-width: 100%;">
-            <p class="text-caps-orange font-extrabold uppercase tracking-wider text-sm">Project bespreken?</p>
-            <div class="mt-4 space-y-3">
-              <p>
-                <a href="tel:+31646970719" class="text-white font-semibold text-base md:text-lg hover:text-orange-200 transition inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><g transform="rotate(-18 12 12)"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10 5.5h4"/><path d="M12 18.5h0.01"/></g></svg>+31 6 46970719</a>
-              </p>
-              <p>
-                <a href="mailto:info@jvwinfraservice.nl" class="text-white font-semibold text-base md:text-lg hover:text-orange-200 transition inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="m22 8-10 7L2 8"/></svg>info@jvwinfraservice.nl</a>
-              </p>
-              <div class="mt-6 h-px bg-white/15" aria-hidden="true"></div>
-              <p class="mt-5">
-                <a href="https://www.linkedin.com/in/joost-van-wageningen-9538163a2/?originalSubdomain=nl" target="_blank" rel="noopener noreferrer" class="text-white font-semibold hover:text-orange-200 transition inline-flex items-center gap-2" aria-label="Bekijk het LinkedIn-profiel van Joost van Wageningen (opent in nieuw tabblad)">
-                  Bekijk mijn LinkedIn-profiel
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-              </p>
+          <div class="about-contact-card">
+            <p class="about-contact-title">PROJECT BESPREKEN?</p>
+            <div class="about-contact-list">
+              <a href="tel:+31646970719" class="about-contact-row" aria-label="Bel JVW Infraservice">
+                <span class="about-contact-icon-wrap" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><g transform="rotate(-18 12 12)"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10 5.5h4"/><path d="M12 18.5h0.01"/></g></svg>
+                </span>
+                <span class="about-contact-text">+31 6 46970719</span>
+              </a>
+              <a href="mailto:info@jvwinfraservice.nl" class="about-contact-row" aria-label="Mail JVW Infraservice">
+                <span class="about-contact-icon-wrap" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="m22 8-10 7L2 8"/></svg>
+                </span>
+                <span class="about-contact-text">info@jvwinfraservice.nl</span>
+              </a>
+              <a href="https://www.linkedin.com/in/joost-van-wageningen-9538163a2/?originalSubdomain=nl" target="_blank" rel="noopener noreferrer" class="about-contact-row" aria-label="Bekijk het LinkedIn-profiel van Joost van Wageningen (opent in nieuw tabblad)">
+                <span class="about-contact-icon-wrap" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </span>
+                <span class="about-contact-text">Bekijk mijn LinkedIn-profiel</span>
+              </a>
             </div>
           </div>
         </div>
