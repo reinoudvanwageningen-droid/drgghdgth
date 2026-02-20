@@ -174,6 +174,26 @@
       opacity: 0.42;
     }
 
+    .project-cta-wrap {
+      margin-top: 2.5rem;
+      margin-inline: auto;
+      width: 100%;
+      max-width: 44rem;
+    }
+
+    .project-cta-button {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    @media (min-width: 640px) {
+      .project-cta-button {
+        width: calc((100% - 0.85rem) * 1.35 / 2.35);
+        margin-inline: auto;
+      }
+    }
+
   </style>
 </head>
 
@@ -305,8 +325,8 @@
           </article>
         </div>
 
-        <div class="mt-10 mx-auto w-full" style="max-width: 44rem;">
-          <a href="contact.htm?intent=offerte" class="inline-flex w-full justify-center items-center gap-2 bg-caps-orange text-white px-6 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
+        <div class="project-cta-wrap">
+          <a href="contact.htm?intent=offerte" class="project-cta-button items-center gap-2 bg-caps-orange text-white px-6 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
             Bespreek uw project
             <span aria-hidden="true">→</span>
           </a>
