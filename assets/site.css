@@ -536,19 +536,6 @@
     text-align: center;
   }
 
-  .footer-address-col .footer-address,
-  .legal-footer .footer-address {
-    text-align: center !important;
-    margin-inline: auto;
-  }
-
-  .footer-address-title,
-  .legal-footer .footer-address strong {
-    display: block;
-    text-align: center;
-    color: #fff !important;
-  }
-
   .footer-right-col {
     order: 2 !important;
   }
