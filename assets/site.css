@@ -288,8 +288,7 @@
 @media (max-width: 720px) {
   .footer-inner {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
-    padding-inline: 0.15rem;
+    gap: 1.5rem;
   }
 
   .footer-links-col,
@@ -306,16 +305,6 @@
 
   .footer-links {
     align-items: center;
-    gap: 0.5rem;
-  }
-
-  .footer-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 40px;
-    padding: 0.1rem 0.35rem;
-    text-align: center;
   }
 
   .footer-address-col .footer-address {
@@ -328,33 +317,9 @@
     text-align: center !important;
   }
 
-  .footer-contact-stack {
-    gap: 0.85rem;
-  }
-
   .footer-contact-list,
   .footer-social-grid {
     grid-template-columns: 1fr;
-  }
-
-  .footer-contact-card {
-    min-height: 72px;
-    padding: 0.78rem 0.9rem;
-  }
-
-  .footer-contact-value {
-    white-space: normal;
-    word-break: break-word;
-    line-height: 1.35;
-  }
-
-  .footer-social-button {
-    min-height: 50px;
-  }
-
-  .footer-bottom {
-    margin-top: 1.25rem;
-    padding-top: 1rem;
   }
 }
 
@@ -448,11 +413,7 @@
 @media (max-width: 720px) {
   .legal-footer .footer-inner {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .legal-footer .footer-wrap {
-    padding-inline: 18px;
+    gap: 1.5rem;
   }
 
   .legal-footer .footer-links,
@@ -462,16 +423,6 @@
 
   .legal-footer .footer-links {
     align-items: center;
-    gap: 0.5rem;
-  }
-
-  .legal-footer .footer-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 40px;
-    padding: 0.1rem 0.35rem;
-    text-align: center;
   }
 
   .legal-footer .footer-address {
@@ -480,10 +431,5 @@
 
   .legal-footer .footer-right p {
     text-align: center;
-  }
-
-  .legal-footer .footer-bottom {
-    margin-top: 1rem;
-    padding-top: 0.9rem;
   }
 }
