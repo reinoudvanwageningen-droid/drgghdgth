@@ -59,17 +59,6 @@
     .ml-auto { margin-left: auto !important; }
     .text-right { text-align: right !important; }
     .w-full { width: 100% !important; }
-    
-    /* Layout fixes for checkbox/button row */
-    .flex-col { flex-direction: column !important; }
-    .items-center { align-items: center !important; }
-    .justify-between { justify-content: space-between !important; }
-    .gap-5 { gap: 1.25rem !important; }
-    
-    @media (min-width: 768px) {
-      .md\:flex-row { flex-direction: row !important; }
-      .md\:w-auto { width: auto !important; }
-    }
   </style>
 </head>
 
@@ -174,13 +163,15 @@
               </div>
             </div>
 
-            <div class="flex flex-col md:flex-row items-center justify-between gap-5 w-full">
-              <label for="contact-consent" class="flex items-start gap-2.5 text-sm text-gray-600 dark:text-slate-300 leading-relaxed max-w-xl">
-                <input id="contact-consent" name="consent_formsubmit" type="checkbox" required class="mt-1 h-4 w-4 shrink-0 rounded border-gray-300 text-caps-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange dark:border-slate-500 dark:bg-slate-900" />
+            <div>
+              <label for="contact-consent" class="flex items-start gap-2.5 text-sm text-gray-600 dark:text-slate-300 leading-relaxed">
+                <input id="contact-consent" name="consent_formsubmit" type="checkbox" required class="mt-1 h-4 w-4 rounded border-gray-300 text-caps-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange dark:border-slate-500 dark:bg-slate-900" />
                 <span>Ik ga akkoord met de verwerking van mijn gegevens. <a href="privacybeleid.html" class="font-semibold underline underline-offset-2 hover:text-caps-orange transition">Privacyverklaring</a>.</span>
               </label>
+            </div>
 
-              <button type="submit" class="inline-flex items-center justify-center gap-2 bg-caps-orange text-white px-8 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft md:w-auto w-full">
+            <div class="flex justify-end w-full text-right">
+              <button type="submit" class="ml-auto inline-flex items-center justify-center gap-2 bg-caps-orange text-white px-8 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
                 Verstuur bericht
                 <span aria-hidden="true">→</span>
               </button>
