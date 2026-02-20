@@ -153,7 +153,7 @@
 
               <div class="h-full flex flex-col">
                 <label for="contact-message" class="block text-sm font-bold text-caps-blue dark:text-slate-100 mb-2">Bericht *</label>
-                <textarea id="contact-message" name="message" rows="10" required placeholder="Waarmee kunnen we u helpen?" class="flex-1 w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange"></textarea>
+                <textarea id="contact-message" name="message" rows="10" required placeholder="Waarmee kunnen we u helpen?" class="flex-1 min-h-0 w-full rounded-xl border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-100 px-4 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-caps-orange"></textarea>
               </div>
             </div>
 
@@ -164,11 +164,14 @@
               </label>
             </div>
 
-            <div class="flex justify-end">
-              <button type="submit" class="inline-flex items-center justify-center gap-2 bg-caps-orange text-white px-8 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
-                Verstuur bericht
-                <span aria-hidden="true">→</span>
-              </button>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div class="hidden md:block"></div>
+              <div class="flex justify-end">
+                <button type="submit" class="inline-flex items-center justify-center gap-2 bg-caps-orange text-white px-8 py-3 rounded-full font-extrabold hover:bg-orange-600 transition shadow-soft">
+                  Verstuur bericht
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
             </div>
 
             <p id="contact-form-status" class="hidden text-sm font-semibold text-caps-blue dark:text-slate-200" aria-live="polite"></p>
