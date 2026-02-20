@@ -304,11 +304,11 @@
   }
 
   .footer-address-col {
-    order: 3;
+    order: 2;
   }
 
   .footer-links-col {
-    order: 2;
+    order: 3;
     opacity: 0.85;
   }
 
@@ -467,18 +467,6 @@
   .legal-footer .footer-inner {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-  }
-
-  .legal-footer .footer-inner > div:nth-child(3) {
-    order: 1;
-  }
-
-  .legal-footer .footer-inner > div:nth-child(1) {
-    order: 2;
-  }
-
-  .legal-footer .footer-inner > div:nth-child(2) {
-    order: 3;
   }
 
   .legal-footer .footer-wrap {
